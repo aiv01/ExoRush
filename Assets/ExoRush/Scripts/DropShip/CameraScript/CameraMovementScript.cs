@@ -34,9 +34,7 @@ public class CameraMovementScript : MonoBehaviour
         CameraReference.fieldOfView = DefaultFov + (DropShipReference.CurrentVelocity * FovIncreaseMultiplier);
 
         //Update camera location
-        CameraHolder.transform.position = new Vector3(0, CameraHeight, ActualCameraZPosition);  
-
-
+        CameraHolder.transform.position = new Vector3(0, CameraHeight, ActualCameraZPosition);
 
     }
 

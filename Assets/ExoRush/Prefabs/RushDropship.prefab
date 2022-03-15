@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 8991238020083654771}
   - component: {fileID: 8991238020175638958}
   m_Layer: 16
-  m_Name: Dropship
+  m_Name: RushDropship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
