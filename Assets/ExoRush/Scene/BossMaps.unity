@@ -291,7 +291,7 @@ MonoBehaviour:
   ReachPositionSpeed: 10
   ReachRotationSpeed: 10
   YRotationSpeed: 25
-  ZRotationSpeed: 25
+  ZRotationSpeed: 50
   ZMaxRotation: {x: -20, y: 30}
   OriginPosition: {fileID: 1622009131}
   ShipCenter: {fileID: 990377951}
@@ -319,7 +319,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  DashAmplifier: 4
+  DashAmplifier: 500
   InverseDashDuration: 1
   DashAnimationCurve:
     serializedVersion: 2
@@ -345,8 +345,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  RotationAmplifier: 30
-  AnimationRotationSpeed: 5
+  YRotationAmplifier: 30
+  YAnimationRotationSpeed: 10
+  ZRotationAmplifier: 30
+  ZAnimationRotationSpeed: 10
 --- !u!1 &518104637
 GameObject:
   m_ObjectHideFlags: 0

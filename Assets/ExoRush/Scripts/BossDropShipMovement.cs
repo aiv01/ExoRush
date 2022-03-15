@@ -35,9 +35,18 @@ public class BossDropShipMovement : MonoBehaviour
     bool LastInputDirectionRight;
 
     //AesteticVariables
-    public float RotationAmplifier;
-    float SmoothRotation;
-    public float AnimationRotationSpeed = 1;
+
+    //Y Axsis
+    public float YRotationAmplifier;
+    float YSmoothRotation;
+    public float YAnimationRotationSpeed = 1;
+    //ZAxsis
+    public float ZRotationAmplifier;
+    float ZSmoothRotation;
+    public float ZAnimationRotationSpeed = 1;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +55,7 @@ public class BossDropShipMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
 
         YInputForce = Input.GetAxis("Horizontal");
@@ -66,7 +75,7 @@ public class BossDropShipMovement : MonoBehaviour
         if (IsDashing)
         {
             Dash();
-            YRot -= DashValue;
+            YRot -= DashValue * Time.deltaTime;
         }
         else
         {
@@ -101,15 +110,23 @@ public class BossDropShipMovement : MonoBehaviour
 
         transform.rotation = Quaternion.Lerp(transform.rotation, TargetShipTransform.rotation, Time.deltaTime * ReachRotationSpeed);
 
-        //VisualAnimation
-        SmoothRotation = Mathf.Lerp(SmoothRotation, YInputForce, Time.deltaTime * AnimationRotationSpeed);
 
-        ShipCenter.transform.localEulerAngles = new Vector3(0, 0, DashRotation+(SmoothRotation*RotationAmplifier*-1));
+    }
+
+    private void LateUpdate()
+    {
+        //VisualAnimation
+
+        YSmoothRotation = Mathf.Lerp(YSmoothRotation, YInputForce, Time.deltaTime * YAnimationRotationSpeed);
+
+        ZSmoothRotation = Mathf.Lerp(YSmoothRotation, ZRot, Time.deltaTime * ZAnimationRotationSpeed);
+
+        ShipCenter.transform.localEulerAngles = new Vector3(0, 0, DashRotation+(YSmoothRotation*YRotationAmplifier*-1));
     }
 
     void Dash()
     {
-        DashTimer += Time.deltaTime * InverseDashDuration;
+        DashTimer = DashTimer + (Time.deltaTime * InverseDashDuration);
 
         DashValue = DashCurve.Evaluate(DashTimer);
 
