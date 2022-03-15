@@ -288,9 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetShipTransform: {fileID: 1205749817}
-  ReachPositionSpeed: 10
-  ReachRotationSpeed: 10
-  YRotationSpeed: 25
+  ReachPositionSpeed: 4
+  ReachRotationSpeed: 4
+  YRotationSpeed: 40
   ZRotationSpeed: 50
   ZMaxRotation: {x: -20, y: 30}
   OriginPosition: {fileID: 1622009131}
@@ -348,7 +348,7 @@ MonoBehaviour:
   YRotationAmplifier: 30
   YAnimationRotationSpeed: 10
   ZRotationAmplifier: 30
-  ZAnimationRotationSpeed: 10
+  ZAnimationRotationSpeed: 5
   LeftEngine: {fileID: 2134158405}
   RightEngine: {fileID: 2028456708}
   YEngineRotationAmplification: 30
@@ -411,7 +411,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781506784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 24.824402}
+  m_LocalPosition: {x: 0, y: 0, z: 29.4}
   m_LocalScale: {x: 0.05, y: 0.049999997, z: 0.049999997}
   m_Children:
   - {fileID: 103979238}

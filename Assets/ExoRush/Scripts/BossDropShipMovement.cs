@@ -18,6 +18,7 @@ public class BossDropShipMovement : MonoBehaviour
     public GameObject ShipCenter;
 
     float YInputForce;
+    float ZInputForce;
 
     float YRot;
     float ZRot;
@@ -66,7 +67,9 @@ public class BossDropShipMovement : MonoBehaviour
 
         YInputForce = Input.GetAxis("Horizontal");
 
-        if(YInputForce != 0)
+        ZInputForce = Input.GetAxis("Vertical");
+
+        if (YInputForce != 0)
         {
             if(YInputForce < 0)
             {
@@ -102,7 +105,7 @@ public class BossDropShipMovement : MonoBehaviour
             YRot -= (YInputForce * Time.deltaTime * YRotationSpeed);
         }
                
-        ZRot += Input.GetAxis("Vertical") * Time.deltaTime * ZRotationSpeed;
+        ZRot += ZInputForce * Time.deltaTime * ZRotationSpeed;
 
         //Limits
         ZRot = Mathf.Clamp(ZRot, ZMaxRotation.x, ZMaxRotation.y);
@@ -123,11 +126,12 @@ public class BossDropShipMovement : MonoBehaviour
     {
         //VisualAnimation
         //Ship
+
         YSmoothRotation = Mathf.Lerp(YSmoothRotation, YInputForce, Time.deltaTime * YAnimationRotationSpeed);
 
-        ZSmoothRotation = Mathf.Lerp(YSmoothRotation, ZRot, Time.deltaTime * ZAnimationRotationSpeed);
+        ZSmoothRotation = Mathf.Lerp(ZSmoothRotation, ZInputForce, Time.deltaTime * ZAnimationRotationSpeed);
 
-        ShipCenter.transform.localEulerAngles = new Vector3(0, 0, DashRotation+(YSmoothRotation*YRotationAmplifier*-1));
+        ShipCenter.transform.localEulerAngles = new Vector3(ZSmoothRotation*ZRotationAmplifier*-1, 0, DashRotation+(YSmoothRotation*YRotationAmplifier*-1));
         //Engine
         YEngineRotation = Mathf.Lerp(YEngineRotation, YInputForce, Time.deltaTime * EngineRotationSpeed);
 
