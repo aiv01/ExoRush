@@ -349,6 +349,10 @@ MonoBehaviour:
   YAnimationRotationSpeed: 10
   ZRotationAmplifier: 30
   ZAnimationRotationSpeed: 10
+  LeftEngine: {fileID: 2134158405}
+  RightEngine: {fileID: 2028456708}
+  YEngineRotationAmplification: 30
+  EngineRotationSpeed: 30
 --- !u!1 &518104637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1143,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &2028456708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4618231656785488375, guid: b64efcd1457abab418e25783b065dd42,
+    type: 3}
+  m_PrefabInstance: {fileID: 9159549999609918416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2134158405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4618231658067119898, guid: b64efcd1457abab418e25783b065dd42,
+    type: 3}
+  m_PrefabInstance: {fileID: 9159549999609918416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9159549999609918416
 PrefabInstance:
   m_ObjectHideFlags: 0

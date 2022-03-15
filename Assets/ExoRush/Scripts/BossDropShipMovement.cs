@@ -44,6 +44,12 @@ public class BossDropShipMovement : MonoBehaviour
     public float ZRotationAmplifier;
     float ZSmoothRotation;
     public float ZAnimationRotationSpeed = 1;
+    //Engines
+    public GameObject LeftEngine;
+    public GameObject RightEngine;
+    public float YEngineRotationAmplification;
+    public float EngineRotationSpeed = 1;
+    float YEngineRotation;
 
 
 
@@ -116,12 +122,17 @@ public class BossDropShipMovement : MonoBehaviour
     private void LateUpdate()
     {
         //VisualAnimation
-
+        //Ship
         YSmoothRotation = Mathf.Lerp(YSmoothRotation, YInputForce, Time.deltaTime * YAnimationRotationSpeed);
 
         ZSmoothRotation = Mathf.Lerp(YSmoothRotation, ZRot, Time.deltaTime * ZAnimationRotationSpeed);
 
         ShipCenter.transform.localEulerAngles = new Vector3(0, 0, DashRotation+(YSmoothRotation*YRotationAmplifier*-1));
+        //Engine
+        YEngineRotation = Mathf.Lerp(YEngineRotation, YInputForce, Time.deltaTime * EngineRotationSpeed);
+
+        LeftEngine.transform.localEulerAngles = new Vector3(YEngineRotation*YEngineRotationAmplification, 0, 0);
+        RightEngine.transform.localEulerAngles = new Vector3(YEngineRotation * YEngineRotationAmplification * -1, 0, 0);
     }
 
     void Dash()
