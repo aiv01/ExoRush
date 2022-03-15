@@ -15,8 +15,29 @@ public class BossDropShipMovement : MonoBehaviour
 
     public GameObject OriginPosition;
 
+    public GameObject ShipCenter;
+
+    float YInputForce;
+
     float YRot;
     float ZRot;
+
+    //BossDash
+    public AnimationCurve DashCurve;
+    public float DashAmplifier = 1;
+    bool IsDashing;
+    public float InverseDashDuration = 1;
+    float DashTimer;
+    float DashValue;
+    bool RightDash;
+    public AnimationCurve DashAnimationCurve;
+    float DashRotation;
+    bool LastInputDirectionRight;
+
+    //AesteticVariables
+    public float RotationAmplifier;
+    float SmoothRotation;
+    public float AnimationRotationSpeed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +46,47 @@ public class BossDropShipMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        YRot += Input.GetAxis("Horizontal") * Time.deltaTime * YRotationSpeed*-1;
 
+        YInputForce = Input.GetAxis("Horizontal");
+
+        if(YInputForce != 0)
+        {
+            if(YInputForce < 0)
+            {
+                LastInputDirectionRight = true;
+            }
+            else
+            {
+                LastInputDirectionRight = false;
+            }
+        }
+
+        if (IsDashing)
+        {
+            Dash();
+            YRot -= DashValue;
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                IsDashing = true;
+                DashTimer = 0;
+                if (LastInputDirectionRight)
+                {
+                    RightDash = true;
+                }
+                else
+                {
+                    RightDash = false;
+                }
+            }
+
+            YRot -= (YInputForce * Time.deltaTime * YRotationSpeed);
+        }
+               
         ZRot += Input.GetAxis("Vertical") * Time.deltaTime * ZRotationSpeed;
 
         //Limits
@@ -38,8 +96,40 @@ public class BossDropShipMovement : MonoBehaviour
         OriginPosition.transform.eulerAngles = new Vector3(0, YRot,ZRot);
 
         //ShipLocation
+
         transform.position = Vector3.Lerp(transform.position, TargetShipTransform.position, Time.deltaTime * ReachPositionSpeed);
 
         transform.rotation = Quaternion.Lerp(transform.rotation, TargetShipTransform.rotation, Time.deltaTime * ReachRotationSpeed);
+
+        //VisualAnimation
+        SmoothRotation = Mathf.Lerp(SmoothRotation, YInputForce, Time.deltaTime * AnimationRotationSpeed);
+
+        ShipCenter.transform.localEulerAngles = new Vector3(0, 0, DashRotation+(SmoothRotation*RotationAmplifier*-1));
+    }
+
+    void Dash()
+    {
+        DashTimer += Time.deltaTime * InverseDashDuration;
+
+        DashValue = DashCurve.Evaluate(DashTimer);
+
+        DashValue = DashValue * DashAmplifier;
+
+        DashRotation = DashAnimationCurve.Evaluate(DashTimer);
+
+        if (!RightDash)
+        {
+            DashRotation *= -1;
+        }
+
+        if (RightDash)
+        {
+            DashValue = DashValue*-1;
+        }
+
+        if (DashTimer >= 1)
+        {
+            IsDashing = false;
+        }
     }
 }
