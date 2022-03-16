@@ -25,18 +25,28 @@ public class BossScript : MonoBehaviour
     {
         Vector3 FaceDirection = Player.transform.position - transform.position;
 
-        TargetRotation = Quaternion.LookRotation(FaceDirection);
+        TargetRotation = Quaternion.FromToRotation(transform.forward, FaceDirection);
 
         YRot = TargetRotation.eulerAngles.y;
 
-        YRot = YRot - transform.rotation.eulerAngles.y;
+        
 
-        Debug.Log(YRot);
+        //YRot = YRot - transform.rotation.eulerAngles.y;       
+
+        //if(YRot > 180)
+        //{
+        //    YRot = YRot - 360;
+        //    YRot = YRot * -1;
+        //}
 
         BossAnimator.SetFloat("Angle",YRot/180);
 
+        Debug.Log(YRot);
+
         BossAnimator.SetTrigger("TurnTrigger");
-        
+
+       
+
 
     }
 }
