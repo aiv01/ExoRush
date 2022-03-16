@@ -313,6 +313,26 @@ MonoBehaviour:
     m_RotationOrder: 4
   DashDuration: 3
   MovementScript: {fileID: 1171629354}
+--- !u!114 &168456049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168456035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad9b81c223919143a2a4d075311adc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IslandPoolLibrary:
+  - {fileID: 2871967428368110992, guid: d74186f1e1c282744b0de05be6f7b67b, type: 3}
+  - {fileID: 3404553440375638009, guid: c06913e8c52856b418b141d43c280ea5, type: 3}
+  - {fileID: 1419503874080713212, guid: 187d2a6e8509da94089dce5f120d04b4, type: 3}
+  IslandAmount: 20
+  SpawnDistance: 2000
+  SpawnTimeCowntdown: 2
+  HeightOffset: -100
 --- !u!1 &311822066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 876220602382056338, guid: a85f1df4f46180e47a5a8064f35e125f,
