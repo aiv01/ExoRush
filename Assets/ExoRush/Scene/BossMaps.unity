@@ -1074,6 +1074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 401484638}
   BossAnimator: {fileID: 1816641119}
+  RotationTollerance: 40
+  RotationTimer: 0
 --- !u!95 &1816641119 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95408953468183704, guid: 71a1be879433fcb46b1fb72b19e392ef,

@@ -6,8 +6,9 @@ public class BossScript : MonoBehaviour
 {
     public GameObject Player;
     public Animator BossAnimator;
-    Quaternion TargetRotation;
-    float YRot;
+    public float RotationTollerance;
+    public float RotationTimer;
+    float RotationTempTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class BossScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         RotateToPlayer();
     }
     
@@ -25,25 +27,26 @@ public class BossScript : MonoBehaviour
     {
         Vector3 FaceDirection = Player.transform.position - transform.position;
 
-        TargetRotation = Quaternion.FromToRotation(transform.forward, FaceDirection);
+        Vector3 From = transform.forward;
 
-        YRot = TargetRotation.eulerAngles.y;
+        From.y = 0;
 
-        
 
-        //YRot = YRot - transform.rotation.eulerAngles.y;       
+        FaceDirection.y = 0;
 
-        //if(YRot > 180)
-        //{
-        //    YRot = YRot - 360;
-        //    YRot = YRot * -1;
-        //}
 
-        BossAnimator.SetFloat("Angle",YRot/180);
+        float Angle = Vector3.SignedAngle(From, FaceDirection,Vector3.up);
 
-        Debug.Log(YRot);
+        if((Angle > 0 && Angle > RotationTollerance)|| (Angle < 0 && Angle < RotationTollerance*-1))
+        {
+            BossAnimator.SetFloat("Angle", Angle / 180);
 
-        BossAnimator.SetTrigger("TurnTrigger");
+            Debug.Log(Angle);
+
+            BossAnimator.SetTrigger("TurnTrigger");
+        }
+
+
 
        
 

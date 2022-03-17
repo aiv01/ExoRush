@@ -332,7 +332,7 @@ MonoBehaviour:
   IslandAmount: 20
   SpawnDistance: 2000
   SpawnTimeCowntdown: 2
-  HeightOffset: -100
+  HeightOffset: 0
 --- !u!1 &311822066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 876220602382056338, guid: a85f1df4f46180e47a5a8064f35e125f,
@@ -1096,7 +1096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &975404081
 MeshCollider:
   m_ObjectHideFlags: 0
