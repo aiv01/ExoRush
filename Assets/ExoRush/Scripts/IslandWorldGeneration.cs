@@ -42,6 +42,18 @@ public class IslandWorldGeneration : MonoBehaviour
         IslandPool[IslandIndex].transform.position = new Vector3(0, HeightOffset, transform.position.z + SpawnDistance);
 
         IslandPool[IslandIndex].SetActive(true);
+
+        //if(Random.value < 0.5)
+        //{
+        //    IslandPool[IslandIndex].transform.GetChild(0).transform.localScale = new Vector3(-1, 1, 1);
+        //}
+        //else
+        //{
+        //    IslandPool[IslandIndex].transform.GetChild(0).transform.localScale = new Vector3(1, 1, 1);
+        //}
+
+        Debug.Log(IslandPool[IslandIndex].transform.GetChild(0).transform.name);
+        
         IslandIndex++;
         if (IslandIndex >= IslandAmount)
         {
