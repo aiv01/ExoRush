@@ -10,8 +10,13 @@ PrefabInstance:
     - target: {fileID: 8989541349209877056, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: m_Name
-      value: RushDropship Variant
+      value: BossDropship Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8991238018827756493, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e23180ac50ef7a147a9a0eb64a582655, type: 2}
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: DropShipMovementScript
