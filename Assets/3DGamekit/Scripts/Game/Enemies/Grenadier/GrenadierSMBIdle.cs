@@ -20,7 +20,7 @@ namespace Gamekit3D
         {
             base.OnSLStateNoTransitionUpdate(animator, stateInfo, layerIndex);
 
-            m_MonoBehaviour.FindTarget();
+            //m_MonoBehaviour.FindTarget();
             if (m_MonoBehaviour.target != null)
             {
                 Vector3 toTarget = m_MonoBehaviour.target.transform.position - m_MonoBehaviour.transform.position;
@@ -31,7 +31,7 @@ namespace Gamekit3D
                     {
                         animator.SetTrigger(GrenadierBehaviour.hashMeleeAttack);
                     }
-                    else if(!m_MonoBehaviour.shieldUp)
+                    else if (!m_MonoBehaviour.shieldUp)
                     {
                         //we don't turn, we do a shield attack, reset the turn apram set by the orient function
                         animator.ResetTrigger(GrenadierBehaviour.hashTurnTriggerParam);

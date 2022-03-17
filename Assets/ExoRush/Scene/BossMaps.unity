@@ -901,6 +901,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95408953468183704, guid: 71a1be879433fcb46b1fb72b19e392ef,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199292792453767928, guid: 71a1be879433fcb46b1fb72b19e392ef,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199544426861044746, guid: 71a1be879433fcb46b1fb72b19e392ef,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199625515835026232, guid: 71a1be879433fcb46b1fb72b19e392ef,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114578858838445908, guid: 71a1be879433fcb46b1fb72b19e392ef, type: 3}
     - {fileID: 114161401988340100, guid: 71a1be879433fcb46b1fb72b19e392ef, type: 3}
@@ -1075,7 +1095,9 @@ MonoBehaviour:
   Player: {fileID: 401484638}
   BossAnimator: {fileID: 1816641119}
   RotationTollerance: 40
-  RotationTimer: 0
+  RotationTimer: 3
+  MeleeTimer: 10
+  RangeTimer: 12
 --- !u!95 &1816641119 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95408953468183704, guid: 71a1be879433fcb46b1fb72b19e392ef,

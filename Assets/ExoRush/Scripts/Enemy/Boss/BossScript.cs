@@ -6,21 +6,55 @@ public class BossScript : MonoBehaviour
 {
     public GameObject Player;
     public Animator BossAnimator;
+
+    //Rotation
     public float RotationTollerance;
     public float RotationTimer;
     float RotationTempTimer;
 
+    //MeleeAttack
+    public float MeleeTimer;
+    float MeleeTempTimer;
+
+    //RangeAttack
+    public float RangeTimer;
+    float RangeTempTimer;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        RangeTempTimer = RangeTimer;
+        MeleeTempTimer = MeleeTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
+        RotationTempTimer = RotationTempTimer - Time.deltaTime;
 
-        RotateToPlayer();
+        if(RotationTempTimer < 0)
+        {
+            RotateToPlayer();
+            RotationTempTimer = RotationTimer;
+        }
+
+        MeleeTempTimer = MeleeTempTimer - Time.deltaTime;
+
+        if (MeleeTempTimer < 0)
+        {
+            MaleeAttack();
+            MeleeTempTimer = MeleeTimer;
+        }
+
+        RangeTempTimer = RangeTempTimer - Time.deltaTime;
+
+        if (RangeTempTimer < 0)
+        {
+            RangeAttack();
+            RangeTempTimer = RangeTimer;
+        }
+
     }
     
     void RotateToPlayer()
@@ -30,7 +64,6 @@ public class BossScript : MonoBehaviour
         Vector3 From = transform.forward;
 
         From.y = 0;
-
 
         FaceDirection.y = 0;
 
@@ -45,11 +78,16 @@ public class BossScript : MonoBehaviour
 
             BossAnimator.SetTrigger("TurnTrigger");
         }
+            
+    }
 
+    void MaleeAttack()
+    {
+        BossAnimator.SetTrigger("MeleeAttack");
+    }
 
-
-       
-
-
+    void RangeAttack()
+    {
+        BossAnimator.SetTrigger("RangeAttack");
     }
 }
