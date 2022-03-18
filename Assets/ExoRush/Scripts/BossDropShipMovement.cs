@@ -23,6 +23,8 @@ public class BossDropShipMovement : MonoBehaviour
     float YRot;
     float ZRot;
 
+    Vector2 ZLimitReduction = new Vector2 (1,1);
+
     //BossDash
     public AnimationCurve DashCurve;
     public float DashAmplifier = 1;
@@ -104,8 +106,41 @@ public class BossDropShipMovement : MonoBehaviour
 
             YRot -= (YInputForce * Time.deltaTime * YRotationSpeed);
         }
-               
-        ZRot += ZInputForce * Time.deltaTime * ZRotationSpeed;
+
+        //Border Reduction
+
+        if (ZInputForce > 0)
+        {
+
+           ZLimitReduction.x = ((ZRot - ZMaxRotation.y) / 20);           
+
+           ZLimitReduction.x = Mathf.Abs(ZLimitReduction.x);
+
+           ZLimitReduction.x = Mathf.Clamp(ZLimitReduction.x, 0, 1);
+
+        }
+        else
+        {
+            ZLimitReduction.x = 1;
+        }
+
+        if (ZInputForce < 0)
+        {
+
+            ZLimitReduction.y = ((ZRot - ZMaxRotation.x) / 20*-1);
+
+            ZLimitReduction.y = Mathf.Abs(ZLimitReduction.y);
+
+            ZLimitReduction.y = Mathf.Clamp(ZLimitReduction.y, 0, 1);
+
+        }
+        else
+        {
+            ZLimitReduction.y = 1;
+        }
+
+
+        ZRot += ZInputForce * Time.deltaTime * ZRotationSpeed * ZLimitReduction.x * ZLimitReduction.y;
 
         //Limits
         ZRot = Mathf.Clamp(ZRot, ZMaxRotation.x, ZMaxRotation.y);
