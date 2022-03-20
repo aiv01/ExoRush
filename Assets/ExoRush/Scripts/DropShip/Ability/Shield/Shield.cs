@@ -14,6 +14,8 @@ public class Shield : MonoBehaviour
     public float ReuseTime;
     float TempReuseTime;
 
+    public GameObject ShieldBar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +73,7 @@ public class Shield : MonoBehaviour
         }
 
         ShieldEnergy = Mathf.Clamp(ShieldEnergy, 0, 1);
-        Debug.Log(ShieldEnergy);
+
+        ShieldBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)ShieldEnergy;
     }
 }
