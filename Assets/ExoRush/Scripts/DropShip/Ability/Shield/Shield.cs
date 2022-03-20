@@ -8,8 +8,11 @@ public class Shield : MonoBehaviour
     public bool Active;
     float ShieldEnergy = 1;
     public float EnergyDrainedSpeed;
+    public float EnergyRegenerateSpeed;
     public float ReloadTime;
+    float TempReloadTime;
     public float ReuseTime;
+    float TempReuseTime;
 
     // Start is called before the first frame update
     void Start()
@@ -22,14 +25,52 @@ public class Shield : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            Shiled.SetActive(true);
-            Active = true;
-            ShieldEnergy -= Time.deltaTime * EnergyDrainedSpeed;
+            
+
+            if(ShieldEnergy > 0 && TempReuseTime <= 0)
+            {
+                Shiled.SetActive(true);
+                Active = true;
+                ShieldEnergy -= Time.deltaTime * EnergyDrainedSpeed;
+                TempReloadTime = ReloadTime;
+            }
+
+
+
+            if(ShieldEnergy <= 0)
+            {
+                Shiled.SetActive(false);
+                Active = false;
+            }
+
         }
         else
-        {
+        {         
+
             Shiled.SetActive(false);
             Active = false;
         }
+
+        if (TempReloadTime <= 0 && !Active)
+        {
+            ShieldEnergy += Time.deltaTime * EnergyRegenerateSpeed;
+        }
+        else
+        {
+            TempReloadTime -= Time.deltaTime;
+        }
+
+
+        if (ShieldEnergy <= 0 && TempReuseTime <= 0)
+        {
+            TempReuseTime = ReuseTime;
+        }
+        else
+        {
+            TempReuseTime -= Time.deltaTime;
+        }
+
+        ShieldEnergy = Mathf.Clamp(ShieldEnergy, 0, 1);
+        Debug.Log(ShieldEnergy);
     }
 }
