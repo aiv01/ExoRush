@@ -49,7 +49,7 @@ public class DropShipMovement : MonoBehaviour
     bool InTransition;
     public float TransitionTime;
     float TempTransition;
-
+    public GameObject TransitionEffect;
 
     
 
@@ -126,15 +126,11 @@ public class DropShipMovement : MonoBehaviour
         {
             InTransition = true;
             TempTransition = TransitionTime;
+            Instantiate(TransitionEffect, transform.position, Quaternion.identity);
         }
         else if (InTransition)
         {
             TempTransition -= Time.deltaTime;
-        }
-
-        if(InTransition && TempTransition <= 0)
-        {
-            SceneManager.LoadScene("BossMap");
         }
     }
 

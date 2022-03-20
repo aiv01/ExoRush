@@ -9,7 +9,8 @@ public class Transition : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("BossMaps");
+            SceneManager.LoadScene("BossMap");
+            Debug.Log("OpenMap");
         }
     }
 }
