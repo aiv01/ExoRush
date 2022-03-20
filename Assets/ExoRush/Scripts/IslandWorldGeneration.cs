@@ -12,6 +12,8 @@ public class IslandWorldGeneration : MonoBehaviour
     public float SpawnDistance = 100;
     public float SpawnTimeCowntdown;
     public float HeightOffset;
+    public float DistanceMargin;
+    float PrecedentSpawnPosition;
 
 
     // Start is called before the first frame update
@@ -28,31 +30,41 @@ public class IslandWorldGeneration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IslandCowntdown <= 0)
+        if (PrecedentSpawnPosition + DistanceMargin < transform.position.z)
         {
             SpawnIsland();
-            IslandCowntdown = SpawnTimeCowntdown;
+
+            
         }
 
-        IslandCowntdown = IslandCowntdown - Time.deltaTime;
+
+        //if (IslandCowntdown <= 0)
+        //{
+        //    SpawnIsland();
+        //    IslandCowntdown = SpawnTimeCowntdown;
+        //}
+
+        //IslandCowntdown = IslandCowntdown - Time.deltaTime;
     }
 
     public void SpawnIsland()
     {
         IslandPool[IslandIndex].transform.position = new Vector3(0, HeightOffset, transform.position.z + SpawnDistance);
 
+        PrecedentSpawnPosition = transform.position.z;
+
         IslandPool[IslandIndex].SetActive(true);
 
-        //if(Random.value < 0.5)
+        //if (Random.value < 0.5)
         //{
-        //    IslandPool[IslandIndex].transform.GetChild(0).transform.localScale = new Vector3(-1, 1, 1);
+        //    IslandPool[IslandIndex].transform.GetChild(0).transform.localScale = new Vector3(IslandPool[IslandIndex].transform.GetChild(0).transform.localScale.x*-1, IslandPool[IslandIndex].transform.GetChild(0).transform.localScale.y, IslandPool[IslandIndex].transform.GetChild(0).transform.localScale.y);
         //}
         //else
         //{
-        //    IslandPool[IslandIndex].transform.GetChild(0).transform.localScale = new Vector3(1, 1, 1);
+        //    IslandPool[IslandIndex].transform.GetChild(0).transform.localScale = new Vector3(IslandPool[IslandIndex].transform.GetChild(0).transform.localScale.x , IslandPool[IslandIndex].transform.GetChild(0).transform.localScale.y, IslandPool[IslandIndex].transform.GetChild(0).transform.localScale.y);
         //}
 
-        Debug.Log(IslandPool[IslandIndex].transform.GetChild(0).transform.name);
+        
         
         IslandIndex++;
         if (IslandIndex >= IslandAmount)

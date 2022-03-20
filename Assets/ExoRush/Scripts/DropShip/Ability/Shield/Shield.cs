@@ -5,7 +5,11 @@ using UnityEngine;
 public class Shield : MonoBehaviour
 {
     public GameObject Shiled;
-    bool Active;
+    public bool Active;
+    float ShieldEnergy = 1;
+    public float EnergyDrainedSpeed;
+    public float ReloadTime;
+    public float ReuseTime;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +24,7 @@ public class Shield : MonoBehaviour
         {
             Shiled.SetActive(true);
             Active = true;
+            ShieldEnergy -= Time.deltaTime * EnergyDrainedSpeed;
         }
         else
         {

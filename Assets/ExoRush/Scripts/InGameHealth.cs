@@ -48,12 +48,22 @@ public class InGameHealth : MonoBehaviour
         HealthBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)Health/(float)MaxHealth;
     }
 
-    public void Damage(int damage)
+    public void Damage(int damage,bool Shieldable,bool SpeedReduction,bool ShakeCamera)
     {
+        if (Shieldable && ShiledScript.Active)
+        {
+            damage = 0;
+        }
         HealAfterCounter = HealAfterTimer;
         Health = Health - damage;
-        CameraScript.ShakeCamera();
-        DropShipMovementScript.DamagingCollision();
+        if (ShakeCamera)
+        {
+            CameraScript.ShakeCamera();
+        }
+        if (SpeedReduction)
+        {
+            DropShipMovementScript.DamagingCollision();
+        }
         if(Health <= 0)
         {
             DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
@@ -69,7 +79,7 @@ public class InGameHealth : MonoBehaviour
     {
         if(other.tag == "Obstacle")
         {
-            Damage(400);
+            Damage(400,false,true,true);
         }
         else if(other.tag == "Enemy")
         {
