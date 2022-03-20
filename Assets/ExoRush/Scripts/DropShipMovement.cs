@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DropShipMovement : MonoBehaviour
 {
@@ -43,6 +44,13 @@ public class DropShipMovement : MonoBehaviour
     public float BoostSpeedRotationAmplifier = 50;
     public float BoostSpeed = 1;
 
+    //BossMap
+    public float TransferDistance;
+    bool InTransition;
+    public float TransitionTime;
+    float TempTransition;
+
+
     
 
 
@@ -60,6 +68,8 @@ public class DropShipMovement : MonoBehaviour
         ShipMovement();
         
         UpdateEngineRotation();
+
+        GoToBossmap();
 
     }
 
@@ -108,6 +118,25 @@ public class DropShipMovement : MonoBehaviour
         LeftEngine.transform.eulerAngles = new Vector3(EngineSpeedRotation, transform.eulerAngles.y, transform.eulerAngles.z);
         RightEngine.transform.eulerAngles = new Vector3(EngineSpeedRotation, transform.eulerAngles.y, transform.eulerAngles.z);
 
+    }
+
+    void GoToBossmap()
+    {
+        if (!InTransition && transform.position.z >= TransferDistance)
+        {
+            InTransition = true;
+            TempTransition = TransitionTime;
+        }
+        else if (InTransition)
+        {
+            TempTransition -= Time.deltaTime;
+        }
+
+        if(InTransition && TempTransition <= 0)
+        {
+            SceneManager.LoadScene("BossMap");
+            Debug.Log("Load");
+        }
     }
 
 }
