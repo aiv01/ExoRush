@@ -15,13 +15,16 @@ public class LaserAbility : MonoBehaviour
     public float ReloadTime = 2;
     float ReloadTimer;
 
+    //Damage
+    public float BetweenDamageTime;
+    float TempDamageTime;
+    public int Damage;
 
     void Start()
     {
         for (int i = 0; i < LaserGameObject.Length; i++)
         {
             LaserGameObject[i].GetComponent<LineRenderer>().widthMultiplier = CurrentLaserWidth = 0;
-
         }
         ReloadTimer = ReloadTime;
     }
@@ -43,6 +46,9 @@ public class LaserAbility : MonoBehaviour
             }
 
         }
+
+        TempDamageTime -= Time.deltaTime;
+
         if (IsUsingLaser)
         {
             NormalizedAnimation = NormalizedAnimation + (Time.deltaTime * AnimationLenght);
@@ -56,10 +62,31 @@ public class LaserAbility : MonoBehaviour
                 if(i == 0)
                 {
                     LaserGameObject[i].transform.rotation = Quaternion.Euler(CurrentRotation, -0.8f, 0);
+
+
                 }
                 else
                 {
                     LaserGameObject[i].transform.rotation = Quaternion.Euler(CurrentRotation, 0.8f, 0);
+
+
+                }
+
+                RaycastHit hit;
+
+                if (TempDamageTime <= 0)
+                {
+
+                    if (Physics.Raycast(LaserGameObject[i].transform.position, LaserGameObject[i].transform.forward, out hit, Mathf.Infinity))
+                    {
+                        if (hit.collider.gameObject.GetComponent<EnemyMaster>() != null)
+                        {
+                            hit.collider.gameObject.GetComponent<EnemyMaster>().Damage(Damage);
+
+                            TempDamageTime = BetweenDamageTime;
+                        }
+                        ////Debug.DrawRay(LaserGameObject[i].transform.position, LaserGameObject[i].transform.forward, Color.yellow);                    
+                    }
                 }
 
             }
@@ -72,7 +99,6 @@ public class LaserAbility : MonoBehaviour
             for (int i = 0; i < LaserGameObject.Length; i++)
             {
                 LaserGameObject[i].GetComponent<LineRenderer>().widthMultiplier = CurrentLaserWidth = 0;
-
             }
         }
 
