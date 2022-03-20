@@ -3054,12 +3054,22 @@ PrefabInstance:
     - target: {fileID: 8991238020083654759, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: ForwardSpeed
-      value: 600
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654759, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TransitionTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654759, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: BoostMultiplier
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654759, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TransferDistance
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654759, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}

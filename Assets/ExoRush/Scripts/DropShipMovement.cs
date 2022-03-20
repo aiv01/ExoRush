@@ -135,7 +135,6 @@ public class DropShipMovement : MonoBehaviour
         if(InTransition && TempTransition <= 0)
         {
             SceneManager.LoadScene("BossMap");
-            Debug.Log("Load");
         }
     }
 
