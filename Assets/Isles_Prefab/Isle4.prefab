@@ -308,10 +308,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObstaclesLibrary:
-  - {fileID: 1781895963362334, guid: ae33cdbea5544a145aec990f5d8c344e, type: 3}
-  - {fileID: 1103786686026924, guid: 28ac81b967e3af647a58169b4ca8917b, type: 3}
-  - {fileID: 1750448690376516, guid: ae0271f1987760f42b243ff8968dc937, type: 3}
-  - {fileID: 1350299389018228, guid: fea365f70814ed347925886d219bdd6a, type: 3}
+  - {fileID: 6425638742339659816, guid: 564de36b98539504c9fdfaa32ea8ed82, type: 3}
+  - {fileID: 8511855201331233976, guid: b9b29552cd26df74bb7f0abe0f02b1a7, type: 3}
+  - {fileID: 8730903837727758737, guid: a30f93e1af771ce45b7ce188021a25b9, type: 3}
   EnemyLibrary:
   - {fileID: 5212987549901051944, guid: 081fc2b5097d5bf40990f6e46982e8e3, type: 3}
 --- !u!1 &8504932989696051416
