@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
+
+    public KeyCode joystickShieldKey = KeyCode.Joystick1Button0;
     public GameObject Shiled;
     public bool Active;
     float ShieldEnergy = 1;
@@ -25,7 +27,7 @@ public class Shield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(joystickShieldKey))
         {
             
 

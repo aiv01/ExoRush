@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae4ec461322cc449b1fc717057f8b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystickAbilityKey: 330
   DashBoostAnimationFlipped:
     serializedVersion: 2
     m_Curve:
@@ -3229,8 +3230,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: joystickShieldKey
+      value: 331
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: EnergyDrainedSpeed
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: joystickAbilityKey
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DashBoost : MonoBehaviour
 {
+
+    public KeyCode joystickAbilityKey = KeyCode.Joystick1Button1;
     public AnimationCurve DashBoostAnimationFlipped;
     public AnimationCurve DashBoostSpeedFlipped;
     public float DashDuration = 5;
@@ -20,7 +22,7 @@ public class DashBoost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(joystickAbilityKey))
         {
             if (!IsActivated)
             {
