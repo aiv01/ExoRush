@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4365314594726328}
   - component: {fileID: 205170058121242336}
+  - component: {fileID: 3609134742668710688}
   m_Layer: 16
   m_Name: RockChunk01
   m_TagString: Obstacle
@@ -61,6 +62,20 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23375945598492458}
   m_Enabled: 1
+--- !u!64 &3609134742668710688
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103786686026924}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300006, guid: 6faa4076a385e5e42a2cabd7f38a7b56, type: 3}
 --- !u!1 &1292966034821860
 GameObject:
   m_ObjectHideFlags: 0

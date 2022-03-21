@@ -7,6 +7,9 @@ TagManager:
   - FlythroughCam
   - Obstacle
   - Enemy
+  - OBSP
+  - ENSP
+  - BXSP
   layers:
   - Default
   - TransparentFX
