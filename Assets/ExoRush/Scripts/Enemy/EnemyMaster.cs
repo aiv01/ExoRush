@@ -8,6 +8,7 @@ public class EnemyMaster : MonoBehaviour
     public int MaxHealth = 1;
     int Health;
     public GameObject HealthBar;
+    public BoxDestruction BoxDestruction;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,16 @@ public class EnemyMaster : MonoBehaviour
             {
                 RagdollReference.Replace();
             }
+            else if(BoxDestruction != null)
+            {
+                BoxDestruction.DestroyBox();
+            }
+            else
+            {
+                Destroy(this);
+            }
+
+            Debug.Log("Destroy");
 
         }
 
