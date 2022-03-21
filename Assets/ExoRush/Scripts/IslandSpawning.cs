@@ -7,7 +7,7 @@ public class IslandSpawning : MonoBehaviour
     Transform[] SpawingObject;
     public GameObject[] ObstaclesLibrary;
     public GameObject[] EnemyLibrary;
-    float SpawnRate;
+    public float SpawnRateMuiltiplier = 0.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class IslandSpawning : MonoBehaviour
         {
             //Debug.Log((transform.position.z / 10000) > (Random.Range(0, Random.value)));
 
-            if((transform.position.z / 10000) > (Random.Range(0, Random.value)))
+            if(((transform.position.z / 10000)*SpawnRateMuiltiplier) > (Random.Range(0, Random.value)))
                 {
 
                 if (SpawingObject[i].transform.tag == "OBSP")
