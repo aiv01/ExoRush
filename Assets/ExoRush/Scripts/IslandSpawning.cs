@@ -12,8 +12,6 @@ public class IslandSpawning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hey");
-
         SpawingObject = this.transform.GetComponentsInChildren<Transform>();
 
 
