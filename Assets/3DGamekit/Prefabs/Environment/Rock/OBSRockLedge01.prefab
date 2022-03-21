@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4946618981427986}
   - component: {fileID: 205701782185668478}
-  - component: {fileID: 3629578632331154897}
+  - component: {fileID: 667991084461952541}
   m_Layer: 16
   m_Name: OBSRockLedge01
   m_TagString: Obstacle
@@ -226,8 +226,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23484909342428556}
   m_Enabled: 1
---- !u!65 &3629578632331154897
-BoxCollider:
+--- !u!64 &667991084461952541
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -236,9 +236,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 40.07, y: 14.81, z: 25.75}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300004, guid: 21880eb3f26ed7f4ea0648ac43fd486a, type: 3}
 --- !u!1 &1934147395448920
 GameObject:
   m_ObjectHideFlags: 0

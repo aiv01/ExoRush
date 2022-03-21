@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4301333872304726}
   - component: {fileID: 205296271964176190}
-  - component: {fileID: 8859980208981225392}
+  - component: {fileID: 2668496300542388469}
   m_Layer: 16
   m_Name: OBSCliffEdge04
   m_TagString: Obstacle
@@ -307,8 +307,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23799351836424604}
   m_Enabled: 1
---- !u!65 &8859980208981225392
-BoxCollider:
+--- !u!64 &2668496300542388469
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -317,6 +317,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 11.02, y: 6.49, z: 11.67}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 810a1b223d1ae12409785d307cb074cb, type: 3}
