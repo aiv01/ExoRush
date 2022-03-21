@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4033406464408490}
   - component: {fileID: 205608355313072192}
-  - component: {fileID: 4046737159267009206}
+  - component: {fileID: 5195324872865789863}
   m_Layer: 16
   m_Name: OBSRockSwamp01
   m_TagString: Obstacle
@@ -62,8 +62,8 @@ LODGroup:
     renderers:
     - renderer: {fileID: 23092304496063074}
   m_Enabled: 1
---- !u!65 &4046737159267009206
-BoxCollider:
+--- !u!64 &5195324872865789863
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -72,9 +72,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.58, y: 4.55, z: 4.26}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 0e7a0cbe96ebe3747a42d2e165016ddc, type: 3}
 --- !u!1 &1412483018875794
 GameObject:
   m_ObjectHideFlags: 0
