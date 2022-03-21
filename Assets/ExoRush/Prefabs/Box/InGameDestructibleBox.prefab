@@ -11802,7 +11802,7 @@ GameObject:
   - component: {fileID: 2269899479323120867}
   - component: {fileID: 4749794517358057899}
   m_Layer: 0
-  m_Name: DestructibleBox
+  m_Name: InGameDestructibleBox
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

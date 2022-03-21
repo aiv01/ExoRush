@@ -7,7 +7,9 @@ public class IslandSpawning : MonoBehaviour
     Transform[] SpawingObject;
     public GameObject[] ObstaclesLibrary;
     public GameObject[] EnemyLibrary;
+    public GameObject[] BoxLibrary;
     public float SpawnRateMuiltiplier = 0.5f;
+    bool BoxSpawned;
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +32,20 @@ public class IslandSpawning : MonoBehaviour
                 {
                     Instantiate(EnemyLibrary[Random.Range(0, EnemyLibrary.Length)], SpawingObject[i].transform.position, SpawingObject[i].transform.rotation);
                 }
+                else if (SpawingObject[i].transform.tag == "BXSP")
+                {
+                    if (!BoxSpawned)
+                    {
+                        Instantiate(BoxLibrary[Random.Range(0, BoxLibrary.Length)], SpawingObject[i].transform.position, SpawingObject[i].transform.rotation);
+                        BoxSpawned = true;
+                    }
+                    
+                }
+            }
             }
 
 
         }
 
 
-
-
-
-
-    }
 }
