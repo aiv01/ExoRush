@@ -10,6 +10,7 @@ public class BoxDestruction : MonoBehaviour
     AbilityManager AbilityManager;
     public PowerUps PowerUp;
     public bool ForcedPowerup;
+    bool activated;
 
 
     // Start is called before the first frame update
@@ -25,11 +26,16 @@ public class BoxDestruction : MonoBehaviour
 
     public void DestroyBox()
     {
-        PhysicalBox.enabled = false;
-        DestructibleBox.SetActive(true);
-        DropShip = GameObject.FindGameObjectWithTag("Player");
-        AbilityManager = DropShip.GetComponent<AbilityManager>();
-        AbilityManager.EarnPowerUp(PowerUp);
+        if (!activated)
+        {
+            activated = true;
+            PhysicalBox.enabled = false;
+            DestructibleBox.SetActive(true);
+            DropShip = GameObject.FindGameObjectWithTag("Player");
+            AbilityManager = DropShip.GetComponent<AbilityManager>();
+            AbilityManager.EarnPowerUp(PowerUp);
+        }
+
     }
 
     // Update is called once per frame

@@ -1399,6 +1399,7 @@ MonoBehaviour:
   RagdollReference: {fileID: 0}
   MaxHealth: 1
   HealthBar: {fileID: 439686313}
+  BoxDestruction: {fileID: 0}
 --- !u!1 &1939669303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RushDropship
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536657772901358453, guid: b64efcd1457abab418e25783b065dd42,
+        type: 3}
+      propertyPath: CanActivate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}

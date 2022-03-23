@@ -15,6 +15,8 @@ public class ChromperBaseScript : MonoBehaviour
     void Start()
     {
         Ship = Object.FindObjectOfType<DropShipMovement>().gameObject;
+
+        StartCoroutine(CheckKill());
     }
 
     // Update is called once per frame
@@ -37,5 +39,16 @@ public class ChromperBaseScript : MonoBehaviour
         }
 
         //Debug.Log(Vector3.Distance(transform.position, Ship.transform.position));
+    }
+
+    public void CheckIfBehind()
+    {
+
+    }
+
+    IEnumerator CheckKill()
+    {
+        yield return new WaitForSeconds(1f);
+        CheckIfBehind();
     }
 }
