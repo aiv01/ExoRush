@@ -10,6 +10,7 @@ public class DashBoost : MonoBehaviour
     float DashDurationCowntdown;
     bool IsActivated;
     public DropShipMovement MovementScript;
+    [HideInInspector]
     public bool CanActivate;
 
     // Start is called before the first frame update

@@ -14,6 +14,7 @@ public class LaserAbility : MonoBehaviour
     float CurrentRotation;
     public float ReloadTime = 2;
     float ReloadTimer;
+    [HideInInspector]
     public bool CanActivate;
 
     //Damage

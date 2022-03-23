@@ -9,6 +9,7 @@ public class DropShipMissileScript : MonoBehaviour
     float ReloadCowntDown;
     public GameObject Rocket;
     public Transform RocketShootPoint;
+    [HideInInspector]
     public bool CanActivate;
 
     void Start()

@@ -129,7 +129,6 @@ public class AbilityManager : MonoBehaviour
     void AbilityEnabler(bool Enabled)
     {
 
-
         if(CurrentPowerUP == LaserAbiityRef)
         {
             LaserAbiityRef.CanActivate = Enabled;
