@@ -9,8 +9,6 @@ public class ShopItemLogic : MonoBehaviour
     [SerializeField] private TMP_Text currencyText;
     private TMP_Text priceText;
     private Button button;
-
-    private bool isEnabled = false;
     private int currency = 0, price = 0;
 
     private void Awake()
@@ -22,14 +20,16 @@ public class ShopItemLogic : MonoBehaviour
     //if numeric value is detected returns true and changes value 
     private bool GetTextValues(TMP_Text item, int value) 
     {
-        return (int.TryParse(item.text, out value));
+        return int.TryParse(item.text, out value);
     }
 
     void UpdateValues()
     {
+        if (!GetTextValues(currencyText, currency)) Debug.Log("could not find currency value");
         if (!GetTextValues(currencyText, currency)) currency = 0;
         if (!GetTextValues(priceText, price)) price = 1000;
 
+        Debug.LogFormat("Values updated; currency: {0}, price: {1}", currency, price);
         if (price > currency)
         {
             button.interactable = false;
@@ -53,9 +53,10 @@ public class ShopItemLogic : MonoBehaviour
         {
             currency -= price;
             price += 10000;
-            priceText.text = "" + price;
-            currencyText.text = "" + currency;
+            priceText.text = price.ToString();
+            currencyText.text = currency.ToString();
         }
+        Debug.Log("button clicked");
         UpdateValues();
     }
 }
