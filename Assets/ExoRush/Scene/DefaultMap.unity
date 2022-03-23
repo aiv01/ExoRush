@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1223,7 +1223,7 @@ PrefabInstance:
     - target: {fileID: 8323547276105867825, guid: 187d2a6e8509da94089dce5f120d04b4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 150
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8323547276105867825, guid: 187d2a6e8509da94089dce5f120d04b4,
         type: 3}
@@ -1641,7 +1641,7 @@ PrefabInstance:
     - target: {fileID: 4748411846834417701, guid: ef567a085d4b4334b9e9f43db5a9eb41,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.7782516
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4748424222774824315, guid: ef567a085d4b4334b9e9f43db5a9eb41,
         type: 3}
@@ -1702,6 +1702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InGameDestructibleBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751117494814260505, guid: ef567a085d4b4334b9e9f43db5a9eb41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef567a085d4b4334b9e9f43db5a9eb41, type: 3}
