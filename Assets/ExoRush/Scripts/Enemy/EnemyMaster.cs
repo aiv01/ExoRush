@@ -46,7 +46,6 @@ public class EnemyMaster : MonoBehaviour
                 Destroy(this);
             }
 
-            Debug.Log("Destroy");
 
         }
 

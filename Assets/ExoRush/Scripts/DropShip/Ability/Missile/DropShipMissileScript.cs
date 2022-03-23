@@ -9,6 +9,7 @@ public class DropShipMissileScript : MonoBehaviour
     float ReloadCowntDown;
     public GameObject Rocket;
     public Transform RocketShootPoint;
+    public bool CanActivate;
 
     void Start()
     {
@@ -18,13 +19,12 @@ public class DropShipMissileScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Laser"))
+        if (Input.GetButton("Ability")&&CanActivate)
         {
             if (ReloadCowntDown < 0)
             {
                 ReloadCowntDown = ReloadTime;
                 Instantiate(Rocket, RocketShootPoint.position, RocketShootPoint.rotation);
-                Debug.Log("Shoot");
             }
         }
 

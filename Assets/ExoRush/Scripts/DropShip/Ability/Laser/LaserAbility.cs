@@ -14,6 +14,7 @@ public class LaserAbility : MonoBehaviour
     float CurrentRotation;
     public float ReloadTime = 2;
     float ReloadTimer;
+    public bool CanActivate;
 
     //Damage
     public float BetweenDamageTime;
@@ -29,10 +30,14 @@ public class LaserAbility : MonoBehaviour
         ReloadTimer = ReloadTime;
     }
 
+    private void OnDisable()
+    {
+        IsUsingLaser = false;
 
+    }
     void Update()
     {
-        if (Input.GetButton("Laser"))
+        if (Input.GetButton("Ability")&&CanActivate)
         {
             if(!IsUsingLaser)
             {

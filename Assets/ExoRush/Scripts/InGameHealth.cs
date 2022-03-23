@@ -13,6 +13,7 @@ public class InGameHealth : MonoBehaviour
     public float HealInterval = 0.1f;
     float HealIntervalCounter;
     public Shield ShiledScript;
+    public AbilityManager AbilityManager;
 
     public CameraMovementScript CameraScript;
     public DropShipMovement DropShipMovementScript;
@@ -43,9 +44,7 @@ public class InGameHealth : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        Health = Mathf.Clamp(Health,0,MaxHealth);
-
-        HealthBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)Health/(float)MaxHealth;
+        FixHealth();
     }
 
     public void Damage(int damage,bool Shieldable,bool SpeedReduction,bool ShakeCamera)
@@ -64,8 +63,13 @@ public class InGameHealth : MonoBehaviour
         {
             DropShipMovementScript.DamagingCollision();
         }
+
+        FixHealth();
+
         if(Health <= 0)
         {
+            AbilityManager.DisableAbility();
+
             DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
 
             DeadShip.GetComponent<Rigidbody>().velocity = new Vector3(DropShipMovementScript.RotTarget * -1, 0, DropShipMovementScript.CurrentVelocity * 10);
@@ -87,6 +91,13 @@ public class InGameHealth : MonoBehaviour
             
         }
 
+    }
+
+   public void FixHealth()
+    {
+        Health = Mathf.Clamp(Health, 0, MaxHealth);
+
+        HealthBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)Health / (float)MaxHealth;
     }
 
 

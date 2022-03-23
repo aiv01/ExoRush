@@ -108,7 +108,6 @@ public class DropShipMovement : MonoBehaviour
 
     public void DamagingCollision()
     {
-
         DamageAccellerationTimer = 0;
     }
 

@@ -10,6 +10,7 @@ public class DashBoost : MonoBehaviour
     float DashDurationCowntdown;
     bool IsActivated;
     public DropShipMovement MovementScript;
+    public bool CanActivate;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class DashBoost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButton("Ability")&&CanActivate)
         {
             if (!IsActivated)
             {
@@ -47,9 +48,18 @@ public class DashBoost : MonoBehaviour
 
     }
 
-    void Dash()
+
+    public void Dash()
     {
         IsActivated = true;
         DashDurationCowntdown = DashDuration;
     }
+
+    void OnDisable()
+    {
+        MovementScript.BoostSpeedRotation = 0;
+
+        MovementScript.BoostSpeed = 1;
+    }
+
 }
