@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
@@ -14,17 +15,24 @@ public class ShopItemLogic : MonoBehaviour
     private TMP_Text priceText;
     private Button button;
     private GameObject[] tokens;
-    
+    private CurrencyLogic currLogic;
+
     private int price = 0;
     private int priceIndex = 0; //<--- TO BE SAVED
     private int currency = 0;   //<--- TO BE SAVED
 
+
     private void Awake()
     {
+        currLogic = currencyText.gameObject.GetComponent<CurrencyLogic>();
         priceText = GetComponentInChildren<TMP_Text>();
         button = GetComponentInChildren<Button>();
         upgradeTokensBar.sizeDelta = new Vector2(50 * prices.Length, upgradeTokensBar.rect.height);
+        InstantiateTokens();
+    }
 
+    private void InstantiateTokens()
+    {
         tokens = new GameObject[prices.Length];
         for (int i = 0; i < tokens.Length; i++)
         {
@@ -32,7 +40,6 @@ public class ShopItemLogic : MonoBehaviour
             Vector3 newPos = new Vector3(tokens[i].transform.localPosition.x + 50 * i, tokens[i].transform.localPosition.y);
             tokens[i].transform.localPosition = newPos;
             tokens[i].GetComponent<TokenLogic>().ActiveStatus = (i <= priceIndex - 1);
-            //tokens[i].transform.localPosition = new Vector3(50 * priceIndex, tokens[i].transform.position.y);
         }
     }
 
@@ -42,12 +49,16 @@ public class ShopItemLogic : MonoBehaviour
         return int.TryParse(item.text, out value);
     }
 
+    /* reads the values from the texts ands assignes them as numbers
+     * calls the ChangeCurrencyValue() method to update all other items
+     * checks if the item is still purchasable
+    */
     private void UpdateValues()
     {
         if (!GetTextValues(currencyText, ref currency)) currency = 0;
         if (priceIndex > 0) button.GetComponentInChildren<Text>().text = "UPGRADE";
+        currLogic.ChangeCurrencyValue(currency);
 
-        //Debug.LogFormat("Values updated; currency: {0}, price: {1}", currency, price);
         if (price > currency)
         {
             button.interactable = false;
@@ -90,9 +101,15 @@ public class ShopItemLogic : MonoBehaviour
         price = prices[priceIndex];
         UpdateValues();
     }
+    
+    public void OnCurrencyChange()
+    {
+        UpdateValues();
+    }
 
     public void OnButtonClicked()
     {
+        
         if (currency >= price)
         {
             currency -= price;
