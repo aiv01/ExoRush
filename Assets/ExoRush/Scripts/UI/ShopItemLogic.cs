@@ -16,6 +16,7 @@ public class ShopItemLogic : MonoBehaviour
     private Button button;
     private GameObject[] tokens;
     private CurrencyLogic currLogic;
+    private AudioLogic audioLogic;
 
     private int price = 0;
     private int priceIndex = 0; //<--- TO BE SAVED
@@ -25,6 +26,7 @@ public class ShopItemLogic : MonoBehaviour
     private void Awake()
     {
         currLogic = currencyText.gameObject.GetComponent<CurrencyLogic>();
+        audioLogic = GetComponentInChildren<AudioLogic>();
         priceText = GetComponentInChildren<TMP_Text>();
         button = GetComponentInChildren<Button>();
         upgradeTokensBar.sizeDelta = new Vector2(50 * prices.Length, upgradeTokensBar.rect.height);
@@ -118,6 +120,7 @@ public class ShopItemLogic : MonoBehaviour
             priceIndex++;
             UpdatePrice();
             priceText.text = price.ToString();
+            audioLogic.PlayPurchaseClip();
         }
         UpdateValues();
         UpdateTokens();
