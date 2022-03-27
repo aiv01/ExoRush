@@ -32,6 +32,7 @@ public class ScriptLever : MonoBehaviour
         if (!Started && other.name == "Dropship")
         {
             Started = true;
+            Object.FindObjectOfType<InGameScoreCalculation>().AdditionalScore(100);
 
         }
     }

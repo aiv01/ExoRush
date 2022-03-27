@@ -51,7 +51,8 @@ public class InGameHealth : MonoBehaviour
     {
         if (Shieldable && ShiledScript.Active)
         {
-            damage = 0;
+            Object.FindObjectOfType<InGameScoreCalculation>().AdditionalScore(damage);
+            damage = 0;            
         }
         HealAfterCounter = HealAfterTimer;
         Health = Health - damage;
