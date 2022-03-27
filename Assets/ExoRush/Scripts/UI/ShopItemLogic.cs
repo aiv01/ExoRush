@@ -9,8 +9,11 @@ public class ShopItemLogic : MonoBehaviour
 {
     [SerializeField] private int[] prices;
     [SerializeField] private TMP_Text currencyText;
+    [Space]
     [SerializeField] private RectTransform upgradeTokensBar;
     [SerializeField] private GameObject upgradeToken;
+    [Space]
+    [SerializeField] private GameObject highlighter;
 
     private TMP_Text priceText;
     private Button button;
@@ -18,7 +21,29 @@ public class ShopItemLogic : MonoBehaviour
     private CurrencyLogic currLogic;
     private AudioLogic audioLogic;
 
+
     private int price = 0;
+    private float highlightCornerOpacity;
+    private bool isHighlighted = false;
+    private Color color;
+
+    public bool IsHighlighted
+    {
+        get { return isHighlighted; }
+        set
+        {
+            if (!isHighlighted && value)
+            {
+                isHighlighted = true;
+                OnItemHighlighted();
+            } else if (isHighlighted && !value)
+            {
+                isHighlighted = false;
+                OnItemLeft();
+            }
+        }
+    }
+
     private int priceIndex = 0; //<--- TO BE SAVED
     private int currency = 0;   //<--- TO BE SAVED
 
@@ -29,6 +54,8 @@ public class ShopItemLogic : MonoBehaviour
         audioLogic = GetComponentInChildren<AudioLogic>();
         priceText = GetComponentInChildren<TMP_Text>();
         button = GetComponentInChildren<Button>();
+        color = highlighter.GetComponent<Image>().color;
+        highlightCornerOpacity = color.a;
         upgradeTokensBar.sizeDelta = new Vector2(50 * prices.Length, upgradeTokensBar.rect.height);
         InstantiateTokens();
     }
@@ -104,6 +131,7 @@ public class ShopItemLogic : MonoBehaviour
         UpdateValues();
     }
     
+    //tied to an event system to change currency automatically
     public void OnCurrencyChange()
     {
         UpdateValues();
@@ -111,7 +139,6 @@ public class ShopItemLogic : MonoBehaviour
 
     public void OnButtonClicked()
     {
-        
         if (currency >= price)
         {
             currency -= price;
@@ -124,5 +151,15 @@ public class ShopItemLogic : MonoBehaviour
         }
         UpdateValues();
         UpdateTokens();
+    }
+
+    private void OnItemHighlighted()
+    {
+        highlighter.gameObject.SetActive(true);
+    }
+
+    private void OnItemLeft()
+    {
+        highlighter.gameObject.SetActive(false);
     }
 }
