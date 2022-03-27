@@ -16,6 +16,8 @@ public class GragonScript : MonoBehaviour
     void Start()
     {
         Ship = Object.FindObjectOfType<DropShipMovement>().gameObject;
+
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     // Update is called once per frame
