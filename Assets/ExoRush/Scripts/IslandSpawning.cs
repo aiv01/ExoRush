@@ -30,11 +30,11 @@ public class IslandSpawning : MonoBehaviour
                 }
                 else if (SpawingObject[i].transform.tag == "ENSP")
                 {
-                    Instantiate(EnemyLibrary[Random.Range(0, EnemyLibrary.Length)], SpawingObject[i].transform.position, SpawingObject[i].transform.rotation);
+                    Instantiate(EnemyLibrary[Random.Range(0, EnemyLibrary.Length)], SpawingObject[i].transform.position, Quaternion.EulerRotation(0, 180, 0));//SpawingObject[i].transform.rotation);
                 }
                 else if (SpawingObject[i].transform.tag == "BXSP")
                 {
-                    if (!BoxSpawned)
+                    if (!BoxSpawned);
                     {
                         Instantiate(BoxLibrary[Random.Range(0, BoxLibrary.Length)], SpawingObject[i].transform.position, SpawingObject[i].transform.rotation);
                         BoxSpawned = true;
