@@ -346,6 +346,7 @@ MonoBehaviour:
   - {fileID: 8730903837727758737, guid: a30f93e1af771ce45b7ce188021a25b9, type: 3}
   - {fileID: 1633145299958333891, guid: d564c6d39b121d749af52500f85be816, type: 3}
   - {fileID: 2608174169590527575, guid: 02be4a169ac74a94586cf296e5c50ce6, type: 3}
+  - {fileID: 2867350406024451200, guid: 4cb948b4a6f6a0b4e852b6f1ee7e7c47, type: 3}
   EnemyLibrary:
   - {fileID: 5212987549901051944, guid: 081fc2b5097d5bf40990f6e46982e8e3, type: 3}
   - {fileID: 8591811417263670170, guid: 53b54fbdb9f840f488da8bfb6358020f, type: 3}
