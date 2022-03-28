@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
-public class ShopItemLogic : MonoBehaviour
+public class ShopItemLogic : MonoBehaviour, IButtonInteractable
 {
     [SerializeField] private int[] prices;
     [SerializeField] private TMP_Text currencyText;
@@ -23,26 +23,7 @@ public class ShopItemLogic : MonoBehaviour
 
 
     private int price = 0;
-    private float highlightCornerOpacity;
-    private bool isHighlighted = false;
     private Color color;
-
-    public bool IsHighlighted
-    {
-        get { return isHighlighted; }
-        set
-        {
-            if (!isHighlighted && value)
-            {
-                isHighlighted = true;
-                OnItemHighlighted();
-            } else if (isHighlighted && !value)
-            {
-                isHighlighted = false;
-                OnItemLeft();
-            }
-        }
-    }
 
     private int priceIndex = 0; //<--- TO BE SAVED
     private int currency = 0;   //<--- TO BE SAVED
@@ -55,7 +36,6 @@ public class ShopItemLogic : MonoBehaviour
         priceText = GetComponentInChildren<TMP_Text>();
         button = GetComponentInChildren<Button>();
         color = highlighter.GetComponent<Image>().color;
-        highlightCornerOpacity = color.a;
         upgradeTokensBar.sizeDelta = new Vector2(50 * prices.Length, upgradeTokensBar.rect.height);
         InstantiateTokens();
     }
@@ -153,12 +133,12 @@ public class ShopItemLogic : MonoBehaviour
         UpdateTokens();
     }
 
-    private void OnItemHighlighted()
+    public void OnItemHighlighted()
     {
         highlighter.gameObject.SetActive(true);
     }
 
-    private void OnItemLeft()
+    public void OnItemLeft()
     {
         highlighter.gameObject.SetActive(false);
     }

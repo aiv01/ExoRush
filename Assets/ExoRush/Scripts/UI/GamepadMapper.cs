@@ -5,14 +5,14 @@ using UnityEngine.UI;
 struct CellGridPos
 {
     public Vector2 pos;
-    public ShopItemLogic item;
+    public IButtonInteractable item;
 }
 
 public class GamepadMapper : MonoBehaviour
 {
     [SerializeField] private float axisThreshold = 0.8f;
 
-    private ShopItemLogic[] items;
+    private IButtonInteractable[] items;
     private CellGridPos[] cellItems;
 
     private Vector2 indexPos;
@@ -24,7 +24,7 @@ public class GamepadMapper : MonoBehaviour
 
     private void Awake()
     {
-        items = GetComponentsInChildren<ShopItemLogic>();
+        items = GetComponentsInChildren<IButtonInteractable>();
         numColons = GetComponent<GridLayoutGroup>().constraintCount;
         cellItems = new CellGridPos[items.Length];
 
@@ -121,7 +121,7 @@ public class GamepadMapper : MonoBehaviour
             lastIndex = index;
             index = FindItemIndexAtPos(tempPos);
         }
-        if (lastIndex != -1) cellItems[lastIndex].item.IsHighlighted = false;
-        cellItems[index].item.IsHighlighted = true;
+        if (lastIndex != -1) cellItems[lastIndex].item.OnItemLeft();
+        cellItems[index].item.OnItemHighlighted();
     }
 }
