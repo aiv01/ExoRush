@@ -6,6 +6,10 @@ public class BossScript : MonoBehaviour
 {
     public GameObject Player;
     public Animator BossAnimator;
+    public BoxCollider MeleeHitBox;
+    public BoxCollider RangeHitBox;
+
+    Collider[] BoxResults;
 
     AnimatorClipInfo[] CurrentClipName;
 
@@ -101,14 +105,47 @@ public class BossScript : MonoBehaviour
         BossAnimator.SetTrigger("RangeAttack");
     }
 
-    public void MeleeDamage()
+    public void StartAttack()
     {
-        Object.FindObjectOfType<InGameHealth>().Damage(250, false, false, true);
+        BoxResults = (Physics.OverlapBox(MeleeHitBox.transform.TransformPoint(MeleeHitBox.center),MeleeHitBox.size/2*MeleeHitBox.transform.lossyScale.x,MeleeHitBox.transform.rotation));
+        for (int i = 0; i < BoxResults.Length; i++)
+        {
+            if(BoxResults[i].transform.name == "RushDropship")
+            {
+                BoxResults[i].GetComponent<InGameHealth>().Damage(700, false, false, true);
+            }           
+            
+        }
+            
     }
 
-    public void RangeDamage()
+    public void Shoot()
     {
-        Object.FindObjectOfType<InGameHealth>().Damage(500, false, false, true);
+
+        BoxResults = (Physics.OverlapBox(RangeHitBox.transform.TransformPoint(RangeHitBox.center), RangeHitBox.size / 2 * RangeHitBox.transform.lossyScale.x, RangeHitBox.transform.rotation));
+        for (int i = 0; i < BoxResults.Length; i++)
+        {
+            if (BoxResults[i].transform.name == "RushDropship")
+            {
+
+               BoxResults[i].GetComponent<InGameHealth>().Damage(500, false, false, true);
+                
+            }
+
+        }
     }
+
+
+    public void EndAttack()
+    {
+
+    }
+
+    public void PlayStep()
+    {
+
+    }
+
+
 }
 
