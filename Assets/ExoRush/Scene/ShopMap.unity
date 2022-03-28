@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731703, g: 0.13414727, b: 0.12107852, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'LEAVE
+  m_text: 'RETURN TO MENU
 
 '
   m_isRightToLeft: 0
@@ -353,8 +353,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1068,6 +1068,7 @@ GameObject:
   - component: {fileID: 1216295282}
   - component: {fileID: 1216295281}
   - component: {fileID: 1216295280}
+  - component: {fileID: 1216295283}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1092,8 +1093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -441.51904, y: -241.22641}
-  m_SizeDelta: {x: 125, y: 40}
+  m_AnchoredPosition: {x: -441.51904, y: -235}
+  m_SizeDelta: {x: 200, y: 40}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1216295280
 MonoBehaviour:
@@ -1138,7 +1139,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1216295281}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1216295283}
+        m_TargetAssemblyTypeName: MenuSceneJumpLogic, Assembly-CSharp
+        m_MethodName: Execute
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1216295281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,6 +1190,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1216295278}
   m_CullTransparentMesh: 1
+--- !u!114 &1216295283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216295278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f68356c9f7b187429ab64a77375b559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: MainMenu
 --- !u!114 &1230269016 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
