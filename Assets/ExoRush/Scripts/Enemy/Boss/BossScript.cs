@@ -7,6 +7,8 @@ public class BossScript : MonoBehaviour
     public GameObject Player;
     public Animator BossAnimator;
 
+    AnimatorClipInfo[] CurrentClipName;
+
     //Rotation
     public float RotationTollerance;
     public float RotationTimer;
@@ -31,9 +33,18 @@ public class BossScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CurrentClipName = BossAnimator.GetCurrentAnimatorClipInfo(0);
+
+
+
+        if (CurrentClipName[0].clip.name == "Grenadier_MeleeAttack")
+        {
+            //Debug.Log(CurrentClipName[0].clip.AddEvent());
+        }
+
         RotationTempTimer = RotationTempTimer - Time.deltaTime;
 
-        if(RotationTempTimer < 0)
+        if (RotationTempTimer < 0)
         {
             RotateToPlayer();
             RotationTempTimer = RotationTimer;
@@ -56,7 +67,7 @@ public class BossScript : MonoBehaviour
         }
 
     }
-    
+
     void RotateToPlayer()
     {
         Vector3 FaceDirection = Player.transform.position - transform.position;
@@ -68,26 +79,36 @@ public class BossScript : MonoBehaviour
         FaceDirection.y = 0;
 
 
-        float Angle = Vector3.SignedAngle(From, FaceDirection,Vector3.up);
+        float Angle = Vector3.SignedAngle(From, FaceDirection, Vector3.up);
 
-        if((Angle > 0 && Angle > RotationTollerance)|| (Angle < 0 && Angle < RotationTollerance*-1))
+        if ((Angle > 0 && Angle > RotationTollerance) || (Angle < 0 && Angle < RotationTollerance * -1))
         {
             BossAnimator.SetFloat("Angle", Angle / 180);
 
-            Debug.Log(Angle);
-
             BossAnimator.SetTrigger("TurnTrigger");
         }
-            
+
     }
 
     void MaleeAttack()
     {
         BossAnimator.SetTrigger("MeleeAttack");
+
     }
 
     void RangeAttack()
     {
         BossAnimator.SetTrigger("RangeAttack");
     }
+
+    public void MeleeDamage()
+    {
+        Object.FindObjectOfType<InGameHealth>().Damage(250, false, false, true);
+    }
+
+    public void RangeDamage()
+    {
+        Object.FindObjectOfType<InGameHealth>().Damage(500, false, false, true);
+    }
 }
+

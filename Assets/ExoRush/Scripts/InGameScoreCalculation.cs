@@ -14,6 +14,7 @@ public class InGameScoreCalculation : MonoBehaviour
     float ScoreAnimation;
     public float AnimationSizeMultiplier;
     public float AnimationSpeed = 5;
+    public GameObject AdditonalScoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +26,11 @@ public class InGameScoreCalculation : MonoBehaviour
     {
         if(ScoreAnimation > 0)
         {
+
             InGameUMG.GetComponent<UnityEngine.UI.Text>().fontSize = ((int)(AdditionalScoreAnimation.Evaluate(ScoreAnimation)* AnimationSizeMultiplier) + 79);
             ScoreAnimation -= Time.deltaTime*AnimationSpeed;
+
+
         }
     }
 
