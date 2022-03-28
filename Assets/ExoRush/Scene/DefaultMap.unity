@@ -2606,6 +2606,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e23180ac50ef7a147a9a0eb64a582655, type: 2}
+    - target: {fileID: 8991238019231107751, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99691737
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238019231107751, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.078459114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238019231107751, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8991238019406584793, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: m_IsActive
@@ -2615,6 +2630,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020061104797, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99691737
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020061104797, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.078459114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020061104797, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654759, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
@@ -2760,8 +2790,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: Effect
+      value: 
+      objectReference: {fileID: 6411865172233049619, guid: bed69d9e8a68ff140bb6e0b446839342,
+        type: 3}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: ReloadTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailEffect
+      value: 
+      objectReference: {fileID: 6411865172233049619, guid: bed69d9e8a68ff140bb6e0b446839342,
+        type: 3}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: ProjectileEffect
+      value: 
+      objectReference: {fileID: 6411865172233049619, guid: bed69d9e8a68ff140bb6e0b446839342,
+        type: 3}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: AdditionalRandomness
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: AmountOfBulletsForEachCannon
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654781, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
