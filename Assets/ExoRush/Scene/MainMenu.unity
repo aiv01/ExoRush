@@ -133,19 +133,29 @@ PrefabInstance:
     - target: {fileID: 898532044544344008, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
         type: 3}
       propertyPath: m_text
-      value: 'OPTIONS
+      value: 'LEADERBOARD
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 898532044544344008, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
         type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 898532044544344008, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 898532044544344008, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
+        type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 898532044562825524, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
         type: 3}
       propertyPath: m_Name
-      value: Options
+      value: Leaderboard
       objectReference: {fileID: 0}
     - target: {fileID: 898532044562825525, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
         type: 3}

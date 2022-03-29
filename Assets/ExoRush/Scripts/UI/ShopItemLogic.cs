@@ -7,8 +7,8 @@ using TMPro;
 
 public class ShopItemLogic : MonoBehaviour, IButtonInteractable
 {
-    [SerializeField] private int[] prices;
-    [SerializeField] private TMP_Text currencyText;
+    public int[] prices;
+    public TMP_Text currencyText;
     [Space]
     [SerializeField] private RectTransform upgradeTokensBar;
     [SerializeField] private GameObject upgradeToken;
@@ -25,8 +25,8 @@ public class ShopItemLogic : MonoBehaviour, IButtonInteractable
     private int price = 0;
     private Color color;
 
-    private int priceIndex = 0; //<--- TO BE SAVED
-    private int currency = 0;   //<--- TO BE SAVED
+    public int priceIndex = 0; //<--- TO BE SAVED
+    public int currency = 0;   //<--- TO BE SAVED
 
 
     private void Awake()
@@ -62,7 +62,7 @@ public class ShopItemLogic : MonoBehaviour, IButtonInteractable
      * calls the ChangeCurrencyValue() method to update all other items
      * checks if the item is still purchasable
     */
-    private void UpdateValues()
+    public void UpdateValues()
     {
         if (!GetTextValues(currencyText, ref currency)) currency = 0;
         if (priceIndex > 0) button.GetComponentInChildren<Text>().text = "UPGRADE";
@@ -86,7 +86,7 @@ public class ShopItemLogic : MonoBehaviour, IButtonInteractable
     }
 
     //updates price to the next value in the pool
-    private void UpdatePrice()
+    public void UpdatePrice()
     {
         if (priceIndex < prices.Length)
         {
@@ -95,9 +95,10 @@ public class ShopItemLogic : MonoBehaviour, IButtonInteractable
         {
             price = 0;
         }
+        priceText.text = price.ToString();
     }
 
-    private void UpdateTokens()
+    public void UpdateTokens()
     {
         for (int i = 0; i < tokens.Length; i++)
         {
@@ -105,17 +106,8 @@ public class ShopItemLogic : MonoBehaviour, IButtonInteractable
         }
     }
 
-    void Start()
-    {
-        price = prices[priceIndex];
-        UpdateValues();
-    }
-    
     //tied to an event system to change currency automatically
-    public void OnCurrencyChange()
-    {
-        UpdateValues();
-    }
+    public void OnCurrencyChange() => UpdateValues();
 
     public void OnButtonClicked()
     {
@@ -126,20 +118,13 @@ public class ShopItemLogic : MonoBehaviour, IButtonInteractable
 
             priceIndex++;
             UpdatePrice();
-            priceText.text = price.ToString();
             audioLogic.PlayPurchaseClip();
         }
         UpdateValues();
         UpdateTokens();
     }
 
-    public void OnItemHighlighted()
-    {
-        highlighter.gameObject.SetActive(true);
-    }
+    public void OnItemHighlighted() => highlighter.SetActive(true);
 
-    public void OnItemLeft()
-    {
-        highlighter.gameObject.SetActive(false);
-    }
+    public void OnItemLeft() => highlighter.SetActive(false);
 }
