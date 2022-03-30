@@ -151,6 +151,8 @@ MonoBehaviour:
   MissileIcon: {fileID: 21300010, guid: db1119505b88ac244ab924ad71d3ece3, type: 3}
   DashAbilityRef: {fileID: 168456037}
   DashIcon: {fileID: 21300000, guid: be668f8b2ae220b4ba6ed120e2613f06, type: 3}
+  FusionAbilityRef: {fileID: 168456043}
+  FusionIcon: {fileID: 21300014, guid: fc49794cc535bef4f969645c4eb97b80, type: 3}
 --- !u!114 &168456037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +265,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7b015f9c6b29e14ba31e2999de1a4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &168456043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8991238018971403597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168456035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ae5111783f3b54990c880924f6ca42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &168456044 stripped
@@ -2787,6 +2801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: BetweenDamageTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: Damage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}

@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2497919056646313449}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2497919055873717754
 BoxCollider:
@@ -108,7 +108,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2497919056646313449}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2497919056393619094
 BoxCollider:
@@ -165,7 +165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2497919056646313449}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2497919056542605825
 BoxCollider:
@@ -195,7 +195,7 @@ MonoBehaviour:
   isGlobal: 0
   priority: 0
   blendDistance: 20
-  weight: 0.859
+  weight: 1
   sharedProfile: {fileID: 11400000, guid: b8839017bdca47140a93e66fbe42e6ec, type: 2}
 --- !u!1 &2497919056646313448
 GameObject:
@@ -225,9 +225,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2497919056758827756}
-  - {fileID: 2497919056542605839}
   - {fileID: 2497919055873717752}
   - {fileID: 2497919056393619092}
+  - {fileID: 2497919056542605839}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -17,6 +17,8 @@ public class FusionCannonAbility : MonoBehaviour
     GameObject[] TrailPool;
     Vector3 OutWithRandomness;
     public float AdditionalRandomness = 5;
+    public int Damage;
+    public bool CanActivate;
 
     // Start is called before the first frame update
     void Start()
@@ -80,9 +82,15 @@ public class FusionCannonAbility : MonoBehaviour
                     HitPool[i].transform.position = hit.point;
                     HitPool[i].GetComponent<ParticleSystem>().time = 0;
 
+                    if (hit.collider.gameObject.GetComponent<EnemyMaster>() != null)
+                    {
+                        hit.collider.gameObject.GetComponent<EnemyMaster>().Damage(Damage);
 
-                    ReloadTimer = ReloadTime;
+                    }
+
+                    
                 }
+                ReloadTimer = ReloadTime;
             }
 
 

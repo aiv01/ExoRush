@@ -9,6 +9,7 @@ public class EnemyMaster : MonoBehaviour
     int Health;
     public GameObject HealthBar;
     public BoxDestruction BoxDestruction;
+    public bool SwitchMap;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +46,10 @@ public class EnemyMaster : MonoBehaviour
             {
                 Destroy(this);
             }
-
+            if (SwitchMap)
+            {
+                
+            }
 
         }
 

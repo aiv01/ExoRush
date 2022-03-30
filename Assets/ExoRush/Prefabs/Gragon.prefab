@@ -11446,7 +11446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0506d7f231ee5cd4e96db01a10881be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EngageDistance: 130
+  EngageDistance: 160
   Animator: {fileID: 8591811417273069658}
   StaticRock: {fileID: 523882045684775175}
   Debris: {fileID: 7880756155804280648}

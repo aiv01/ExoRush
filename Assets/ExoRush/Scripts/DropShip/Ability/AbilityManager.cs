@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum PowerUps { Laser, Missile, Dash};
+public enum PowerUps { Laser, Missile, Dash,FusionCannon};
 
 public class AbilityManager : MonoBehaviour
 {
@@ -40,7 +40,11 @@ public class AbilityManager : MonoBehaviour
     public DashBoost DashAbilityRef;
     public Sprite DashIcon;
 
-    
+    //Fusion Cannon
+    public FusionCannonAbility FusionAbilityRef;
+    public Sprite FusionIcon;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -97,6 +101,11 @@ public class AbilityManager : MonoBehaviour
                 AbilityFullDuration = 3;
                 AbilitySprite = DashIcon;
                 break;
+            case PowerUps.FusionCannon:
+                CurrentPowerUP = FusionAbilityRef;
+                AbilityFullDuration = 3;
+                AbilitySprite = DashIcon;
+                break;
         }
 
         EffectDurationCowntdown = AbilityFullDuration;
@@ -141,7 +150,11 @@ public class AbilityManager : MonoBehaviour
         {
             DashAbilityRef.CanActivate = Enabled;
         }
-        
+        else if (CurrentPowerUP == FusionAbilityRef)
+        {
+            FusionAbilityRef.CanActivate = Enabled;
+        }
+
     }
 
 }
