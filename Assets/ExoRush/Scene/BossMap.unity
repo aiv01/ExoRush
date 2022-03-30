@@ -360,6 +360,8 @@ MonoBehaviour:
   BeamStartingPoint: {fileID: 1240990204}
   StartingDamage: 1
   ExponentialDamageAmplifier: 1
+  OverchargeSpeedAmplifier: 0.3
+  DischargeTime: 2
 --- !u!4 &401484646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5532166339854406452, guid: b64efcd1457abab418e25783b065dd42,
