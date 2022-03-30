@@ -42,7 +42,7 @@ public class LoadItemsValues : MonoBehaviour
         powerUps = sl.sObj.powerUpIndexes;
         items = GetComponentsInChildren<ShopItemLogic>();
 
-        //powerUps and items should always be at the same lenght. Should they not be, the limit will be set at the lowest value
+        //powerUps and items should always be at the same length. Should they not be, the limit will be set at the lowest value
         int limit = powerUps.Length < items.Length ? powerUps.Length : items.Length;
         for (int i = 0; i < limit; i++)
         {

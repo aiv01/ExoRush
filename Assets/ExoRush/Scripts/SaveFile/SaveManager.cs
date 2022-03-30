@@ -14,7 +14,8 @@ public static class SaveManager
 
         if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
 
-        string json = Encrypt(JsonUtility.ToJson(sObj));
+        //string json = Encrypt(JsonUtility.ToJson(sObj));
+        string json = JsonUtility.ToJson(sObj);
         File.WriteAllText(dir + fileName, json);
     }
 
@@ -25,7 +26,8 @@ public static class SaveManager
 
         if (File.Exists(fullPath))
         {
-            string json = Decode(File.ReadAllText(fullPath));
+            //string json = Decode(File.ReadAllText(fullPath));
+            string json = File.ReadAllText(fullPath);
             Debug.Log(json);
             sObj = JsonUtility.FromJson<SaveObject>(json);
             Debug.LogFormat("Loaded {0}", fullPath);

@@ -140,7 +140,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &13884419 stripped
 GameObject:
@@ -358,6 +358,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BeamStartingPoint: {fileID: 1240990204}
+  StartingDamage: 1
+  ExponentialDamageAmplifier: 1
 --- !u!4 &401484646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5532166339854406452, guid: b64efcd1457abab418e25783b065dd42,
@@ -1470,6 +1472,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1844027688410840, guid: 71a1be879433fcb46b1fb72b19e392ef, type: 3}
+      propertyPath: m_TagString
+      value: BossSphere
+      objectReference: {fileID: 0}
     - target: {fileID: 1878432194002958, guid: 71a1be879433fcb46b1fb72b19e392ef, type: 3}
       propertyPath: m_Name
       value: Grenadier
@@ -2093,10 +2099,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RagdollReference: {fileID: 0}
-  MaxHealth: 1
+  MaxHealth: 10000
   HealthBar: {fileID: 439686313}
   BoxDestruction: {fileID: 0}
-  SwitchMap: 0
+  SwitchMap: 1
   SwitchMapTransition: {fileID: 542023875}
 --- !u!65 &1816641122
 BoxCollider:
