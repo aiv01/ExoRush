@@ -495,7 +495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119923116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -90.750916, y: 55.224148, z: 76.44563}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -836,6 +836,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1989316508}
         m_TargetAssemblyTypeName: ShopItemLogic, Assembly-CSharp
         m_MethodName: OnCurrencyChange
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2128205616}
+        m_TargetAssemblyTypeName: SaveLogic, Assembly-CSharp
+        m_MethodName: SaveFile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1231,6 +1243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: MainMenu
+  saveOnJump: 1
+  liv: {fileID: 54180576}
 --- !u!114 &1216295284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,7 +1771,7 @@ MonoBehaviour:
     currency: 60000
     powerUpIndexes: 00000000000000000000000000000000
     leaderboard: 
-    audioVolume: 0
+  resetFile: 1
 --- !u!4 &2128205617
 Transform:
   m_ObjectHideFlags: 0
@@ -1766,7 +1780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128205615}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1027.1355, y: 544.5974, z: 12.21814}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

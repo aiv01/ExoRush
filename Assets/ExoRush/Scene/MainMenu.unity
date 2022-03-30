@@ -508,6 +508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: ShopMap
+  saveOnJump: 0
+  liv: {fileID: 0}
 --- !u!1 &1044231437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,6 +1452,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: DefaultMap
+  saveOnJump: 0
+  liv: {fileID: 0}
 --- !u!114 &898532044378758781 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2178649579781434482, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
