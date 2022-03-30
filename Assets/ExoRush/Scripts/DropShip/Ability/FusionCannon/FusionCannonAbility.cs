@@ -37,8 +37,7 @@ public class FusionCannonAbility : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    {        
         ReloadTimer = ReloadTimer - Time.deltaTime;
     }
 
@@ -47,7 +46,8 @@ public class FusionCannonAbility : MonoBehaviour
     {
         RaycastHit hit;
 
-        //if (Input.GetButton("Fire1"))
+
+        if (CanActivate)
         {
             if(ReloadTimer <= 0)
             {

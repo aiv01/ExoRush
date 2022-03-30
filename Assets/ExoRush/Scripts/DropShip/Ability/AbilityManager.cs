@@ -153,6 +153,7 @@ public class AbilityManager : MonoBehaviour
         else if (CurrentPowerUP == FusionAbilityRef)
         {
             FusionAbilityRef.CanActivate = Enabled;
+            Debug.Log("FusionCannonSctivate");
         }
 
     }
