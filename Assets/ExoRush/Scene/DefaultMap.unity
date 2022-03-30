@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1164,6 +1164,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Isle3
       objectReference: {fileID: 0}
+    - target: {fileID: 1419503874080713212, guid: 187d2a6e8509da94089dce5f120d04b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8323547276105867825, guid: 187d2a6e8509da94089dce5f120d04b4,
         type: 3}
       propertyPath: m_RootOrder
@@ -1575,6 +1580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InGameDestructibleBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 4751059887670816693, guid: ef567a085d4b4334b9e9f43db5a9eb41,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef567a085d4b4334b9e9f43db5a9eb41, type: 3}
@@ -2037,6 +2047,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Isle4
       objectReference: {fileID: 0}
+    - target: {fileID: 4002868557817123359, guid: 227658385a22f084c90896790cb35f59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 227658385a22f084c90896790cb35f59, type: 3}
 --- !u!1 &1707076333 stripped
@@ -2422,6 +2437,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8375690f262cc7147ae3b5bc48493079, type: 3}
+--- !u!1001 &4344894020483813564
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 859910835436243186, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5955544653874551370, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_Name
+      value: Isle6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 61d4b31236b1c4e4cb84cf17a121c09c, type: 3}
 --- !u!1001 &7537446661224462626
 PrefabInstance:
   m_ObjectHideFlags: 0
