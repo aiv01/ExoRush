@@ -47,8 +47,6 @@ public class LaserAbility : MonoBehaviour
                     IsUsingLaser = true;
                     NormalizedAnimation = 0;
                 }
-
-
             }
 
         }
