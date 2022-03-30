@@ -10,6 +10,7 @@ public class EnemyMaster : MonoBehaviour
     public GameObject HealthBar;
     public BoxDestruction BoxDestruction;
     public bool SwitchMap;
+    public TransitionAutomaticAnimation SwitchMapTransition;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +49,7 @@ public class EnemyMaster : MonoBehaviour
             }
             if (SwitchMap)
             {
-                
+                SwitchMapTransition.Activate();
             }
 
         }

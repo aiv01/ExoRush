@@ -32,9 +32,7 @@ public class IslandWorldGeneration : MonoBehaviour
     {
         if (PrecedentSpawnPosition + DistanceMargin < transform.position.z)
         {
-            SpawnIsland();
-
-            
+            SpawnIsland();            
         }
 
 

@@ -2831,6 +2831,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: DamageDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: ProjectileEffect
       value: 
       objectReference: {fileID: 6411865172233049619, guid: bed69d9e8a68ff140bb6e0b446839342,

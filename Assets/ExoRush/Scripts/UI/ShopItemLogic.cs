@@ -5,10 +5,10 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
 
-public class ShopItemLogic : MonoBehaviour
+public class ShopItemLogic : MonoBehaviour, IButtonInteractable
 {
-    [SerializeField] private int[] prices;
-    [SerializeField] private TMP_Text currencyText;
+    public int[] prices;
+    public TMP_Text currencyText;
     [Space]
     [SerializeField] private RectTransform upgradeTokensBar;
     [SerializeField] private GameObject upgradeToken;
@@ -23,29 +23,10 @@ public class ShopItemLogic : MonoBehaviour
 
 
     private int price = 0;
-    private float highlightCornerOpacity;
-    private bool isHighlighted = false;
     private Color color;
 
-    public bool IsHighlighted
-    {
-        get { return isHighlighted; }
-        set
-        {
-            if (!isHighlighted && value)
-            {
-                isHighlighted = true;
-                OnItemHighlighted();
-            } else if (isHighlighted && !value)
-            {
-                isHighlighted = false;
-                OnItemLeft();
-            }
-        }
-    }
-
-    private int priceIndex = 0; //<--- TO BE SAVED
-    private int currency = 0;   //<--- TO BE SAVED
+    public int priceIndex = 0; //<--- TO BE SAVED
+    public int currency = 0;   //<--- TO BE SAVED
 
 
     private void Awake()
@@ -55,7 +36,6 @@ public class ShopItemLogic : MonoBehaviour
         priceText = GetComponentInChildren<TMP_Text>();
         button = GetComponentInChildren<Button>();
         color = highlighter.GetComponent<Image>().color;
-        highlightCornerOpacity = color.a;
         upgradeTokensBar.sizeDelta = new Vector2(50 * prices.Length, upgradeTokensBar.rect.height);
         InstantiateTokens();
     }
@@ -82,7 +62,7 @@ public class ShopItemLogic : MonoBehaviour
      * calls the ChangeCurrencyValue() method to update all other items
      * checks if the item is still purchasable
     */
-    private void UpdateValues()
+    public void UpdateValues()
     {
         if (!GetTextValues(currencyText, ref currency)) currency = 0;
         if (priceIndex > 0) button.GetComponentInChildren<Text>().text = "UPGRADE";
@@ -106,7 +86,7 @@ public class ShopItemLogic : MonoBehaviour
     }
 
     //updates price to the next value in the pool
-    private void UpdatePrice()
+    public void UpdatePrice()
     {
         if (priceIndex < prices.Length)
         {
@@ -115,9 +95,10 @@ public class ShopItemLogic : MonoBehaviour
         {
             price = 0;
         }
+        priceText.text = price.ToString();
     }
 
-    private void UpdateTokens()
+    public void UpdateTokens()
     {
         for (int i = 0; i < tokens.Length; i++)
         {
@@ -125,17 +106,8 @@ public class ShopItemLogic : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        price = prices[priceIndex];
-        UpdateValues();
-    }
-    
     //tied to an event system to change currency automatically
-    public void OnCurrencyChange()
-    {
-        UpdateValues();
-    }
+    public void OnCurrencyChange() => UpdateValues();
 
     public void OnButtonClicked()
     {
@@ -146,20 +118,13 @@ public class ShopItemLogic : MonoBehaviour
 
             priceIndex++;
             UpdatePrice();
-            priceText.text = price.ToString();
             audioLogic.PlayPurchaseClip();
         }
         UpdateValues();
         UpdateTokens();
     }
 
-    private void OnItemHighlighted()
-    {
-        highlighter.gameObject.SetActive(true);
-    }
+    public void OnItemHighlighted() => highlighter.SetActive(true);
 
-    private void OnItemLeft()
-    {
-        highlighter.gameObject.SetActive(false);
-    }
+    public void OnItemLeft() => highlighter.SetActive(false);
 }

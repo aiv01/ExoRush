@@ -9059,6 +9059,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+  SpeedDisappear: 20
+  Chomper: 1
 --- !u!114 &4695414138660460908
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,6 +20,11 @@ namespace Gamekit3D
 
         const string k_CutoffName = "_Cutoff";
 
+        public float SpeedDisappear;
+        float TempDisappearScale = 10;
+
+        public bool Chomper;
+
         void Awake()
         {
 
@@ -42,6 +47,17 @@ namespace Gamekit3D
 
         void Update()
         {
+            if (Chomper)
+            {
+                TempDisappearScale -= (Time.deltaTime * SpeedDisappear);
+
+                TempDisappearScale = Mathf.Clamp(TempDisappearScale, 0.0f, 10.0f);
+
+                transform.localScale = new Vector3(TempDisappearScale, TempDisappearScale, TempDisappearScale);
+            }
+
+
+
             if (Time.time >= m_StartTime)
             {
                 float cutoff = 0;

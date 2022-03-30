@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class TransitionAutomaticAnimation : MonoBehaviour
 {
     public Volume Volume;
-    public bool Active;
+    bool Active;
     public float TransitionSpeed;
 
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class TransitionAutomaticAnimation : MonoBehaviour
             Volume.weight += Time.deltaTime * TransitionSpeed;
             if(Volume.weight > 1)
             {
-
+                SceneManager.LoadScene("DefaultMap");
             }
         }
     }

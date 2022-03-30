@@ -644,9 +644,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac9db96a4f164040902b9c07a1f501c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: {fileID: 0}
-  Active: 0
-  TransitionSpeed: 0
+  Volume: {fileID: 542023876}
+  TransitionSpeed: 1
+--- !u!114 &542023876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1386271694734150798, guid: 60cd560c69014e0489e0638230fdb382,
+    type: 3}
+  m_PrefabInstance: {fileID: 542023873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542023874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &761602430
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +1882,7 @@ MonoBehaviour:
   HealthBar: {fileID: 439686313}
   BoxDestruction: {fileID: 0}
   SwitchMap: 0
+  SwitchMapTransition: {fileID: 542023875}
 --- !u!65 &1816641122
 BoxCollider:
   m_ObjectHideFlags: 0

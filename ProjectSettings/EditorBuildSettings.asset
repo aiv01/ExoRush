@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ExoRush/Scene/DefaultMap.unity
     guid: 53a27a042c927184eab20307f7ef4557
+  - enabled: 1
+    path: Assets/ExoRush/Scene/ShopMap.unity
+    guid: d7bbcc0ffcadc1a49bc30f10f7b09b20
+  - enabled: 1
+    path: Assets/ExoRush/Scene/MainMenu.unity
+    guid: 24b6b9932a080884ca2fc06a177e0e1e
   m_configObjects: {}
