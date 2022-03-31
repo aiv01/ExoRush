@@ -26,7 +26,6 @@ public class InGameScoreCalculation : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(TransitionMapScore);
 
         if(ScoreAnimation > 0)
         {

@@ -21,7 +21,9 @@ public class InGameHealth : MonoBehaviour
     //Death
     public GameObject DeadShipModel;
     private GameObject DeadShip;
- 
+    public FadeAudioEffect AudioManager;
+    public float AudioFadeOutDuration = 2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,13 +71,23 @@ public class InGameHealth : MonoBehaviour
 
         if(Health <= 0)
         {
-            AbilityManager.DisableAbility();
+            if(AbilityManager != null)
+            {
+                AbilityManager.DisableAbility();
+            }
+
+            if(AudioManager != null)
+            {
+                AudioManager.FadeOUT(AudioFadeOutDuration);
+            }
 
             DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
 
+            gameObject.SetActive(false);
+
             DeadShip.GetComponent<Rigidbody>().velocity = new Vector3(DropShipMovementScript.RotTarget * -1, 0, DropShipMovementScript.CurrentVelocity * 10);
 
-            gameObject.SetActive(false);
+            
             
         }
     }

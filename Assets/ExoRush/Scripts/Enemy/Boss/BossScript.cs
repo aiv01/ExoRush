@@ -112,7 +112,7 @@ public class BossScript : MonoBehaviour
         {
             if(BoxResults[i].transform.name == "RushDropship")
             {
-                BoxResults[i].GetComponent<InGameHealth>().Damage(700, false, false, true);
+                BoxResults[i].GetComponent<InGameHealth>().Damage(700, false, false, false);
             }           
             
         }
@@ -128,7 +128,7 @@ public class BossScript : MonoBehaviour
             if (BoxResults[i].transform.name == "RushDropship")
             {
 
-               BoxResults[i].GetComponent<InGameHealth>().Damage(500, false, false, true);
+               BoxResults[i].GetComponent<InGameHealth>().Damage(500, false, false, false);
                 
             }
 
