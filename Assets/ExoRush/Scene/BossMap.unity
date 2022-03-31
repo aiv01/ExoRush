@@ -365,6 +365,30 @@ MonoBehaviour:
   OverchargeRegenerateSpeed: 0.3
   ReloadTime: 2
   ReuseTime: 3
+--- !u!114 &401484640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401484638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bda1e31318b2504ba345451c2183b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InGameUMG: {fileID: 781506784}
+  PositionMultiplier: 1
+  AdditionalScoreAnimation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  AnimationSizeMultiplier: 0
+  AnimationSpeed: 5
+  AdditonalScoreText: {fileID: 781506784}
+  Bossmap: 1
 --- !u!4 &401484646 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5532166339854406452, guid: b64efcd1457abab418e25783b065dd42,
@@ -2668,6 +2692,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RushDropship
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534967398516740428, guid: b64efcd1457abab418e25783b065dd42,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5536657771641264188, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}

@@ -15,6 +15,8 @@ public class InGameScoreCalculation : MonoBehaviour
     public float AnimationSizeMultiplier;
     public float AnimationSpeed = 5;
     public GameObject AdditonalScoreText;
+    static int TransitionMapScore;
+    public bool Bossmap;
 
     // Start is called before the first frame update
     void Start()
@@ -24,22 +26,26 @@ public class InGameScoreCalculation : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(TransitionMapScore);
+
         if(ScoreAnimation > 0)
         {
-
             InGameUMG.GetComponent<UnityEngine.UI.Text>().fontSize = ((int)(AdditionalScoreAnimation.Evaluate(ScoreAnimation)* AnimationSizeMultiplier) + 79);
             ScoreAnimation -= Time.deltaTime*AnimationSpeed;
-
-
         }
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        PositionScore = transform.position.z * PositionMultiplier;
+        if (!Bossmap)
+        {
+            PositionScore = transform.position.z * PositionMultiplier;
+        }
 
-        TotalScore = EventScore + (int) PositionScore;
+
+
+        TotalScore = EventScore + (int) PositionScore + TransitionMapScore;
 
         InGameUMG.GetComponent<UnityEngine.UI.Text>().text = TotalScore.ToString();
     }
@@ -49,5 +55,13 @@ public class InGameScoreCalculation : MonoBehaviour
         EventScore += Score;
 
         ScoreAnimation = 1;
+    }
+
+    public void TransitionMapScoreCalculator()
+    {
+
+        TotalScore = EventScore + (int)PositionScore + TransitionMapScore;
+
+        TransitionMapScore = TotalScore;
     }
 }

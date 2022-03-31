@@ -9,6 +9,7 @@ public class TransitionAutomaticAnimation : MonoBehaviour
     public Volume Volume;
     bool Active;
     public float TransitionSpeed;
+    GameObject Player;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,9 @@ public class TransitionAutomaticAnimation : MonoBehaviour
             Volume.weight += Time.deltaTime * TransitionSpeed;
             if(Volume.weight > 1)
             {
+                Player = GameObject.FindGameObjectWithTag("Player");
+                Player.GetComponent<InGameScoreCalculation>().AdditionalScore(1000);
+                Player.GetComponent<InGameScoreCalculation>().TransitionMapScoreCalculator();
                 SceneManager.LoadScene("DefaultMap");
             }
         }
