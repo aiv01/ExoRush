@@ -11,34 +11,73 @@ public class BossfightBeam : MonoBehaviour
     public float StartingDamage = 1;
     public float ExponentialDamageAmplifier = 1;
 
-    //Overcharge
-    public float OverchargeSpeedAmplifier = 0.1f;
-    float Overcharge;
-    public float DischargeTime = 2;
-    float DischageTimer;
-    float DischageSpeed = 0.3f;
+    public GameObject BeamBar;
 
-    
-    
+    //Overcharge 2
+    float OverchargeEnergy = 1;
+    public float OverchargeDrainedSpeed;
+    public float OverchargeRegenerateSpeed;
+    public float ReloadTime;
+    float TempReloadTime;
+    public float ReuseTime;
+    float TempReuseTime;
+    bool Active;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Ability")&&Overcharge < 1){
 
-            Overcharge += Time.deltaTime * OverchargeSpeedAmplifier;
+        if (Input.GetButton("Ability")){
 
-            Overcharge = Mathf.Clamp(Overcharge, 0, 1);
+            if (OverchargeEnergy > 0 && TempReuseTime <= 0)
+            {
+                Active = true;
+                OverchargeEnergy -= Time.deltaTime * OverchargeDrainedSpeed;
+                TempReloadTime = ReloadTime;
+            }
 
-            Debug.Log(Overcharge);
+            if (OverchargeEnergy <= 0)
+            {
+                Active = false;
+            }
 
-            DischageTimer = DischargeTime;
+        }
+        else
+        {
+            Active = false;
+        }
 
+        if (TempReloadTime <= 0 && !Active)
+        {
+            OverchargeEnergy += Time.deltaTime * OverchargeRegenerateSpeed;
+        }
+        else
+        {
+            TempReloadTime -= Time.deltaTime;
+        }
+
+
+        if (OverchargeEnergy <= 0 && TempReuseTime <= 0)
+        {
+            TempReuseTime = ReuseTime;
+        }
+        else
+        {
+            TempReuseTime -= Time.deltaTime;
+        }
+
+        OverchargeEnergy = Mathf.Clamp(OverchargeEnergy, 0, 1);
+
+
+        if (Active)
+        {
             RaycastHit hit;
             if (Physics.Raycast(BeamStartingPoint.transform.position, BeamStartingPoint.transform.forward, out hit, Mathf.Infinity))
             {
@@ -65,13 +104,15 @@ public class BossfightBeam : MonoBehaviour
             }
 
             Debug.DrawRay(BeamStartingPoint.transform.position, BeamStartingPoint.transform.forward * 9999, Color.green);
-        }
-        else
-        {
-            DischageTimer -= Time.deltaTime * DischageSpeed;
+
+
+
         }
 
+        BeamBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)OverchargeEnergy;
+
     }
+
 
     private void OnDrawGizmos()
     {
