@@ -358,11 +358,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BeamStartingPoint: {fileID: 1240990204}
-  StartingDamage: 1
-  ExponentialDamageAmplifier: 1
+  StartingDamage: 1.5
+  ExponentialDamageAmplifier: 2
   BeamBar: {fileID: 406171195}
-  OverchargeDrainedSpeed: 0.2
-  OverchargeRegenerateSpeed: 0.5
+  OverchargeDrainedSpeed: 0.15
+  OverchargeRegenerateSpeed: 0.3
   ReloadTime: 2
   ReuseTime: 3
 --- !u!4 &401484646 stripped
@@ -880,7 +880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Volume: {fileID: 542023876}
-  TransitionSpeed: 1
+  TransitionSpeed: 0.2
 --- !u!114 &542023876 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1386271694734150798, guid: 60cd560c69014e0489e0638230fdb382,
@@ -2389,6 +2389,7 @@ MonoBehaviour:
   BoxDestruction: {fileID: 0}
   SwitchMap: 1
   SwitchMapTransition: {fileID: 542023875}
+  Animator: {fileID: 1816641119}
 --- !u!65 &1816641122
 BoxCollider:
   m_ObjectHideFlags: 0

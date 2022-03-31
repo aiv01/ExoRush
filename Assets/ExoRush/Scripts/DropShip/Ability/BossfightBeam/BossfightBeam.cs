@@ -109,7 +109,7 @@ public class BossfightBeam : MonoBehaviour
 
         }
 
-        BeamBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)OverchargeEnergy;
+        BeamBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)OverchargeEnergy * -1 +1;
 
     }
 

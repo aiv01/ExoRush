@@ -11,6 +11,7 @@ public class EnemyMaster : MonoBehaviour
     public BoxDestruction BoxDestruction;
     public bool SwitchMap;
     public TransitionAutomaticAnimation SwitchMapTransition;
+    public Animator Animator;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,11 @@ public class EnemyMaster : MonoBehaviour
 
         if(Health <= 0)
         {
+            if(Animator != null)
+            {
+                Animator.SetTrigger("Death");
+            }
+
             if(RagdollReference != null)
             {
                 RagdollReference.Replace();
