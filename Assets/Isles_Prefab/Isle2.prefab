@@ -194,7 +194,7 @@ MonoBehaviour:
   BoxLibrary:
   - {fileID: 4751059887670816693, guid: ef567a085d4b4334b9e9f43db5a9eb41, type: 3}
   SpawnRateMuiltiplier: 0.5
-  DistanceMultiplier: 0.2
+  DistanceMultiplier: 0.5
 --- !u!1 &6509394887256634004
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class BossfightBeam : MonoBehaviour
     public float ExponentialDamageAmplifier = 1;
 
     public GameObject BeamBar;
+    public LaserBeamScript BeamEffect;
 
     //Overcharge 2
     float OverchargeEnergy = 1;
@@ -53,6 +54,8 @@ public class BossfightBeam : MonoBehaviour
         {
             Active = false;
         }
+
+        BeamEffect.SetActivation(Active);
 
         if (TempReloadTime <= 0 && !Active)
         {
