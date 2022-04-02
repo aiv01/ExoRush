@@ -9,11 +9,12 @@ public class ScriptLever : MonoBehaviour
     bool Started;
     float TempTimer;
     public IslandScriptLever IslandScripLever;
+    public float MaxSlideSpawn = 80;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = new Vector3 (transform.position.x + Random.Range(MaxSlideSpawn*-1,MaxSlideSpawn), transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame

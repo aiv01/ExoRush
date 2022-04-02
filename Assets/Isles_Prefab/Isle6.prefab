@@ -172,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4059194329756010737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.043156, y: 0, z: 0}
+  m_LocalPosition: {x: -41.043156, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8057204842989228187}
@@ -511,6 +511,10 @@ PrefabInstance:
     - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_Name
       value: WallLong01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4874148236562170, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_RootOrder
@@ -954,6 +958,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallLong02Broken (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1166,6 +1174,10 @@ PrefabInstance:
     - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_Name
       value: WallTallCorner01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4499794587782668, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_RootOrder
@@ -2130,6 +2142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallLong01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4874148236562170, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -3092,6 +3108,10 @@ PrefabInstance:
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_Name
       value: WallLong02Broken (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
@@ -4378,6 +4398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2867350406024451207, guid: 4cb948b4a6f6a0b4e852b6f1ee7e7c47,
         type: 3}
+      propertyPath: MaxSlideSpawn
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867350406024451207, guid: 4cb948b4a6f6a0b4e852b6f1ee7e7c47,
+        type: 3}
       propertyPath: IslandScripLever
       value: 
       objectReference: {fileID: 2673997922242784919}
@@ -4474,6 +4499,10 @@ PrefabInstance:
     - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_Name
       value: WallTallCorner01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4499794587782668, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_RootOrder
@@ -4925,6 +4954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallLong02Broken (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5263,6 +5296,10 @@ PrefabInstance:
     - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_Name
       value: WallLong01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4874148236562170, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_RootOrder
@@ -5639,6 +5676,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallLong02Broken (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5697,12 +5738,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+--- !u!1 &8054215484829356699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8052535394271715503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8057204842989228187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d,
     type: 3}
   m_PrefabInstance: {fileID: 8052535394271715503}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &3074630604522468646
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054215484829356699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.78, y: 19.94, z: 55.38}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &8145246486493652902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6088,6 +6148,10 @@ PrefabInstance:
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_Name
       value: WallLong02Broken (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
