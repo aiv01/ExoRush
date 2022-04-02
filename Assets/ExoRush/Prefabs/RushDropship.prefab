@@ -311,6 +311,9 @@ MonoBehaviour:
   BoostSpeedRotation: 0
   BoostSpeedRotationAmplifier: 50
   BoostSpeed: 1
+  TransferDistance: 0
+  TransitionTime: 0
+  TransitionEffect: {fileID: 0}
 --- !u!114 &8991238020083654781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,6 +469,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   AnimationLenght: 0.7
   ReloadTime: 2
+  CanActivate: 0
+  BetweenDamageTime: 0
+  Damage: 0
 --- !u!114 &8991238020083654779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,6 +523,7 @@ MonoBehaviour:
   HealAfterAmount: 5
   HealInterval: 0.025
   ShiledScript: {fileID: 0}
+  AbilityManager: {fileID: 0}
   CameraScript: {fileID: 0}
   DropShipMovementScript: {fileID: 8991238020083654759}
   DeadShipModel: {fileID: 0}
@@ -535,6 +542,7 @@ MonoBehaviour:
   ReloadTime: 2
   Rocket: {fileID: 1316536308641708600, guid: 445d6316429c2f741b042db224a06465, type: 3}
   RocketShootPoint: {fileID: 8991238020049082728}
+  CanActivate: 0
 --- !u!114 &8991238020175638958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +556,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shiled: {fileID: 8991238018827756336}
+  Active: 0
+  EnergyDrainedSpeed: 0
+  EnergyRegenerateSpeed: 0
+  ReloadTime: 0
+  ReuseTime: 0
+  ShieldBar: {fileID: 0}
 --- !u!1 &8989554891451571408
 GameObject:
   m_ObjectHideFlags: 0
@@ -24586,7 +24600,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 63ae132df59896a45878a19448d64b36, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29439,13 +29452,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
+  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 000304
+  m_VertexStreams: 0003
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -39412,7 +39425,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.3
+      scalar: 0.2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -40043,7 +40056,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.5
+      value: 0.3
       mode: 0
       spread: 0
       speed:
@@ -44101,7 +44114,7 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 1
+  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 1
@@ -44131,7 +44144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8991238018827756339
 Transform:
   m_ObjectHideFlags: 0
@@ -44173,7 +44186,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e23180ac50ef7a147a9a0eb64a582655, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -44717,27 +44730,27 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 89d43f1844a432f4fa92772ebc2eaca9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8139481
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 89d43f1844a432f4fa92772ebc2eaca9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000081460335
+      value: 0.5809377
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 89d43f1844a432f4fa92772ebc2eaca9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000000036656542
+      value: 0.0000000029836538
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 89d43f1844a432f4fa92772ebc2eaca9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -2.9860545e-16
+      value: 0.0000000021295141
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 89d43f1844a432f4fa92772ebc2eaca9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 71.033
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 89d43f1844a432f4fa92772ebc2eaca9,
         type: 3}

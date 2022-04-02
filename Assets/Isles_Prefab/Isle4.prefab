@@ -350,7 +350,7 @@ MonoBehaviour:
   - {fileID: 5212987549901051944, guid: 081fc2b5097d5bf40990f6e46982e8e3, type: 3}
   BoxLibrary:
   - {fileID: 4751059887670816693, guid: ef567a085d4b4334b9e9f43db5a9eb41, type: 3}
-  SpawnRateMuiltiplier: 0.5
+  SpawnRateMuiltiplier: 0.3
 --- !u!1 &8504932989696051416
 GameObject:
   m_ObjectHideFlags: 0
