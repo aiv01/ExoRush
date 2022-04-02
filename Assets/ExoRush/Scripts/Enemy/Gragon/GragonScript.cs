@@ -11,6 +11,8 @@ public class GragonScript : MonoBehaviour
     public GameObject StaticRock;
     public GameObject Debris;
     public bool AnimationActivated;
+    public AudioSource AttackSound;
+    public AudioSource RockSound;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +29,14 @@ public class GragonScript : MonoBehaviour
         {
             Animator.enabled = true;
             StaticRock.SetActive(false);
-            Debris.SetActive(true);   
+            Debris.SetActive(true);
+            if (!AnimationActivated)
+            {
+                AttackSound.Play();
+                RockSound.Play();
+            }
             AnimationActivated = true;
+
             
         }
     }

@@ -11,6 +11,7 @@ public class BoxDestruction : MonoBehaviour
     public PowerUps PowerUp;
     public bool ForcedPowerup;
     bool activated;
+    public AudioSource AudioSource;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,7 @@ public class BoxDestruction : MonoBehaviour
             DropShip = GameObject.FindGameObjectWithTag("Player");
             AbilityManager = DropShip.GetComponent<AbilityManager>();
             AbilityManager.EarnPowerUp(PowerUp);
+            AudioSource.Play();
         }
 
     }

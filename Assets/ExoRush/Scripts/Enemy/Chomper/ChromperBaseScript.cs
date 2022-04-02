@@ -10,6 +10,8 @@ public class ChromperBaseScript : MonoBehaviour
     public float DamageRadius;
     public Animator ChompAnimator;
     bool HasDamaged;
+    public AudioSource AttackSound;
+    public bool SoundStarted;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +27,20 @@ public class ChromperBaseScript : MonoBehaviour
         if(Vector3.Distance(transform.position, Ship.transform.position) < SpotRadius)
         {
             ChompAnimator.SetTrigger("Spotted");
+            
         }
 
         if(Vector3.Distance(transform.position,Ship.transform.position) < AttackRadius)
         {
-            ChompAnimator.SetTrigger("Attack");           
+            ChompAnimator.SetTrigger("Attack");
+            
+            if (!SoundStarted)
+            {
+                AttackSound.Play();
+            }
+
+            SoundStarted = true;
+            
         }
 
         if (Vector3.Distance(transform.position, Ship.transform.position) < DamageRadius && !HasDamaged)
@@ -43,7 +54,7 @@ public class ChromperBaseScript : MonoBehaviour
 
     public void CheckIfBehind()
     {
-
+        
     }
 
     IEnumerator CheckKill()

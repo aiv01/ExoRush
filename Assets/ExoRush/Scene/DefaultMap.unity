@@ -531,6 +531,21 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7500869926482784174, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500869926482784175, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 472276263}
+    - target: {fileID: 7706277212973641982, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8054003184334950109, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -906,6 +921,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!82 &472276263 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7706277212973641982, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
+    type: 3}
+  m_PrefabInstance: {fileID: 285623118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &492383443 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8991238018884839838, guid: 65a72c65f58be3f438d1ddf71ed4aef4,

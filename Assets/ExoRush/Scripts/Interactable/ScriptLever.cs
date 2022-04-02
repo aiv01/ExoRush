@@ -10,6 +10,7 @@ public class ScriptLever : MonoBehaviour
     float TempTimer;
     public IslandScriptLever IslandScripLever;
     public float MaxSlideSpawn = 80;
+    public AudioSource AudioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class ScriptLever : MonoBehaviour
             Started = true;
             Object.FindObjectOfType<InGameScoreCalculation>().AdditionalScore(100);
             IslandScripLever.LeverActivated();
+            AudioSource.Play();
         }
     }
 }
