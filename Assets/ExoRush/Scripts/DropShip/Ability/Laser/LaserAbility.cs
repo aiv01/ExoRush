@@ -16,6 +16,7 @@ public class LaserAbility : MonoBehaviour
     float ReloadTimer;
     [HideInInspector]
     public bool CanActivate;
+    public AudioSource LaserSound;
 
     //Damage
     public float BetweenDamageTime;
@@ -46,6 +47,7 @@ public class LaserAbility : MonoBehaviour
                 {
                     IsUsingLaser = true;
                     NormalizedAnimation = 0;
+                    LaserSound.Play();
                 }
             }
 

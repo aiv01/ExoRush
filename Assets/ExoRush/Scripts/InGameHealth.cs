@@ -24,6 +24,10 @@ public class InGameHealth : MonoBehaviour
     public FadeAudioEffect AudioManager;
     public float AudioFadeOutDuration = 2;
 
+    //Sound
+    public AudioSource ImpactAudio;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +65,7 @@ public class InGameHealth : MonoBehaviour
         if (ShakeCamera)
         {
             CameraScript.ShakeCamera();
+            ImpactAudio.Play();
         }
         if (SpeedReduction)
         {
