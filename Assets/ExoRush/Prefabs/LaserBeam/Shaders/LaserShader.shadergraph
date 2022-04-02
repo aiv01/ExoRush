@@ -168,6 +168,20 @@
             },
             "m_InputSlot": {
                 "m_Node": {
+                    "m_Id": "5786bd7d377241dbb39eb987056ca1c9"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "2739e23c79264ed9b988e8a61d4d2799"
+                },
+                "m_SlotId": 2
+            },
+            "m_InputSlot": {
+                "m_Node": {
                     "m_Id": "59837974ee9c4206997d885202b85590"
                 },
                 "m_SlotId": 0
@@ -588,20 +602,6 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "5786bd7d377241dbb39eb987056ca1c9"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "d0a3c35b4dc44c2d8b65deb94c0bcb18"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
                     "m_Id": "a40f1f9c178e4ebd9efdcc845c2cea80"
                 },
                 "m_SlotId": 0
@@ -640,7 +640,7 @@
                 "m_Node": {
                     "m_Id": "e77cd806b08a439a9fe0a86e36cfa38b"
                 },
-                "m_SlotId": 7
+                "m_SlotId": 4
             },
             "m_InputSlot": {
                 "m_Node": {
@@ -680,8 +680,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 2128.0,
-            "y": -255.0
+            "x": 2264.0,
+            "y": -255.00003051757813
         },
         "m_Blocks": [
             {
@@ -918,7 +918,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":2800000,\"guid\":\"abb227010a59d77429b4bd449bf3fe89\",\"type\":3}}",
         "m_Guid": ""
     },
     "m_Modifiable": true,
@@ -1064,7 +1064,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
@@ -1356,10 +1356,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1767.9998779296875,
-            "y": -32.00000762939453,
+            "x": 1898.0001220703125,
+            "y": -87.00000762939453,
             "width": 130.0,
-            "height": 118.0
+            "height": 118.00000762939453
         }
     },
     "m_Slots": [
@@ -1819,10 +1819,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1558.0,
-            "y": -8.0,
-            "width": 116.0,
-            "height": 94.0
+            "x": 1514.0001220703125,
+            "y": 1.9999943971633912,
+            "width": 116.00000762939453,
+            "height": 94.00000762939453
         }
     },
     "m_Slots": [
@@ -2956,10 +2956,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1384.0,
-            "y": -145.00001525878907,
-            "width": 130.0,
-            "height": 118.0
+            "x": 1369.0,
+            "y": -145.0,
+            "width": 208.0,
+            "height": 302.0
         }
     },
     "m_Slots": [
@@ -3820,10 +3820,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 760.0,
-            "y": 144.00001525878907,
-            "width": 126.0,
-            "height": 118.0
+            "x": 735.0,
+            "y": 132.0,
+            "width": 208.0,
+            "height": 302.0
         }
     },
     "m_Slots": [
@@ -4216,7 +4216,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
