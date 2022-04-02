@@ -14,6 +14,8 @@ public class BossfightBeam : MonoBehaviour
     public GameObject BeamBar;
     public LaserBeamScript BeamEffect;
 
+    
+
     //Overcharge 2
     float OverchargeEnergy = 1;
     public float OverchargeDrainedSpeed;
@@ -23,6 +25,9 @@ public class BossfightBeam : MonoBehaviour
     public float ReuseTime;
     float TempReuseTime;
     bool Active;
+
+    
+
 
 
 

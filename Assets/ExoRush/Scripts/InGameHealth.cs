@@ -26,6 +26,8 @@ public class InGameHealth : MonoBehaviour
 
     //Sound
     public AudioSource ImpactAudio;
+    public AudioSource DeathAudio;
+
 
 
     // Start is called before the first frame update
@@ -76,6 +78,11 @@ public class InGameHealth : MonoBehaviour
 
         if(Health <= 0)
         {
+            if(DeathAudio != null)
+            {
+                DeathAudio.Play();
+            }
+
             if(AbilityManager != null)
             {
                 AbilityManager.DisableAbility();
