@@ -20,6 +20,7 @@ public class FusionCannonAbility : MonoBehaviour
     public float DamageDistance = 10;
     public int Damage;
     public bool CanActivate;
+    public AudioSource[] Audio;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +50,9 @@ public class FusionCannonAbility : MonoBehaviour
 
         if (CanActivate)
         {
+
+            SetAudioVolume(1);
+
             if(ReloadTimer <= 0)
             {
                 RightCannon = !RightCannon;
@@ -98,6 +102,18 @@ public class FusionCannonAbility : MonoBehaviour
 
 
         }
+        else
+        {
+            SetAudioVolume(0);
+        }
 
+    }
+
+    public void SetAudioVolume(float Volume)
+    {
+        for (int i = 0; i < Audio.Length; i++)
+        {
+            Audio[i].volume = Volume;
+        }
     }
 }

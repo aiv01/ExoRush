@@ -13,6 +13,8 @@ public class BossScript : MonoBehaviour
 
     AnimatorClipInfo[] CurrentClipName;
 
+    public AudioSource TurnAudio;
+
     //Rotation
     public float RotationTollerance;
     public float RotationTimer;
@@ -21,10 +23,12 @@ public class BossScript : MonoBehaviour
     //MeleeAttack
     public float MeleeTimer;
     float MeleeTempTimer;
+    public AudioSource MeleeAttackSource;
 
     //RangeAttack
     public float RangeTimer;
     float RangeTempTimer;
+    public AudioSource RangeAttackSource;
 
 
     // Start is called before the first frame update
@@ -39,7 +43,14 @@ public class BossScript : MonoBehaviour
     {
         CurrentClipName = BossAnimator.GetCurrentAnimatorClipInfo(0);
 
-
+        if (BossAnimator.GetCurrentAnimatorStateInfo(0).IsName("Turn"))
+        {
+            TurnAudio.volume = 1;
+        }
+        else
+        {
+            TurnAudio.volume = 0;
+        }
 
         if (CurrentClipName[0].clip.name == "Grenadier_MeleeAttack")
         {
@@ -94,19 +105,23 @@ public class BossScript : MonoBehaviour
 
     }
 
+
+
     void MaleeAttack()
     {
         BossAnimator.SetTrigger("MeleeAttack");
-
+        
     }
 
     void RangeAttack()
     {
         BossAnimator.SetTrigger("RangeAttack");
+       
     }
 
     public void StartAttack()
     {
+        MeleeAttackSource.Play();
         BoxResults = (Physics.OverlapBox(MeleeHitBox.transform.TransformPoint(MeleeHitBox.center),MeleeHitBox.size/2*MeleeHitBox.transform.lossyScale.x,MeleeHitBox.transform.rotation));
         for (int i = 0; i < BoxResults.Length; i++)
         {
@@ -121,7 +136,7 @@ public class BossScript : MonoBehaviour
 
     public void Shoot()
     {
-
+        RangeAttackSource.Play();
         BoxResults = (Physics.OverlapBox(RangeHitBox.transform.TransformPoint(RangeHitBox.center), RangeHitBox.size / 2 * RangeHitBox.transform.lossyScale.x, RangeHitBox.transform.rotation));
         for (int i = 0; i < BoxResults.Length; i++)
         {
