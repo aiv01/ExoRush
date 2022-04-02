@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class InGameHealth : MonoBehaviour
 {
@@ -17,6 +19,8 @@ public class InGameHealth : MonoBehaviour
 
     public CameraMovementScript CameraScript;
     public DropShipMovement DropShipMovementScript;
+
+    public Volume DamageVolume;
 
     //Death
     public GameObject DeadShipModel;
@@ -122,7 +126,12 @@ public class InGameHealth : MonoBehaviour
     {
         Health = Mathf.Clamp(Health, 0, MaxHealth);
 
+        DamageVolume.weight = ((float)Health / (float)MaxHealth) * -1 + 0.8f;
+
         HealthBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)Health / (float)MaxHealth;
+
+        
+        
     }
 
 
