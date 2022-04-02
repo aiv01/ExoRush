@@ -8,6 +8,7 @@ public class ScriptLever : MonoBehaviour
     public float AnimSpeed = 1;
     bool Started;
     float TempTimer;
+    public IslandScriptLever IslandScripLever;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,7 @@ public class ScriptLever : MonoBehaviour
         {
             Started = true;
             Object.FindObjectOfType<InGameScoreCalculation>().AdditionalScore(100);
-
+            IslandScripLever.LeverActivated();
         }
     }
 }
