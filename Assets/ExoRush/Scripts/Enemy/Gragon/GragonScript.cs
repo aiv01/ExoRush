@@ -23,7 +23,6 @@ public class GragonScript : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        StartCoroutine(CheckKill());
     }
 
     // Update is called once per frame
@@ -43,6 +42,7 @@ public class GragonScript : MonoBehaviour
 
             
         }
+        CheckIfBehind();
     }
 
     void OnTriggerEnter(Collider other)
@@ -59,14 +59,9 @@ public class GragonScript : MonoBehaviour
     {
         if (transform.position.z < Ship.transform.position.z + DestroyOffset)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
 
     }
 
-    IEnumerator CheckKill()
-    {
-        yield return new WaitForSeconds(1f);
-        CheckIfBehind();
-    }
 }

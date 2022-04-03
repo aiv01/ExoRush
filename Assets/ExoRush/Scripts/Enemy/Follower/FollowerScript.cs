@@ -33,7 +33,7 @@ public class FollowerScript : MonoBehaviour
     {
         Ship = Object.FindObjectOfType<DropShipMovement>().gameObject;
 
-        StartCoroutine(CheckKill());
+ 
     }
 
     // Update is called once per frame
@@ -49,6 +49,8 @@ public class FollowerScript : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x,transform.position.y * ((Time.deltaTime * FallingSpeed)*-1));
         }
+
+        CheckIfBehind();
 
         var mask = ~(22 << 24);
         mask = ~mask;
@@ -131,9 +133,4 @@ public class FollowerScript : MonoBehaviour
 
     }
 
-    IEnumerator CheckKill()
-    {
-        yield return new WaitForSeconds(1f);
-        CheckIfBehind();
-    }
 }

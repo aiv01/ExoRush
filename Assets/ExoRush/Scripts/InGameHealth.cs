@@ -32,6 +32,10 @@ public class InGameHealth : MonoBehaviour
     public AudioSource ImpactAudio;
     public AudioSource DeathAudio;
 
+    //Inulnerability
+    public float InvulnerabilityTimeFrame = 0.2f;
+    float TempInvulnerabiliy;
+
 
 
     // Start is called before the first frame update
@@ -51,6 +55,8 @@ public class InGameHealth : MonoBehaviour
             Health += HealAfterAmount;
         }
 
+        InvulnerabilityTimeFrame -= Time.deltaTime;
+
     }
 
     // Update is called once per frame
@@ -61,6 +67,14 @@ public class InGameHealth : MonoBehaviour
 
     public void Damage(int damage,bool Shieldable,bool SpeedReduction,bool ShakeCamera)
     {
+
+        if(TempInvulnerabiliy > 0)
+        {
+            damage = 0;
+        }
+
+        TempInvulnerabiliy = InvulnerabilityTimeFrame;
+
         if (Shieldable && ShiledScript.Active)
         {
             Object.FindObjectOfType<InGameScoreCalculation>().AdditionalScore(damage);
