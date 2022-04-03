@@ -26,7 +26,10 @@ public class BossfightBeam : MonoBehaviour
     float TempReuseTime;
     bool Active;
 
-    
+    //LVL
+    public AbilityLoader AbilityLoader;
+    int AbilityLvl;
+    public int AbilityIndex;
 
 
 
@@ -34,6 +37,8 @@ public class BossfightBeam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AbilityLvlLoader();
+        ExponentialDamageAmplifier += AbilityLvl;
     }
 
     // Update is called once per frame
@@ -126,5 +131,10 @@ public class BossfightBeam : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawSphere(hitPos, 1);
+    }
+
+    public void AbilityLvlLoader()
+    {
+        AbilityLvl = AbilityLoader.AbilityLvl[AbilityIndex] + 1;
     }
 }

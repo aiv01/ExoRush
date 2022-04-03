@@ -22,9 +22,16 @@ public class FusionCannonAbility : MonoBehaviour
     public bool CanActivate;
     public AudioSource[] Audio;
 
+    //LVL
+    public AbilityLoader AbilityLoader;
+    public int AbilityLvl;
+    public int AbilityIndex;
+
     // Start is called before the first frame update
     void Start()
     {
+        AbilityLvlLoader();
+
         HitPool = new GameObject[AmountOfBulletsForEachCannon + 1];
 
         TrailPool = new GameObject[AmountOfBulletsForEachCannon + 1];
@@ -115,5 +122,10 @@ public class FusionCannonAbility : MonoBehaviour
         {
             Audio[i].volume = Volume;
         }
+    }
+
+    public void AbilityLvlLoader()
+    {
+        AbilityLvl = AbilityLoader.AbilityLvl[AbilityIndex] + 1;
     }
 }

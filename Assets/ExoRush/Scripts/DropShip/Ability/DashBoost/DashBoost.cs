@@ -13,10 +13,17 @@ public class DashBoost : MonoBehaviour
     [HideInInspector]
     public bool CanActivate;
 
+    //LVL
+    public AbilityLoader AbilityLoader;
+    public int AbilityLvl;
+    public int AbilityIndex;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        AbilityLvlLoader();
     }
 
     // Update is called once per frame
@@ -61,6 +68,11 @@ public class DashBoost : MonoBehaviour
         MovementScript.BoostSpeedRotation = 0;
 
         MovementScript.BoostSpeed = 1;
+    }
+
+    public void AbilityLvlLoader()
+    {
+        AbilityLvl = AbilityLoader.AbilityLvl[AbilityIndex] + 1;
     }
 
 }

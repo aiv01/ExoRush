@@ -23,13 +23,21 @@ public class LaserAbility : MonoBehaviour
     float TempDamageTime;
     public int Damage;
 
+    //LVL
+    public AbilityLoader AbilityLoader;
+    public int AbilityLvl;
+    public int AbilityIndex;
+
     void Start()
     {
+        AbilityLvlLoader();
+
         for (int i = 0; i < LaserGameObject.Length; i++)
         {
             LaserGameObject[i].GetComponent<LineRenderer>().widthMultiplier = CurrentLaserWidth = 0;
         }
         ReloadTimer = ReloadTime;
+
     }
 
     private void OnDisable()
@@ -114,5 +122,10 @@ public class LaserAbility : MonoBehaviour
         }
 
 
+    }
+
+    public void AbilityLvlLoader()
+    {
+        AbilityLvl = AbilityLoader.AbilityLvl[AbilityIndex] + 1;
     }
 }

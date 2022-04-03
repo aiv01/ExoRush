@@ -366,6 +366,8 @@ MonoBehaviour:
   OverchargeRegenerateSpeed: 0.3
   ReloadTime: 2
   ReuseTime: 3
+  AbilityLoader: {fileID: 401484641}
+  AbilityIndex: 5
 --- !u!114 &401484640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +392,23 @@ MonoBehaviour:
   AnimationSpeed: 5
   AdditonalScoreText: {fileID: 781506784}
   Bossmap: 1
+--- !u!114 &401484641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401484638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca549f3204cf7a4595f51416e0f1d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveObject:
+    currency: 0
+    powerUpIndexes: 000000000000000000000000000000000000000000000000
+    leaderboard: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  AbilityLvl: 
 --- !u!82 &401484645
 AudioSource:
   m_ObjectHideFlags: 0

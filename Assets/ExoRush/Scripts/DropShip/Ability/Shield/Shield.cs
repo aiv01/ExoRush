@@ -16,9 +16,16 @@ public class Shield : MonoBehaviour
 
     public GameObject ShieldBar;
 
+    //LVL
+    public AbilityLoader AbilityLoader;
+    int AbilityLvl;
+    public int AbilityIndex;
+
     // Start is called before the first frame update
     void Start()
     {
+        AbilityLvlLoader();
+
         Shiled.SetActive(false);
     }
 
@@ -33,7 +40,7 @@ public class Shield : MonoBehaviour
             {
                 Shiled.SetActive(true);
                 Active = true;
-                ShieldEnergy -= Time.deltaTime * EnergyDrainedSpeed;
+                ShieldEnergy -= (Time.deltaTime * EnergyDrainedSpeed) / AbilityLvl;
                 TempReloadTime = ReloadTime;
             }
 
@@ -55,7 +62,7 @@ public class Shield : MonoBehaviour
 
         if (TempReloadTime <= 0 && !Active)
         {
-            ShieldEnergy += Time.deltaTime * EnergyRegenerateSpeed;
+            ShieldEnergy += Time.deltaTime * EnergyRegenerateSpeed * AbilityLvl;
         }
         else
         {
@@ -75,5 +82,10 @@ public class Shield : MonoBehaviour
         ShieldEnergy = Mathf.Clamp(ShieldEnergy, 0, 1);
 
         ShieldBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)ShieldEnergy;
+    }
+
+    public void AbilityLvlLoader()
+    {
+        AbilityLvl = AbilityLoader.AbilityLvl[AbilityIndex] + 1;
     }
 }

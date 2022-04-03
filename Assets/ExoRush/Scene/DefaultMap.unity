@@ -243,6 +243,9 @@ MonoBehaviour:
   DashDuration: 3
   MovementScript: {fileID: 1171629354}
   CanActivate: 0
+  AbilityLoader: {fileID: 168456046}
+  AbilityLvl: 0
+  AbilityIndex: 3
 --- !u!114 &168456038 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
@@ -585,6 +588,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &168456046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168456035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca549f3204cf7a4595f51416e0f1d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveObject:
+    currency: 0
+    powerUpIndexes: 000000000000000000000000000000000000000000000000
+    leaderboard: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  AbilityLvl: 
 --- !u!114 &168456049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3001,6 +3021,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654771, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: AbilityIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654771, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: AbilityLoader
+      value: 
+      objectReference: {fileID: 168456046}
     - target: {fileID: 8991238020083654772, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: InGameUMG
@@ -3114,6 +3144,11 @@ PrefabInstance:
       objectReference: {fileID: 168456045}
     - target: {fileID: 8991238020083654777, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: AbilityLoader
+      value: 
+      objectReference: {fileID: 168456046}
+    - target: {fileID: 8991238020083654777, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: BetweenDamageTime
       value: 0.1
       objectReference: {fileID: 0}
@@ -3144,6 +3179,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6411865172233049619, guid: bed69d9e8a68ff140bb6e0b446839342,
         type: 3}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: AbilityIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: AbilityLoader
+      value: 
+      objectReference: {fileID: 168456046}
     - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: DamageDistance
@@ -3205,6 +3250,16 @@ PrefabInstance:
       propertyPath: ReloadTime
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: AbilityIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: AbilityLoader
+      value: 
+      objectReference: {fileID: 168456046}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: EnergyDrainedSpeed

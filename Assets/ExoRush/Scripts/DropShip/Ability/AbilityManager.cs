@@ -88,22 +88,22 @@ public class AbilityManager : MonoBehaviour
         {
             case PowerUps.Laser:
                 CurrentPowerUP = LaserAbiityRef;
-                AbilityFullDuration = 3;
+                AbilityFullDuration = LaserAbiityRef.AbilityLvl * 3;
                 AbilitySprite = LaserIcon;
                 break;
             case PowerUps.Missile:
                 CurrentPowerUP = MissileAbilityRef;
-                AbilityFullDuration = 3;
+                AbilityFullDuration = MissileAbilityRef.AbilityLvl * 3;
                 AbilitySprite = MissileIcon ;
                 break;
             case PowerUps.Dash:
                 CurrentPowerUP = DashAbilityRef;
-                AbilityFullDuration = 3;
+                AbilityFullDuration = DashAbilityRef.AbilityLvl * 2;
                 AbilitySprite = DashIcon;
                 break;
             case PowerUps.FusionCannon:
                 CurrentPowerUP = FusionAbilityRef;
-                AbilityFullDuration = 3;
+                AbilityFullDuration = FusionAbilityRef.AbilityLvl * 3;
                 AbilitySprite = DashIcon;
                 break;
         }

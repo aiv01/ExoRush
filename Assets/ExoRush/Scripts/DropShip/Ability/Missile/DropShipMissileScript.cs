@@ -12,9 +12,14 @@ public class DropShipMissileScript : MonoBehaviour
     [HideInInspector]
     public bool CanActivate;
 
+    //LVL
+    public AbilityLoader AbilityLoader;
+    public int AbilityLvl;
+    public int AbilityIndex;
+
     void Start()
     {
-
+        AbilityLvlLoader();
     }
 
 
@@ -29,11 +34,12 @@ public class DropShipMissileScript : MonoBehaviour
             }
         }
 
-        ReloadCowntDown -= Time.deltaTime;
+        ReloadCowntDown -= Time.deltaTime;    
 
-        
+    }
 
-
-
+    public void AbilityLvlLoader()
+    {
+        AbilityLvl = AbilityLoader.AbilityLvl[AbilityIndex] + 1;
     }
 }
