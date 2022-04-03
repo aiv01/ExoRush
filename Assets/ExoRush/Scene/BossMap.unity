@@ -1522,6 +1522,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaebf58018c112540a6aec9cb33fe083, type: 3}
+--- !u!1 &901810615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1948724091429874, guid: 71a1be879433fcb46b1fb72b19e392ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1396826370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &901810618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901810615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3, y: 2.27, z: 1.27}
+  m_Center: {x: 0.17, y: 0.23, z: 0.63}
 --- !u!1 &990377951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1673896928387673298, guid: b64efcd1457abab418e25783b065dd42,
@@ -2139,6 +2158,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 98.98356
       objectReference: {fileID: 0}
+    - target: {fileID: 4566788763055196, guid: 71a1be879433fcb46b1fb72b19e392ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.70568496
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566788763055196, guid: 71a1be879433fcb46b1fb72b19e392ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.10978534
+      objectReference: {fileID: 0}
+    - target: {fileID: 4566788763055196, guid: 71a1be879433fcb46b1fb72b19e392ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.1193404
+      objectReference: {fileID: 0}
     - target: {fileID: 4578414607419758, guid: 71a1be879433fcb46b1fb72b19e392ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 22.275774
@@ -2690,7 +2721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RagdollReference: {fileID: 0}
-  MaxHealth: 30000
+  MaxHealth: 20000
   HealthBar: {fileID: 439686313}
   BoxDestruction: {fileID: 0}
   SwitchMap: 1

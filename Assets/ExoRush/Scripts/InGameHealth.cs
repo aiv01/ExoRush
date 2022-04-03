@@ -126,7 +126,11 @@ public class InGameHealth : MonoBehaviour
     {
         Health = Mathf.Clamp(Health, 0, MaxHealth);
 
-        DamageVolume.weight = ((float)Health / (float)MaxHealth) * -1 + 0.8f;
+        if(DamageVolume != null)
+        {
+            DamageVolume.weight = ((float)Health / (float)MaxHealth) * -1 + 0.8f;
+        }
+        
 
         HealthBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)Health / (float)MaxHealth;
 
