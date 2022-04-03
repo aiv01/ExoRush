@@ -4,4 +4,5 @@ public class SaveObject
     public int currency;
     public int[] powerUpIndexes;
     public int[] leaderboard;
+    public int score;
 }

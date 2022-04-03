@@ -5,7 +5,6 @@ using UnityEngine;
 public class SaveLogic : MonoBehaviour
 {
     [SerializeField] public SaveObject sObj;
-    [SerializeField] private bool resetFile = false;
     public void SaveFile()
     {
         SaveManager.Save(sObj);
@@ -40,16 +39,5 @@ public class SaveLogic : MonoBehaviour
     {
         sObj.leaderboard = leaderboard;
         if (saveFile) SaveFile();
-    }
-
-    private void LateUpdate()
-    {
-        if (resetFile)
-        {
-            resetFile = false;
-            sObj = new SaveObject();
-            sObj.currency = 60000;
-            SaveFile();
-        }
     }
 }
