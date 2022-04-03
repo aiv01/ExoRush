@@ -329,7 +329,7 @@ MonoBehaviour:
   - {fileID: 8591811417263670170, guid: 53b54fbdb9f840f488da8bfb6358020f, type: 3}
   BoxLibrary:
   - {fileID: 4751059887670816693, guid: ef567a085d4b4334b9e9f43db5a9eb41, type: 3}
-  SpawnRateMuiltiplier: 1
+  SpawnRateMuiltiplier: 0.2
   DistanceMultiplier: 1
 --- !u!114 &2673997922242784919
 MonoBehaviour:

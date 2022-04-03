@@ -7,6 +7,7 @@ public static class SaveManager
 {
     public static string directory = "/SaveData/";
     public static string fileName = "DataFile.txt";
+    public static SaveObject sampleSObj = new SaveObject();
 
     public static void Save(SaveObject sObj)
     {
@@ -34,7 +35,8 @@ public static class SaveManager
         }else
         {
             //Debug.LogErrorFormat("Could not find {0}", fullPath);
-            Save(sObj);
+            Save(sampleSObj);
+            Debug.Log("could not find DataFile. A new DataFile has been created");
         }
 
         return sObj;
