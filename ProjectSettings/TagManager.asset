@@ -8,6 +8,9 @@ TagManager:
   - Obstacle
   - Enemy
   - BossSphere
+  - ENSP
+  - OBSP
+  - BXSP
   layers:
   - Default
   - TransparentFX
@@ -21,7 +24,7 @@ TagManager:
   - Player
   - PostProcessing
   - SetDressing
-  - 
+  - Shield
   - 
   - Vehicles
   - Navmesh

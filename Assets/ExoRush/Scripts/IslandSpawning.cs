@@ -10,7 +10,7 @@ public class IslandSpawning : MonoBehaviour
     public GameObject[] BoxLibrary;
     public float SpawnRateMuiltiplier = 0.5f;
     bool BoxSpawned;
-    public float DistanceMultiplier = 1;
+    public float DistanceReducer = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class IslandSpawning : MonoBehaviour
         {
             //Debug.Log((transform.position.z / 10000) > (Random.Range(0, Random.value)));
 
-            if(((transform.position.z / (10000 * DistanceMultiplier))*SpawnRateMuiltiplier) > (Random.Range(0, Random.value)))
+            if(((transform.position.z / (100000 * DistanceReducer))*SpawnRateMuiltiplier) > (Random.Range(0, Random.value)))
                 {
 
                 if (SpawingObject[i].transform.tag == "OBSP")

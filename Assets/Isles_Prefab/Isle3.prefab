@@ -128,8 +128,8 @@ MonoBehaviour:
   - {fileID: 1025136541512064008, guid: 84dd3d3e6d3ba864898acade213e11e7, type: 3}
   BoxLibrary:
   - {fileID: 4751059887670816693, guid: ef567a085d4b4334b9e9f43db5a9eb41, type: 3}
-  SpawnRateMuiltiplier: 0.5
-  DistanceMultiplier: 0.5
+  SpawnRateMuiltiplier: 2
+  DistanceReducer: 0.9
 --- !u!1 &3421351230487379839
 GameObject:
   m_ObjectHideFlags: 0
