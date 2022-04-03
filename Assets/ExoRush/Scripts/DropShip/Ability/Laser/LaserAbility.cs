@@ -47,6 +47,8 @@ public class LaserAbility : MonoBehaviour
     }
     void Update()
     {
+
+
         if (Input.GetButton("Ability")&&CanActivate)
         {
             if(!IsUsingLaser)
