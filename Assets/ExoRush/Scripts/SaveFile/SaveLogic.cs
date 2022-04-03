@@ -15,11 +15,12 @@ public class SaveLogic : MonoBehaviour
         sObj = SaveManager.Load();
     }
 
-    public void UpdateAll(int currency, int[] indexes, int[] leaderboard, bool saveFile = false)
+    public void UpdateAll(int currency, int[] indexes, int[] leaderboard, string[] lbNames, int score, bool saveFile = false)
     {
         UpdateObjCurrency(currency);
         UpdateObjIndexes(indexes);
-        UpdateObjLeaderboard(leaderboard);
+        UpdateObjLeaderboard(leaderboard, lbNames);
+        UpdateScore(score);
         if (saveFile) SaveFile();
     }
 
@@ -35,9 +36,16 @@ public class SaveLogic : MonoBehaviour
         if (saveFile) SaveFile();
     }
 
-    public void UpdateObjLeaderboard(int[] leaderboard, bool saveFile = false)
+    public void UpdateObjLeaderboard(int[] leaderboardvalues, string[] leaderboardNames, bool saveFile = false)
     {
-        sObj.leaderboard = leaderboard;
+        sObj.leaderboard = leaderboardvalues;
+        sObj.lbNames = leaderboardNames;
+        if (saveFile) SaveFile();
+    }
+
+    public void UpdateScore(int score, bool saveFile = false)
+    {
+        sObj.score = score;
         if (saveFile) SaveFile();
     }
 }

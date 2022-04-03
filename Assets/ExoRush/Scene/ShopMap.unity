@@ -1445,7 +1445,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: MainMenu
   saveOnJump: 1
-  liv: {fileID: 54180576}
+  saveCurrency: 1
+  savePowerUps: 1
+  saveLeaderboard: 0
 --- !u!114 &1216295284
 MonoBehaviour:
   m_ObjectHideFlags: 0
