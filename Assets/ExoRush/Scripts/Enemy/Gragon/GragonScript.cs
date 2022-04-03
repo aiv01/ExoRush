@@ -14,12 +14,16 @@ public class GragonScript : MonoBehaviour
     public AudioSource AttackSound;
     public AudioSource RockSound;
 
+    public float DestroyOffset;
+
     // Start is called before the first frame update
     void Start()
     {
         Ship = Object.FindObjectOfType<DropShipMovement>().gameObject;
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        StartCoroutine(CheckKill());
     }
 
     // Update is called once per frame
@@ -49,5 +53,20 @@ public class GragonScript : MonoBehaviour
             HasDamaged = true;
         }
 
+    }
+
+    public void CheckIfBehind()
+    {
+        if (transform.position.z < Ship.transform.position.z + DestroyOffset)
+        {
+            Destroy(this);
+        }
+
+    }
+
+    IEnumerator CheckKill()
+    {
+        yield return new WaitForSeconds(1f);
+        CheckIfBehind();
     }
 }

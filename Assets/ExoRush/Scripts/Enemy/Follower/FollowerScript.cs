@@ -24,10 +24,16 @@ public class FollowerScript : MonoBehaviour
     public GameObject WalkingGround;
     public float GroundCheckDistance = 40;
 
+    public float DestroyOffset;
+
+    bool Attacked;
+
     // Start is called before the first frame update
     void Start()
     {
         Ship = Object.FindObjectOfType<DropShipMovement>().gameObject;
+
+        StartCoroutine(CheckKill());
     }
 
     // Update is called once per frame
@@ -78,7 +84,12 @@ public class FollowerScript : MonoBehaviour
 
         if (Vector3.Distance(transform.position, Ship.transform.position) < AttackRadius)
         {
-            FollowerAnimator.SetTrigger("Attack");
+            if (!Attacked)
+            {
+                Attacked = true;
+                FollowerAnimator.SetTrigger("Attack");
+            }
+            
 
         }
 
@@ -109,5 +120,20 @@ public class FollowerScript : MonoBehaviour
     public void Shoot()
     {
 
+    }
+
+    public void CheckIfBehind()
+    {
+        if (transform.position.z < Ship.transform.position.z + DestroyOffset)
+        {
+            Destroy(this);
+        }
+
+    }
+
+    IEnumerator CheckKill()
+    {
+        yield return new WaitForSeconds(1f);
+        CheckIfBehind();
     }
 }

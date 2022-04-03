@@ -57,7 +57,12 @@ namespace Tarodev
                 }
             }
 
-            _target = ChoosedEnemy;
+            if(ChoosedEnemy != null)
+            {
+                _target = ChoosedEnemy;
+            }
+
+            
         }
 
 
