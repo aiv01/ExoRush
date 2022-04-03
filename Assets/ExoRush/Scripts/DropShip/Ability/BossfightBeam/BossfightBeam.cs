@@ -95,7 +95,7 @@ public class BossfightBeam : MonoBehaviour
                     Damage = Mathf.Pow(StartingDamage, HittingTime);
 
                     Damage = Damage * Time.deltaTime * 1000;
-
+                        
                     hit.collider.transform.root.GetComponent<EnemyMaster>().Damage((int)Damage);
                     HittingTime += Time.deltaTime * ExponentialDamageAmplifier;
                 }
