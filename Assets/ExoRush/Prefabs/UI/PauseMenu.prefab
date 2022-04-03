@@ -516,6 +516,8 @@ MonoBehaviour:
   affectedScripts: []
   affectedObjs:
   - {fileID: 174735192645185224}
+  canvas: {fileID: 174735192645185228}
+  grid: {fileID: 174735192731141494}
 --- !u!114 &8430549281561445468
 MonoBehaviour:
   m_ObjectHideFlags: 0

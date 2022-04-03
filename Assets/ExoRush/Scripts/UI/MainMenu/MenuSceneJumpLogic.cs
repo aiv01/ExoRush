@@ -20,6 +20,7 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
         if (jump) 
         {
             if (saveOnJump) liv.UpdateSelected(true, true);
+            Time.timeScale = 1;
             SceneManager.LoadScene(sceneName);
         } 
     }

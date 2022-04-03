@@ -6,6 +6,8 @@ public class PauseMenuLogic : MonoBehaviour, IMenuInteractable
 {
     public MonoBehaviour[] affectedScripts;
     public GameObject[] affectedObjs;
+    public Canvas canvas;
+    public GamepadMapper grid;
     private bool isActive;
     public bool IsActive
     {
@@ -38,7 +40,7 @@ public class PauseMenuLogic : MonoBehaviour, IMenuInteractable
 
     void Pause()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0.001f;
         AffectScriptsAndObjs();
     }
 
@@ -50,9 +52,11 @@ public class PauseMenuLogic : MonoBehaviour, IMenuInteractable
 
     void AffectScriptsAndObjs()
     {
+        canvas.enabled = isActive;
+        grid.enabled = isActive;
         foreach (var item in affectedScripts)
         {
-            item.enabled = isActive;
+            item.enabled = !isActive;
         }
         foreach (var item in affectedObjs)
         {

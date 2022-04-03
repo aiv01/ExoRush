@@ -25,9 +25,8 @@ public class Shield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Fire2") >= 0.8f)
+        if (Input.GetButton("Shield"))
         {
-            
 
             if(ShieldEnergy > 0 && TempReuseTime <= 0)
             {

@@ -15,7 +15,7 @@ InputManager:
     altPositiveButton: d
     gravity: 1000
     dead: 0.001
-    sensitivity: 1000
+    sensitivity: 10000000
     snap: 1
     invert: 0
     type: 0
@@ -31,7 +31,7 @@ InputManager:
     altPositiveButton: w
     gravity: 1000
     dead: 0.001
-    sensitivity: 1000
+    sensitivity: 1000000
     snap: 1
     invert: 0
     type: 0
@@ -287,7 +287,7 @@ InputManager:
     altPositiveButton: joystick button 0
     gravity: 1000
     dead: 0.001
-    sensitivity: 1000
+    sensitivity: 1000000
     snap: 0
     invert: 0
     type: 0
@@ -303,7 +303,7 @@ InputManager:
     altPositiveButton: space
     gravity: 1000
     dead: 0.001
-    sensitivity: 1000
+    sensitivity: 10000000
     snap: 0
     invert: 0
     type: 0
@@ -377,10 +377,10 @@ InputManager:
     m_Name: Ability
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: e
-    positiveButton: 
+    negativeButton: 
+    positiveButton: e
     altNegativeButton: 
-    altPositiveButton: joystick button 7
+    altPositiveButton: joystick button 0
     gravity: 0
     dead: 0.19
     sensitivity: 1
@@ -588,7 +588,7 @@ InputManager:
     negativeButton: 
     positiveButton: left shift
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: joystick button 1
     gravity: 1000
     dead: 0.001
     sensitivity: 1000

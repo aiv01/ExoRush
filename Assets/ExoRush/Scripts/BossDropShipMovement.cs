@@ -90,7 +90,7 @@ public class BossDropShipMovement : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) || (Input.GetKeyDown(KeyCode.Joystick1Button1)))
             {
                 IsDashing = true;
                 DashTimer = 0;
