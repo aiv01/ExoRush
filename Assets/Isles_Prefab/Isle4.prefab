@@ -349,6 +349,7 @@ MonoBehaviour:
   EnemyLibrary:
   - {fileID: 5212987549901051944, guid: 081fc2b5097d5bf40990f6e46982e8e3, type: 3}
   - {fileID: 8591811417263670170, guid: 53b54fbdb9f840f488da8bfb6358020f, type: 3}
+  - {fileID: 1025136541512064008, guid: 84dd3d3e6d3ba864898acade213e11e7, type: 3}
   BoxLibrary:
   - {fileID: 4751059887670816693, guid: ef567a085d4b4334b9e9f43db5a9eb41, type: 3}
   SpawnRateMuiltiplier: 0.5

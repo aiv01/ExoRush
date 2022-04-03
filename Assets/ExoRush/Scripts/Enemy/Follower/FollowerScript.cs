@@ -10,6 +10,9 @@ public class FollowerScript : MonoBehaviour
     GameObject Ship;
 
     public float SpotDistance;
+    public float AttackRadius = 100;
+    public float DamageRadius = 80;
+    bool HasDamaged;
 
     public float RotationDamping;
     public float FallingSpeed = 1;
@@ -17,6 +20,9 @@ public class FollowerScript : MonoBehaviour
     public GameObject ViewPoint;
 
     public Animator FollowerAnimator;
+
+    public GameObject WalkingGround;
+    public float GroundCheckDistance = 40;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +47,8 @@ public class FollowerScript : MonoBehaviour
         var mask = ~(22 << 24);
         mask = ~mask;
 
+        //CheckGround
+
         if (Vector3.Distance (ViewPoint.transform.position, Ship.transform.position) < SpotDistance)
         {
             if (Physics.Linecast(ViewPoint.transform.position, Ship.transform.position,out hit,mask))
@@ -54,13 +62,36 @@ public class FollowerScript : MonoBehaviour
             {
                 Debug.DrawLine(ViewPoint.transform.position, Ship.transform.position, Color.green);
                 Debug.Log("NotFound");
-                GoToPlayer(true);
+
+                if (Physics.Raycast(WalkingGround.transform.position, WalkingGround.transform.forward, out hit, GroundCheckDistance))
+                {
+                    GoToPlayer(true);
+                }
+                else
+                {
+                    GoToPlayer(false);
+                }
+                
+
                 RotateToPlayer();
             }
         }
 
+        if (Vector3.Distance(transform.position, Ship.transform.position) < AttackRadius)
+        {
+            FollowerAnimator.SetTrigger("Attack");
 
-      
+        }
+
+
+        if (Vector3.Distance(transform.position, Ship.transform.position) < DamageRadius && !HasDamaged)
+        {
+            Object.FindObjectOfType<InGameHealth>().Damage(300, true, false, false);
+            HasDamaged = true;
+        }
+
+
+
     }
 
     void RotateToPlayer()
