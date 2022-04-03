@@ -61,7 +61,6 @@ public class FollowerScript : MonoBehaviour
             else
             {
                 Debug.DrawLine(ViewPoint.transform.position, Ship.transform.position, Color.green);
-                Debug.Log("NotFound");
 
                 if (Physics.Raycast(WalkingGround.transform.position, WalkingGround.transform.forward, out hit, GroundCheckDistance))
                 {
@@ -105,5 +104,10 @@ public class FollowerScript : MonoBehaviour
     void GoToPlayer(bool Follow)
     {
         FollowerAnimator.SetBool("Fleeing", Follow);
+    }
+
+    public void Shoot()
+    {
+
     }
 }

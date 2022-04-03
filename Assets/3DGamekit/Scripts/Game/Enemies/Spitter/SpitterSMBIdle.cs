@@ -22,23 +22,30 @@ namespace Gamekit3D
 
         public override void OnSLStateNoTransitionUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            base.OnSLStateNoTransitionUpdate(animator, stateInfo, layerIndex);
+        //    base.OnSLStateNoTransitionUpdate(animator, stateInfo, layerIndex);
 
-            remainingToNextGrunt -= Time.deltaTime;
+        //    remainingToNextGrunt -= Time.deltaTime;
 
-            if (remainingToNextGrunt < 0)
-            {
-                remainingToNextGrunt = Random.Range(minimumIdleGruntTime, maximumIdleGruntTime);
-                m_MonoBehaviour.Grunt();
-            }
+        //    if (remainingToNextGrunt < 0)
+        //    {
+        //        remainingToNextGrunt = Random.Range(minimumIdleGruntTime, maximumIdleGruntTime);
+        //        if(m_MonoBehaviour != null)
+        //        {
+        //            m_MonoBehaviour.Grunt();
+        //        }
+                
+        //    }
+        //    if(m_MonoBehaviour != null)
+        //    {
+        //        m_MonoBehaviour.FindTarget();
+        //        m_MonoBehaviour.CheckNeedFleeing();
+        //    }
 
-            m_MonoBehaviour.FindTarget();
-            m_MonoBehaviour.CheckNeedFleeing();
 
-            if (m_MonoBehaviour.target != null)
-            {
-                m_MonoBehaviour.TriggerAttack();
-            }
+        //    if (m_MonoBehaviour.target != null)
+        //    {
+        //        m_MonoBehaviour.TriggerAttack();
+        //    }
         }
     }
 }
