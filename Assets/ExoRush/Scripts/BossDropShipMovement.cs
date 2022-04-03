@@ -90,7 +90,7 @@ public class BossDropShipMovement : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetAxis("Jump") > 0.8f)
             {
                 IsDashing = true;
                 DashTimer = 0;

@@ -128,7 +128,7 @@ public class InGameHealth : MonoBehaviour
 
         if(DamageVolume != null)
         {
-            DamageVolume.weight = ((float)Health / (float)MaxHealth) * -1 + 0.8f;
+            DamageVolume.weight = ((float)Health / (float)MaxHealth) * -1 + 0.5f;
         }
         
 
