@@ -14,6 +14,9 @@ public class FollowerScript : MonoBehaviour
     public float RotationDamping;
     public float FallingSpeed = 1;
     public float MovementSpeed;
+    public GameObject ViewPoint;
+
+    public Animator FollowerAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -35,23 +38,30 @@ public class FollowerScript : MonoBehaviour
             transform.position = new Vector3(transform.position.x,transform.position.y * ((Time.deltaTime * FallingSpeed)*-1));
         }
 
-        if(Vector3.Distance (transform.position, Ship.transform.position) < SpotDistance)
+        var mask = ~(22 << 24);
+        mask = ~mask;
+
+        if (Vector3.Distance (ViewPoint.transform.position, Ship.transform.position) < SpotDistance)
         {
-            if (Physics.Linecast(transform.position, Ship.transform.position))
+            if (Physics.Linecast(ViewPoint.transform.position, Ship.transform.position,out hit,mask))
             {
-                Debug.Log("Found");
+                Debug.DrawLine(ViewPoint.transform.position, Ship.transform.position,Color.red);
+                Debug.Log(hit.rigidbody.name);
                 
+                GoToPlayer(false);
+
             }
             else
             {
+                Debug.DrawLine(ViewPoint.transform.position, Ship.transform.position, Color.green);
                 Debug.Log("NotFound");
+                GoToPlayer(true);
+                RotateToPlayer();
             }
         }
 
-        RotateToPlayer();
-        GoToPlayer();
-        
 
+      
     }
 
     void RotateToPlayer()
@@ -60,11 +70,10 @@ public class FollowerScript : MonoBehaviour
         lookPos.y = 0;
         var rotation = Quaternion.LookRotation(lookPos);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * RotationDamping);
-
     }
 
-    void GoToPlayer()
+    void GoToPlayer(bool Follow)
     {
-        transform.position += Vector3.forward * Time.deltaTime * MovementSpeed;
+        FollowerAnimator.SetBool("Fleeing", Follow);
     }
 }
