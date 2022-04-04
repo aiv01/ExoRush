@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731703, g: 0.13414727, b: 0.12107852, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1446,6 +1446,9 @@ MonoBehaviour:
   sceneName: MainMenu
   saveOnJump: 1
   liv: {fileID: 54180576}
+  saveCurrency: 1
+  savePowerUps: 1
+  saveLeaderboard: 0
 --- !u!114 &1216295284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1563,6 +1566,11 @@ PrefabInstance:
       objectReference: {fileID: 884669511}
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
+      propertyPath: prices.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
       propertyPath: prices.Array.data[0]
       value: 3000
       objectReference: {fileID: 0}
@@ -1580,6 +1588,11 @@ PrefabInstance:
         type: 3}
       propertyPath: prices.Array.data[3]
       value: 16000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: prices.Array.data[4]
+      value: 21000
       objectReference: {fileID: 0}
     - target: {fileID: 7996579852185696982, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
@@ -1927,7 +1940,7 @@ PrefabInstance:
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
       propertyPath: prices.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
@@ -2149,7 +2162,8 @@ MonoBehaviour:
     currency: 60000
     powerUpIndexes: 000000000000000000000000000000000000000000000000
     leaderboard: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  resetFile: 0
+    lbNames: []
+    score: 0
 --- !u!4 &2128205617
 Transform:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.Rendering.Universal;
 
 public class InGameHealth : MonoBehaviour
 {
+    public LIV liv;
     public int MaxHealth = 100;
     int Health;
     public GameObject HealthBar;
@@ -117,7 +118,7 @@ public class InGameHealth : MonoBehaviour
 
             DeadShip.GetComponent<Rigidbody>().velocity = new Vector3(DropShipMovementScript.RotTarget * -1, 0, DropShipMovementScript.CurrentVelocity * 10);
 
-            
+            liv.UpdateSelected(false, false, false, true);
             
         }
     }

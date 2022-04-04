@@ -5,7 +5,6 @@ using UnityEngine;
 public class SaveLogic : MonoBehaviour
 {
     [SerializeField] public SaveObject sObj;
-    [SerializeField] private bool resetFile = false;
     public void SaveFile()
     {
         SaveManager.Save(sObj);
@@ -16,11 +15,12 @@ public class SaveLogic : MonoBehaviour
         sObj = SaveManager.Load();
     }
 
-    public void UpdateAll(int currency, int[] indexes, int[] leaderboard, bool saveFile = false)
+    public void UpdateAll(int currency, int[] indexes, int[] leaderboard, string[] lbNames, int score, bool saveFile = false)
     {
         UpdateObjCurrency(currency);
         UpdateObjIndexes(indexes);
-        UpdateObjLeaderboard(leaderboard);
+        UpdateObjLeaderboard(leaderboard, lbNames);
+        UpdateScore(score);
         if (saveFile) SaveFile();
     }
 
@@ -36,20 +36,16 @@ public class SaveLogic : MonoBehaviour
         if (saveFile) SaveFile();
     }
 
-    public void UpdateObjLeaderboard(int[] leaderboard, bool saveFile = false)
+    public void UpdateObjLeaderboard(int[] leaderboardvalues, string[] leaderboardNames, bool saveFile = false)
     {
-        sObj.leaderboard = leaderboard;
+        sObj.leaderboard = leaderboardvalues;
+        sObj.lbNames = leaderboardNames;
         if (saveFile) SaveFile();
     }
 
-    private void LateUpdate()
+    public void UpdateScore(int score, bool saveFile = false)
     {
-        if (resetFile)
-        {
-            resetFile = false;
-            sObj = new SaveObject();
-            sObj.currency = 60000;
-            SaveFile();
-        }
+        sObj.score = score;
+        if (saveFile) SaveFile();
     }
 }

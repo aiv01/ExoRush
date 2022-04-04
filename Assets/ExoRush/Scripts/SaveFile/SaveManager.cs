@@ -7,7 +7,6 @@ public static class SaveManager
 {
     public static string directory = "/SaveData/";
     public static string fileName = "DataFile.txt";
-    public static SaveObject sampleSObj = new SaveObject();
 
     public static void Save(SaveObject sObj)
     {
@@ -29,14 +28,13 @@ public static class SaveManager
         {
             //string json = Decode(File.ReadAllText(fullPath));
             string json = File.ReadAllText(fullPath);
-            //Debug.Log(json);
+            Debug.Log(json);
             sObj = JsonUtility.FromJson<SaveObject>(json);
-            //Debug.LogFormat("Loaded {0}", fullPath);
+            Debug.LogFormat("Loaded {0}", fullPath);
         }else
         {
-            //Debug.LogErrorFormat("Could not find {0}", fullPath);
-            Save(sampleSObj);
-            //Debug.Log("could not find DataFile. A new DataFile has been created");
+            Debug.Log("Could not find DataFile. New DataFile created");
+            Save(sObj);
         }
 
         return sObj;

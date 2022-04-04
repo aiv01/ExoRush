@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadItemsValues : MonoBehaviour
+public class LoadItemsValues : LIV
 {
     [SerializeField] SaveLogic sl;
     private int[] powerUps;
@@ -13,14 +13,16 @@ public class LoadItemsValues : MonoBehaviour
         sl.LoadFile();
     }
 
-    public void UpdateSelected(bool currency, bool indexes = false, bool leaderboard = false)
+    public override void UpdateSelected(bool currency, bool indexes = false, bool leaderboard = false, bool score = false)
     {
         int curr = sl.sObj.currency;
+        int scr = sl.sObj.score;
         int[] ind = sl.sObj.powerUpIndexes;
         int[] lb = sl.sObj.leaderboard;
+        string[] lbnames = sl.sObj.lbNames;
         if (currency)
         { 
-           curr = items[0].currency;
+            curr = items[0].currency;
         }
         if (indexes)
         {
@@ -30,11 +32,7 @@ public class LoadItemsValues : MonoBehaviour
                 ind[i] = items[i].priceIndex;
             }
         }
-        if (leaderboard)
-        {
-            //TBD
-        }
-        sl.UpdateAll(curr, ind, lb, true);
+        sl.UpdateAll(curr, ind, lb, lbnames, scr, true);
     }
 
     private void Start()

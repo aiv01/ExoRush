@@ -34,7 +34,6 @@ public class Shield : MonoBehaviour
     {
         if (Input.GetButton("Shield"))
         {
-            
 
             if(ShieldEnergy > 0 && TempReuseTime <= 0)
             {
