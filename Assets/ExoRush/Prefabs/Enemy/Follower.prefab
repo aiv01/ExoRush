@@ -1435,7 +1435,7 @@ MonoBehaviour:
   TopOffset: 5
   SpotDistance: 500
   AttackRadius: 150
-  DamageRadius: 50
+  DamageRadius: 10
   RotationDamping: 10
   FallingSpeed: 1
   MovementSpeed: 0
@@ -1443,6 +1443,7 @@ MonoBehaviour:
   FollowerAnimator: {fileID: 1111311676290898566}
   WalkingGround: {fileID: 6516664767619762726}
   GroundCheckDistance: 40
+  DestroyOffset: 0
 --- !u!114 &6516664767976141765
 MonoBehaviour:
   m_ObjectHideFlags: 0

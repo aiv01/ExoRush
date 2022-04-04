@@ -11450,13 +11450,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0506d7f231ee5cd4e96db01a10881be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EngageDistance: 160
+  EngageDistance: 170
   Animator: {fileID: 8591811417273069658}
   StaticRock: {fileID: 523882045684775175}
   Debris: {fileID: 7880756155804280648}
   AnimationActivated: 0
   AttackSound: {fileID: 5183114805530182696}
   RockSound: {fileID: -8623970487980511050}
+  DestroyOffset: 0
 --- !u!65 &1226287974657034504
 BoxCollider:
   m_ObjectHideFlags: 0

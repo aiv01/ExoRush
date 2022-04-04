@@ -27,6 +27,8 @@ public class FusionCannonAbility : MonoBehaviour
     public int AbilityLvl;
     public int AbilityIndex;
 
+    public LayerMask Layer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +73,7 @@ public class FusionCannonAbility : MonoBehaviour
                         //SpreadedProjectileDirection = Vector3.Lerp(FusionCannon[0].transform.forward, FusionCannon[0].transform.right*-1,Random.Range(0,ProjectileSpread));
                         //SpreadedProjectileDirection = Vector3.Lerp(SpreadedProjectileDirection, FusionCannon[0].transform.up, Random.Range(0, ProjectileSpread));
 
-                        Physics.Raycast(FusionCannon[0].transform.position, FusionCannon[0].transform.forward + new Vector3(Random.Range(AdditionalRandomness*-1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness)), out hit, DamageDistance);
+                        Physics.Raycast(FusionCannon[0].transform.position, FusionCannon[0].transform.forward + new Vector3(Random.Range(AdditionalRandomness*-1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness)), out hit, DamageDistance,Layer);
                         Debug.DrawLine(FusionCannon[0].transform.position, OutWithRandomness, Color.green);
 
                         TrailPool[i].GetComponent<FusionCannonEffectManager>().Started(FusionCannon[0].transform.position, hit.point);
@@ -83,7 +85,7 @@ public class FusionCannonAbility : MonoBehaviour
                         //SpreadedProjectileDirection = Vector3.Lerp(FusionCannon[1].transform.forward, FusionCannon[1].transform.right, Random.Range(0, ProjectileSpread));
                         //SpreadedProjectileDirection = Vector3.Lerp(SpreadedProjectileDirection, FusionCannon[1].transform.up, Random.Range(0, ProjectileSpread));
 
-                        Physics.Raycast(FusionCannon[1].transform.position, FusionCannon[0].transform.forward + new Vector3(Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness)), out hit, DamageDistance);
+                        Physics.Raycast(FusionCannon[1].transform.position, FusionCannon[0].transform.forward + new Vector3(Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness)), out hit, DamageDistance,Layer);
                         Debug.DrawLine(FusionCannon[1].transform.position, hit.point, Color.green);
 
                         TrailPool[i].GetComponent<FusionCannonEffectManager>().Started(FusionCannon[1].transform.position, hit.point);

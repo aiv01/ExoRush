@@ -5,6 +5,8 @@ using UnityEngine;
 public class LaserScript : MonoBehaviour
 {
     private LineRenderer lr;
+
+    public LayerMask Layer;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class LaserScript : MonoBehaviour
     {
         lr.SetPosition(0, transform.position);
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        if (Physics.Raycast(transform.position, transform.forward, out hit,Layer))
         {
             if (hit.collider)
             {

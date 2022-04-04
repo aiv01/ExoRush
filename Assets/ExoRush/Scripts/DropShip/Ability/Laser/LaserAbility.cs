@@ -28,6 +28,8 @@ public class LaserAbility : MonoBehaviour
     public int AbilityLvl;
     public int AbilityIndex;
 
+    public LayerMask Layer;
+
     void Start()
     {
         AbilityLvlLoader();
@@ -93,7 +95,7 @@ public class LaserAbility : MonoBehaviour
                 if (TempDamageTime <= 0)
                 {
 
-                    if (Physics.Raycast(LaserGameObject[i].transform.position, LaserGameObject[i].transform.forward, out hit, Mathf.Infinity))
+                    if (Physics.Raycast(LaserGameObject[i].transform.position, LaserGameObject[i].transform.forward, out hit, Mathf.Infinity,Layer))
                     {
                         if (hit.collider.gameObject.GetComponent<EnemyMaster>() != null)
                         {
