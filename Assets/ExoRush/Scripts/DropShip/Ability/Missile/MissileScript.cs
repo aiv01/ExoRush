@@ -69,7 +69,7 @@ namespace Tarodev
         private void Update()
         {
             AutoDestructionTime -= Time.deltaTime;
-            if(AutoDestructionTime <= 0)
+            if(AutoDestructionTime <= 0 || _target == null)
             {
                 Destroy(gameObject);
             }
@@ -83,7 +83,9 @@ namespace Tarodev
 
             _rb.velocity = transform.forward * _currentspeed;
 
-            RotateRocket();
+            Rigidbody testRB;
+            if (_target.TryGetComponent<Rigidbody>(out testRB)) RotateRocket();
+
         }
 
         private void RotateRocket()
