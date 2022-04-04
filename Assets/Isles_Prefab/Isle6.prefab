@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2213311510833242983}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BoxesSP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7134034694170244357}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Spawners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1703625970025417877}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 858892820411377698}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: EnemiesSP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4607959426539907926}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Structures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5142886524559851603}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ObstaclesSP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 859910835436243186}
   - component: {fileID: -8342665703546624463}
   - component: {fileID: 2673997922242784919}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Isle6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ MonoBehaviour:
   BoxLibrary:
   - {fileID: 4751059887670816693, guid: ef567a085d4b4334b9e9f43db5a9eb41, type: 3}
   SpawnRateMuiltiplier: 1
-  DistanceMultiplier: 1
+  DistanceReducer: 1
 --- !u!114 &2673997922242784919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6221990247019943696}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Rocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3442422219377498527}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: InteractablesSP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,8 +513,20 @@ PrefabInstance:
       value: WallLong01
       objectReference: {fileID: 0}
     - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465956298113460, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832175705630406, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4874148236562170, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_RootOrder
@@ -591,6 +603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OBSP (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
@@ -809,6 +826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -884,6 +906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -954,13 +981,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3075190571166598096}
     m_Modifications:
+    - target: {fileID: 1631123401944690, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_Name
       value: WallLong02Broken (10)
       objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915219102560988, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
@@ -1101,6 +1140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1171,13 +1215,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3075190571166598096}
     m_Modifications:
+    - target: {fileID: 1088326629739010, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089526031704510, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_Name
       value: WallTallCorner01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815699444772826, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4499794587782668, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_RootOrder
@@ -1405,6 +1465,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1479,6 +1544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OBSP (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
@@ -1780,6 +1850,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1985,6 +2060,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BXSP (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 9073569011885564400, guid: 62060207e6ddc304eb00d5e0660a5058,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62060207e6ddc304eb00d5e0660a5058, type: 3}
 --- !u!4 &1263873573189788341 stripped
@@ -2143,8 +2223,20 @@ PrefabInstance:
       value: WallLong01 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465956298113460, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832175705630406, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4874148236562170, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_RootOrder
@@ -2297,6 +2389,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -2447,6 +2544,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -2585,6 +2687,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -2715,6 +2822,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BXSP (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 9073569011885564400, guid: 62060207e6ddc304eb00d5e0660a5058,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62060207e6ddc304eb00d5e0660a5058, type: 3}
 --- !u!4 &2399554467363574936 stripped
@@ -2809,6 +2921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OBSP (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
@@ -2940,6 +3057,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BXSP
       objectReference: {fileID: 0}
+    - target: {fileID: 9073569011885564400, guid: 62060207e6ddc304eb00d5e0660a5058,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62060207e6ddc304eb00d5e0660a5058, type: 3}
 --- !u!4 &4094418680573765900 stripped
@@ -2958,6 +3080,30 @@ PrefabInstance:
     - target: {fileID: 1077931925729256, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
       propertyPath: m_Name
       value: DistantTerrain (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077931925729256, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142621390938056, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429579748311950, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447587716317238, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688969514932972, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782754524479428, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4756930872692726, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
       propertyPath: m_RootOrder
@@ -3105,13 +3251,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3075190571166598096}
     m_Modifications:
+    - target: {fileID: 1631123401944690, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_Name
       value: WallLong02Broken (7)
       objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915219102560988, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
@@ -3189,6 +3347,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3263,6 +3426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ENSP (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
@@ -3477,6 +3645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -3690,6 +3863,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3765,6 +3943,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3838,6 +4021,30 @@ PrefabInstance:
     - target: {fileID: 1077931925729256, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
       propertyPath: m_Name
       value: DistantTerrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077931925729256, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1142621390938056, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1429579748311950, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447587716317238, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688969514932972, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1782754524479428, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4756930872692726, guid: 9141f281a0b7a8344962a0e677d847a3, type: 3}
       propertyPath: m_RootOrder
@@ -3915,6 +4122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -3985,9 +4197,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6221990247019943696}
     m_Modifications:
+    - target: {fileID: 1194259771720252, guid: 409a7376f1ca2ed41819e64a9edce2d9, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379066974502668, guid: 409a7376f1ca2ed41819e64a9edce2d9, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1677148800270060, guid: 409a7376f1ca2ed41819e64a9edce2d9, type: 3}
       propertyPath: m_Name
       value: Monument01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1677148800270060, guid: 409a7376f1ca2ed41819e64a9edce2d9, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989705445811532, guid: 409a7376f1ca2ed41819e64a9edce2d9, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4554516105989090, guid: 409a7376f1ca2ed41819e64a9edce2d9, type: 3}
       propertyPath: m_RootOrder
@@ -4107,6 +4335,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BXSP (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9073569011885564400, guid: 62060207e6ddc304eb00d5e0660a5058,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62060207e6ddc304eb00d5e0660a5058, type: 3}
@@ -4341,6 +4574,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lever
       objectReference: {fileID: 0}
+    - target: {fileID: 2867350406024451200, guid: 4cb948b4a6f6a0b4e852b6f1ee7e7c47,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2867350406024451206, guid: 4cb948b4a6f6a0b4e852b6f1ee7e7c47,
         type: 3}
       propertyPath: m_RootOrder
@@ -4406,6 +4644,11 @@ PrefabInstance:
       propertyPath: IslandScripLever
       value: 
       objectReference: {fileID: 2673997922242784919}
+    - target: {fileID: 2867350407269897264, guid: 4cb948b4a6f6a0b4e852b6f1ee7e7c47,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cb948b4a6f6a0b4e852b6f1ee7e7c47, type: 3}
 --- !u!4 &7500869926482784174 stripped
@@ -4496,13 +4739,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3075190571166598096}
     m_Modifications:
+    - target: {fileID: 1088326629739010, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089526031704510, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_Name
       value: WallTallCorner01
       objectReference: {fileID: 0}
     - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763215010632190, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1815699444772826, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4499794587782668, guid: 0e4aae17fddb5584d8b6119fbba40ed3, type: 3}
       propertyPath: m_RootOrder
@@ -4580,6 +4839,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -4654,6 +4918,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ENSP (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
@@ -4805,6 +5074,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -4880,6 +5154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -4950,13 +5229,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3075190571166598096}
     m_Modifications:
+    - target: {fileID: 1631123401944690, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_Name
       value: WallLong02Broken (9)
       objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915219102560988, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
@@ -5160,6 +5451,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -5298,8 +5594,20 @@ PrefabInstance:
       value: WallLong01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041490482117764, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465956298113460, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832175705630406, guid: 261832a571225ac41a21799951f189e8, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4874148236562170, guid: 261832a571225ac41a21799951f189e8, type: 3}
       propertyPath: m_RootOrder
@@ -5377,6 +5685,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -5451,6 +5764,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ENSP (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
@@ -5527,6 +5845,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ENSP (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
       propertyPath: m_RootOrder
@@ -5602,6 +5925,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -5672,13 +6000,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3075190571166598096}
     m_Modifications:
+    - target: {fileID: 1631123401944690, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_Name
       value: WallLong02Broken (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915219102560988, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder
@@ -5905,6 +6245,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BXSP (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 9073569011885564400, guid: 62060207e6ddc304eb00d5e0660a5058,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62060207e6ddc304eb00d5e0660a5058, type: 3}
 --- !u!4 &9177313035849411791 stripped
@@ -6000,6 +6345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -6075,6 +6425,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -6145,13 +6500,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3075190571166598096}
     m_Modifications:
+    - target: {fileID: 1631123401944690, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_Name
       value: WallLong02Broken (5)
       objectReference: {fileID: 0}
     - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1697687047451188, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915219102560988, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4692008035512372, guid: 97ff29e8b5f376747927d07aed3dd17d, type: 3}
       propertyPath: m_RootOrder

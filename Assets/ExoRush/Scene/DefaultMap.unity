@@ -3858,10 +3858,25 @@ PrefabInstance:
       propertyPath: AmountOfBulletsForEachCannon
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654780, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: Layer.m_Bits
+      value: 65536
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654781, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: Layer.m_Bits
+      value: 65536
+      objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654781, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: VegetationAmount
       value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654783, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: Layer.m_Bits
+      value: 65536
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654783, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}

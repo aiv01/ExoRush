@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5472461312614879104}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: EnemiesSP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2902513827163595004}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: ObstaclesSP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2413589119527718054}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Structures
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9123060237252470831}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Spawners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766499288911162102}
   - component: {fileID: 3466590216979743838}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Isle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1906821122372442825}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: BoxesSP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5088118340075583109}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,7 +270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6170572793651331228}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Rock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,6 +662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallRock02
       objectReference: {fileID: 0}
+    - target: {fileID: 1100890239326732, guid: 65194f4f6d2fa7b499d9426fb9ace010, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4504288210850576, guid: 65194f4f6d2fa7b499d9426fb9ace010, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -962,6 +966,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BXSP
       objectReference: {fileID: 0}
+    - target: {fileID: 9073569011885564400, guid: 62060207e6ddc304eb00d5e0660a5058,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62060207e6ddc304eb00d5e0660a5058, type: 3}
 --- !u!4 &1257044084926126320 stripped
@@ -981,6 +990,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ENSP2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}
@@ -1056,6 +1070,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OBSP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
@@ -1347,6 +1366,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OBSP (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1501,6 +1525,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OBSP (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
@@ -1733,9 +1762,69 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2413589119527718054}
     m_Modifications:
+    - target: {fileID: 1046520505921540, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070100989343530, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116161894363178, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175022564001380, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1243116821957508, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248125496355576, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248894872830044, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 1313477305897852, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
       propertyPath: m_Name
       value: Platform3x3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1386600743660440, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500974322914268, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581148415280682, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653092444077290, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767889900723852, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874417314387270, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948105166390472, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1992604773764442, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4391597317842242, guid: e7a4e183d1e7204459f2dab44d1cf267, type: 3}
       propertyPath: m_RootOrder
@@ -2218,6 +2307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallRock02
       objectReference: {fileID: 0}
+    - target: {fileID: 1100890239326732, guid: 65194f4f6d2fa7b499d9426fb9ace010, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4504288210850576, guid: 65194f4f6d2fa7b499d9426fb9ace010, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2354,6 +2447,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BXSP (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 9073569011885564400, guid: 62060207e6ddc304eb00d5e0660a5058,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62060207e6ddc304eb00d5e0660a5058, type: 3}
 --- !u!4 &6002869934086991104 stripped
@@ -2373,6 +2471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OBSP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379494281031652798, guid: 58c126f239fb88f4b8f305472c7439b6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 6504501904659230402, guid: 58c126f239fb88f4b8f305472c7439b6,
         type: 3}
@@ -2512,6 +2615,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ENSP1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619626439846825962, guid: 8d5cc47e9eea7b54682ca278917eef2e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8350071698627300950, guid: 8d5cc47e9eea7b54682ca278917eef2e,
         type: 3}

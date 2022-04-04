@@ -18,6 +18,8 @@ public class ProceduralWorldGeneration : MonoBehaviour
     //Dropship
     public DropShipMovement DropShipMovement;
 
+    public LayerMask Layer;
+
 
 
     void Start()
@@ -48,7 +50,7 @@ public class ProceduralWorldGeneration : MonoBehaviour
     public void SpawnVegetation()
     {
         RaycastHit hit;
-        if(Physics.Raycast(new Vector3(Random.Range(HorizontalRange, HorizontalRange * -1), 100, transform.position.z + SpawnDistance), Vector3.down,out hit))
+        if(Physics.Raycast(new Vector3(Random.Range(HorizontalRange, HorizontalRange * -1), 100, transform.position.z + SpawnDistance), Vector3.down,out hit,Layer))
         {
             VegetationPool[VegetationIndex].transform.position = hit.point;
 
