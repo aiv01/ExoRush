@@ -401,13 +401,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 401484638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fca549f3204cf7a4595f51416e0f1d45, type: 3}
+  m_Script: {fileID: 11500000, guid: cff492fa43df69948abca7dd104617f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveObject:
-    currency: 0
-    powerUpIndexes: 000000000000000000000000000000000000000000000000
-    leaderboard: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  sl: {fileID: 439579919}
+  scoreValue: {fileID: 781506786}
   AbilityLvl: 
 --- !u!82 &401484645
 AudioSource:
@@ -728,6 +726,65 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &439579918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439579920}
+  - component: {fileID: 439579919}
+  m_Layer: 0
+  m_Name: SaveLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &439579919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439579918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720c7fbc24dab4c40a5bacbed318f62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sObj:
+    currency: 0
+    powerUpIndexes: 000000000000000000000000000000000000000000000000
+    leaderboard: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    lbNames:
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    score: 0
+--- !u!4 &439579920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439579918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.013447, y: 0.06349802, z: 89.96625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439686313
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,7 +2914,7 @@ Transform:
   - {fileID: 1006689374}
   - {fileID: 1256287712}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1592409189 stripped
 GameObject:
@@ -2907,7 +2964,7 @@ Transform:
   m_Children:
   - {fileID: 1205749817}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1799042238 stripped
 GameObject:
@@ -3387,7 +3444,7 @@ PrefabInstance:
     - target: {fileID: 174735192847753321, guid: 7403e2017c3abc74d9e53925e0a56d5f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 174735192847753321, guid: 7403e2017c3abc74d9e53925e0a56d5f,
         type: 3}
@@ -3660,7 +3717,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &2028456708 stripped
 GameObject:
@@ -3972,9 +4029,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}
+      propertyPath: liv
+      value: 
+      objectReference: {fileID: 401484641}
+    - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
+        type: 3}
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 1100253262}
+    - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
+        type: 3}
+      propertyPath: nextScene
+      value: EndMap
+      objectReference: {fileID: 0}
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}
       propertyPath: DeathAudio

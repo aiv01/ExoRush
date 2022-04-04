@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LIVDefMap : LIV
 {
     [SerializeField] private SaveLogic sl;
-    [SerializeField] private Text scoreValue;
+    [SerializeField] private Text scoreValue;       
 
     public int[] AbilityLvl;
 
@@ -14,6 +14,7 @@ public class LIVDefMap : LIV
     {
         sl.LoadFile();
         AbilityLvl = sl.sObj.powerUpIndexes;
+        scoreValue.text = sl.sObj.score.ToString();
     }
 
     public override void UpdateSelected(bool currency, bool indexes = false, bool leaderboard = false, bool score = false)

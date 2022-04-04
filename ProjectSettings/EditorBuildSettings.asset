@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ExoRush/Scene/BossMap.unity
-    guid: 736fd103e4978454a9aa5a432b1c8189
+    path: Assets/ExoRush/Scene/MainMenu.unity
+    guid: 24b6b9932a080884ca2fc06a177e0e1e
   - enabled: 1
     path: Assets/ExoRush/Scene/DefaultMap.unity
     guid: 53a27a042c927184eab20307f7ef4557
   - enabled: 1
+    path: Assets/ExoRush/Scene/BossMap.unity
+    guid: 736fd103e4978454a9aa5a432b1c8189
+  - enabled: 1
     path: Assets/ExoRush/Scene/ShopMap.unity
     guid: d7bbcc0ffcadc1a49bc30f10f7b09b20
-  - enabled: 1
-    path: Assets/ExoRush/Scene/MainMenu.unity
-    guid: 24b6b9932a080884ca2fc06a177e0e1e
   - enabled: 1
     path: Assets/ExoRush/Scene/EndMap.unity
     guid: 7219b31d1233fb845af6130e95236ae4

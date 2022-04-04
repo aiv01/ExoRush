@@ -74,6 +74,10 @@ public class LIVEndMap : LIV
             lb = lbValues;
             lbnames = lbNames;
         }
+        if (score)
+        {
+            sl.UpdateScore(0);
+        }
         sl.UpdateObjLeaderboard(lb, lbnames);
         sl.UpdateObjCurrency(curr, true);
     }
