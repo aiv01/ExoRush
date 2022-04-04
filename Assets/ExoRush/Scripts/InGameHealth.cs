@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class InGameHealth : MonoBehaviour
 {
@@ -97,7 +98,9 @@ public class InGameHealth : MonoBehaviour
 
         if(Health <= 0)
         {
-            if(DeathAudio != null)
+            
+
+            if (DeathAudio != null)
             {
                 DeathAudio.Play();
             }
@@ -112,13 +115,16 @@ public class InGameHealth : MonoBehaviour
                 AudioManager.FadeOUT(AudioFadeOutDuration);
             }
 
+            liv.UpdateSelected(false, false, false, true);
+            SceneManager.LoadScene("EndMap");
+
             DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
 
             gameObject.SetActive(false);
 
             DeadShip.GetComponent<Rigidbody>().velocity = new Vector3(DropShipMovementScript.RotTarget * -1, 0, DropShipMovementScript.CurrentVelocity * 10);
 
-            liv.UpdateSelected(false, false, false, true);
+            
             
         }
     }

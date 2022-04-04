@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,7 +245,7 @@ MonoBehaviour:
   CanActivate: 0
   AbilityLoader: {fileID: 168456046}
   AbilityLvl: 0
-  AbilityIndex: 3
+  AbilityIndex: 0
 --- !u!114 &168456038 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
@@ -597,13 +597,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 168456035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fca549f3204cf7a4595f51416e0f1d45, type: 3}
+  m_Script: {fileID: 11500000, guid: cff492fa43df69948abca7dd104617f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveObject:
-    currency: 0
-    powerUpIndexes: 000000000000000000000000000000000000000000000000
-    leaderboard: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  sl: {fileID: 1748523443}
+  scoreValue: {fileID: 384298126}
   AbilityLvl: 
 --- !u!114 &168456049
 MonoBehaviour:
@@ -3050,7 +3048,7 @@ PrefabInstance:
     - target: {fileID: 174735192847753321, guid: 7403e2017c3abc74d9e53925e0a56d5f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 174735192847753321, guid: 7403e2017c3abc74d9e53925e0a56d5f,
         type: 3}
@@ -3334,6 +3332,65 @@ PrefabInstance:
       objectReference: {fileID: 168456037}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7403e2017c3abc74d9e53925e0a56d5f, type: 3}
+--- !u!1 &1748523442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1748523444}
+  - component: {fileID: 1748523443}
+  m_Layer: 0
+  m_Name: SaveLogic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1748523443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748523442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720c7fbc24dab4c40a5bacbed318f62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sObj:
+    currency: 0
+    powerUpIndexes: 000000000000000000000000000000000000000000000000
+    leaderboard: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    lbNames:
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    - John Doe
+    score: 0
+--- !u!4 &1748523444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748523442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8355293, y: -4.667317, z: 91.981415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805164986
 GameObject:
   m_ObjectHideFlags: 0
@@ -3617,6 +3674,11 @@ PrefabInstance:
       propertyPath: AdditionalScoreAnimation.m_Curve.Array.data[0].outSlope
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: liv
+      value: 
+      objectReference: {fileID: 168456046}
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: Shield

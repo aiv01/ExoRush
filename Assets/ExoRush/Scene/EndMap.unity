@@ -1493,7 +1493,7 @@ MonoBehaviour:
   sceneName: DefaultMap
   saveOnJump: 1
   liv: {fileID: 1570855121}
-  saveCurrency: 0
+  saveCurrency: 1
   savePowerUps: 0
   saveLeaderboard: 1
   saveScore: 0
@@ -1658,7 +1658,7 @@ MonoBehaviour:
   sceneName: MainMenu
   saveOnJump: 1
   liv: {fileID: 1570855121}
-  saveCurrency: 0
+  saveCurrency: 1
   savePowerUps: 0
   saveLeaderboard: 1
   saveScore: 0

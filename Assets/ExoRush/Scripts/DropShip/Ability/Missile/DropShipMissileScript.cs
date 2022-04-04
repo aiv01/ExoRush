@@ -13,7 +13,7 @@ public class DropShipMissileScript : MonoBehaviour
     public bool CanActivate;
 
     //LVL
-    public AbilityLoader AbilityLoader;
+    public LIVDefMap AbilityLoader;
     public int AbilityLvl;
     public int AbilityIndex;
 

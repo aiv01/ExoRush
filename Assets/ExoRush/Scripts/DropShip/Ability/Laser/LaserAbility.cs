@@ -24,7 +24,7 @@ public class LaserAbility : MonoBehaviour
     public int Damage;
 
     //LVL
-    public AbilityLoader AbilityLoader;
+    public LIVDefMap AbilityLoader;
     public int AbilityLvl;
     public int AbilityIndex;
 

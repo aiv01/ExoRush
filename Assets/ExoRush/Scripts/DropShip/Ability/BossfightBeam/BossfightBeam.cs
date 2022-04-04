@@ -27,7 +27,7 @@ public class BossfightBeam : MonoBehaviour
     bool Active;
 
     //LVL
-    public AbilityLoader AbilityLoader;
+    public LIVDefMap AbilityLoader;
     int AbilityLvl;
     public int AbilityIndex;
 

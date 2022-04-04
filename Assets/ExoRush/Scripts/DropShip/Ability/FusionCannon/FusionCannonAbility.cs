@@ -23,7 +23,7 @@ public class FusionCannonAbility : MonoBehaviour
     public AudioSource[] Audio;
 
     //LVL
-    public AbilityLoader AbilityLoader;
+    public LIVDefMap AbilityLoader;
     public int AbilityLvl;
     public int AbilityIndex;
 

@@ -21,7 +21,7 @@ public class LIVEndMap : LIV
         lbValues = sl.sObj.leaderboard;
         lbNames = sl.sObj.lbNames;
         score.text = sl.sObj.score.ToString();
-        currency.text = sl.sObj.currency.ToString();
+        currency.text = (sl.sObj.currency + sl.sObj.score).ToString();
         SortLB();
         sl.UpdateObjLeaderboard(lbValues, lbNames, true);
         SetLB();

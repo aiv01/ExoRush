@@ -8,6 +8,14 @@ public class LIVDefMap : LIV
     [SerializeField] private SaveLogic sl;
     [SerializeField] private Text scoreValue;
 
+    public int[] AbilityLvl;
+
+    private void Awake()
+    {
+        sl.LoadFile();
+        AbilityLvl = sl.sObj.powerUpIndexes;
+    }
+
     public override void UpdateSelected(bool currency, bool indexes = false, bool leaderboard = false, bool score = false)
     {
         int scr = sl.sObj.score;

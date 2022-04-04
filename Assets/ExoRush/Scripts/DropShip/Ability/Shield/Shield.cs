@@ -17,7 +17,7 @@ public class Shield : MonoBehaviour
     public GameObject ShieldBar;
 
     //LVL
-    public AbilityLoader AbilityLoader;
+    public LIVDefMap AbilityLoader;
     int AbilityLvl;
     public int AbilityIndex;
 

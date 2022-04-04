@@ -655,6 +655,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 54180573}
     m_Modifications:
+    - target: {fileID: 452328242829393664, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6666718
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_text
+      value: ' SHIELD'
+      objectReference: {fileID: 0}
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
       propertyPath: currencyText
@@ -1078,10 +1088,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 54180573}
     m_Modifications:
+    - target: {fileID: 452328242829393664, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6666718
+      objectReference: {fileID: 0}
     - target: {fileID: 4660791330565712150, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_text
+      value: ' DASH'
       objectReference: {fileID: 0}
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
@@ -1449,6 +1469,7 @@ MonoBehaviour:
   saveCurrency: 1
   savePowerUps: 1
   saveLeaderboard: 0
+  saveScore: 0
 --- !u!114 &1216295284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1559,6 +1580,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 54180573}
     m_Modifications:
+    - target: {fileID: 452328242829393664, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6666718
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_text
+      value: LASER BEAM
+      objectReference: {fileID: 0}
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
       propertyPath: currencyText
@@ -1752,10 +1783,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 54180573}
     m_Modifications:
+    - target: {fileID: 452328242829393664, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6666718
+      objectReference: {fileID: 0}
     - target: {fileID: 4660791330565712150, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_text
+      value: FUSION CANNON
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
@@ -1927,10 +1978,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 54180573}
     m_Modifications:
+    - target: {fileID: 452328242829393664, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6666718
+      objectReference: {fileID: 0}
     - target: {fileID: 4660791330565712150, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_text
+      value: MISSILE
       objectReference: {fileID: 0}
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
@@ -2185,10 +2246,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 54180573}
     m_Modifications:
+    - target: {fileID: 452328242829393664, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.6666718
+      objectReference: {fileID: 0}
     - target: {fileID: 4660791330565712150, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
+        type: 3}
+      propertyPath: m_text
+      value: TWIN LASERS
       objectReference: {fileID: 0}
     - target: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
         type: 3}
