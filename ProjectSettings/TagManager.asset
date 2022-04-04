@@ -8,6 +8,13 @@ TagManager:
   - Obstacle
   - Enemy
   - BossSphere
+  - BXSP
+  - ENSP
+  - OBSP
+  - LsPx
+  - BmPx
+  - lbValue
+  - lbName
   layers:
   - Default
   - TransparentFX

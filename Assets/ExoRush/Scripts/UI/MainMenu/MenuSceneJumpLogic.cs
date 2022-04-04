@@ -11,6 +11,7 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
     [SerializeField] private bool saveCurrency;
     [SerializeField] private bool savePowerUps;
     [SerializeField] private bool saveLeaderboard;
+    [SerializeField] private bool saveScore;
 
     private bool jump = false;
     public void Execute()
@@ -22,7 +23,7 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
     {
         if (jump) 
         {
-            if (saveOnJump) liv.UpdateSelected(saveCurrency, savePowerUps, saveLeaderboard);
+            if (saveOnJump) liv.UpdateSelected(saveCurrency, savePowerUps, saveLeaderboard, saveScore);
             Time.timeScale = 1;
             SceneManager.LoadScene(sceneName);
         } 

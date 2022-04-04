@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 977583755676675785}
   m_Layer: 0
   m_Name: ScoreValue
-  m_TagString: Untagged
+  m_TagString: lbValue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 977583755855720454}
   m_Layer: 0
   m_Name: Text (TMP)
-  m_TagString: Untagged
+  m_TagString: lbName
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

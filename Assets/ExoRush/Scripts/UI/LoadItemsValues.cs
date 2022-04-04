@@ -13,7 +13,7 @@ public class LoadItemsValues : LIV
         sl.LoadFile();
     }
 
-    public override void UpdateSelected(bool currency, bool indexes = false, bool leaderboard = false, bool score)
+    public override void UpdateSelected(bool currency, bool indexes = false, bool leaderboard = false, bool score = false)
     {
         int curr = sl.sObj.currency;
         int scr = sl.sObj.score;
@@ -22,7 +22,7 @@ public class LoadItemsValues : LIV
         string[] lbnames = sl.sObj.lbNames;
         if (currency)
         { 
-           curr = items[0].currency;
+            curr = items[0].currency;
         }
         if (indexes)
         {

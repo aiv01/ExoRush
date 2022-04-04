@@ -33,7 +33,7 @@ public static class SaveManager
             Debug.LogFormat("Loaded {0}", fullPath);
         }else
         {
-            //Debug.LogErrorFormat("Could not find {0}", fullPath);
+            Debug.Log("Could not find DataFile. New DataFile created");
             Save(sObj);
         }
 

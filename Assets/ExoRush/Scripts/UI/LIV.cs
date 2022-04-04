@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LIV: MonoBehaviour
 {
-    public virtual void UpdateSelected(bool currency, bool indexes = false, bool leaderboard = false, bool score)
+    public virtual void UpdateSelected(bool currency, bool indexes = false, bool leaderboard = false, bool score = false)
     {
-
+        
     }
 }
