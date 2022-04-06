@@ -25,7 +25,32 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
         {
             if (saveOnJump) liv.UpdateSelected(saveCurrency, savePowerUps, saveLeaderboard, saveScore);
             Time.timeScale = 1;
-            SceneManager.LoadScene(sceneName);
+            LoadGame();
+            
         } 
+    }
+
+    public void LoadGame()
+    {
+        StartCoroutine(LoadGameAsync(sceneName));
+    }
+
+    private IEnumerator LoadGameAsync(string sceneName)
+    {
+        /*SceneManager.LoadScene(sceneName);
+        yield return null;*/
+        Application.backgroundLoadingPriority = ThreadPriority.Normal;
+        AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(sceneName);
+        sceneLoad.allowSceneActivation = false;
+
+        while (sceneLoad.progress < 0.9f)
+        {
+
+            yield return null;
+        }
+
+        yield return null;
+
+        sceneLoad.allowSceneActivation = true;
     }
 }
