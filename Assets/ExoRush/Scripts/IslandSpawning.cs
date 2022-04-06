@@ -31,7 +31,7 @@ public class IslandSpawning : MonoBehaviour
                 }
                 else if (SpawingObject[i].transform.tag == "ENSP")
                 {
-                    Instantiate(EnemyLibrary[Random.Range(0, EnemyLibrary.Length)], SpawingObject[i].transform.position, Quaternion.EulerRotation(0, 180, 0));//SpawingObject[i].transform.rotation);
+                    Instantiate(EnemyLibrary[Random.Range(0, EnemyLibrary.Length)], SpawingObject[i].transform.position, Quaternion.Euler(0, 180, 0));//SpawingObject[i].transform.rotation);
                 }
                 else if (SpawingObject[i].transform.tag == "BXSP")
                 {

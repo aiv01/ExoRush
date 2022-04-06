@@ -107,15 +107,11 @@ public class FusionCannonAbility : MonoBehaviour
                     if (hit.collider.gameObject.GetComponent<EnemyMaster>() != null)
                     {
                         hit.collider.gameObject.GetComponent<EnemyMaster>().Damage(Damage);
-
                     }
 
-                    
                 }
                 ReloadTimer = ReloadTime;
             }
-
-
 
         }
         else
