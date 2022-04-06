@@ -6,18 +6,25 @@ public enum Devices { Keyboard, Xbox, PS };
 public class InputDeviceCheck : MonoBehaviour
 {    
     Devices NewInput;
-    public Devices CurrentInput;
+    static Devices CurrentInput;
     bool IsController;
+
+    
 
     public delegate void InputDelegate(Devices type);
 
     public event InputDelegate OnInputChanged = null;
 
+    private void Start()
+    {
+        OnInputChanged(CurrentInput);
+    }
+
     void Update()
     {
         if (Input.anyKey)
         {
-            if (Input.GetKey(KeyCode.Joystick1Button0) ||
+        if (Input.GetKey(KeyCode.Joystick1Button0) ||
             Input.GetKey(KeyCode.Joystick1Button1) ||
             Input.GetKey(KeyCode.Joystick1Button2) ||
             Input.GetKey(KeyCode.Joystick1Button3) ||
@@ -67,16 +74,11 @@ public class InputDeviceCheck : MonoBehaviour
         if (NewInput != CurrentInput)
         {
             CurrentInput = NewInput;
-            InputChanged(CurrentInput);
-            
+            OnInputChanged(CurrentInput);          
+
         }
-        Debug.Log(CurrentInput);
+        
 
     }
 
-
-    private void InputChanged(Devices DeviceType)
-    {
-
-    }
 }

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyHint : MonoBehaviour
 {
     public InputDeviceCheck DeviceScript;
     public Devices CurrentDevice;
+    public Sprite[] InputSprite;
+    public Image DisplayImage;
 
 
     void OnEnable()
@@ -20,7 +23,8 @@ public class KeyHint : MonoBehaviour
 
     private void InputChanged(Devices Device)
     {
-
+        DisplayImage.sprite = InputSprite[(int)Device];
+        Debug.Log("Cast");
     }
 
 
