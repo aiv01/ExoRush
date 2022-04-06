@@ -99,7 +99,7 @@ public class InGameHealth : MonoBehaviour
 
         if(Health <= 0)
         {
-            
+            InGameScoreCalculation.TransitionMapScore = 0;
 
             if (DeathAudio != null)
             {

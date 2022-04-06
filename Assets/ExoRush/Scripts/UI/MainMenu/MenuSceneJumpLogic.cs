@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 {
@@ -13,7 +14,14 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
     [SerializeField] private bool saveLeaderboard;
     [SerializeField] private bool saveScore;
 
+    private TMP_Text text;
     private bool jump = false;
+
+    void Awake()
+    {
+        text = GetComponentInChildren<TMP_Text>();
+    }
+
     public void Execute()
     {
         jump = true;
@@ -25,6 +33,7 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
         {
             if (saveOnJump) liv.UpdateSelected(saveCurrency, savePowerUps, saveLeaderboard, saveScore);
             Time.timeScale = 1;
+            text.text = "LOADING...";
             SceneManager.LoadScene(sceneName);
         } 
     }
