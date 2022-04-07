@@ -1416,7 +1416,7 @@ MonoBehaviour:
   BoxDestruction: {fileID: 0}
   SwitchMap: 0
   SwitchMapTransition: {fileID: 0}
-  Animator: {fileID: 0}
+  Animator: {fileID: 1111311676290898566}
   HitBetweenTime: 0.1
   ChangeColorMaterial: {fileID: 0}
 --- !u!114 &6516664767976141761
