@@ -107,6 +107,7 @@ public class InGameHealth : MonoBehaviour
 
         if(Health <= 0)
         {
+            shipModel.SetActive(false);
 
             if (DeathAudio != null)
             {
@@ -124,7 +125,11 @@ public class InGameHealth : MonoBehaviour
             }
             DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
 
-            DeadShip.GetComponent<Rigidbody>().velocity = new Vector3(DropShipMovementScript.RotTarget * -1, 0, DropShipMovementScript.CurrentVelocity * 10);
+            if (DropShipMovementScript != null)
+            {
+                DeadShip.GetComponent<Rigidbody>().velocity = new Vector3(DropShipMovementScript.RotTarget * -1, 0, DropShipMovementScript.CurrentVelocity * 10);
+            }
+            
             DeadShip.AddComponent<EndMenuLogic>();
 
             liv.UpdateSelected(false, false, false, true);
