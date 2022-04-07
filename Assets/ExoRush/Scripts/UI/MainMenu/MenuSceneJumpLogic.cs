@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 {
@@ -14,9 +15,17 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
     [SerializeField] private bool saveScore;
 
     private bool jump = false;
+    private TMP_Text text;
+
+    void Awake()
+    {
+        text = GetComponentInChildren<TMP_Text>();
+    }
+
     public void Execute()
     {
         jump = true;
+        text.text = "LOADING...";
     }
 
     private void LateUpdate()

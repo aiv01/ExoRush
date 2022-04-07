@@ -28,12 +28,12 @@ public static class SaveManager
         {
             //string json = Decode(File.ReadAllText(fullPath));
             string json = File.ReadAllText(fullPath);
-            Debug.Log(json);
             sObj = JsonUtility.FromJson<SaveObject>(json);
-            Debug.LogFormat("Loaded {0}", fullPath);
+            //Debug.Log(json);
+            //Debug.LogFormat("Loaded {0}", fullPath);
         }else
         {
-            Debug.Log("Could not find DataFile. New DataFile created");
+            //Debug.Log("Could not find DataFile. New DataFile created");
             Save(sObj);
         }
 

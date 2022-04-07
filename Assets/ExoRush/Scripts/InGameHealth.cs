@@ -8,7 +8,10 @@ using UnityEngine.SceneManagement;
 public class InGameHealth : MonoBehaviour
 {
     public LIV liv;
-    public string nextScene;
+    public GameObject EndMenu;
+    public GameObject PauseMenu;
+    public float EndMenuTimer = 2.0f;
+    public GameObject shipModel;
     public int MaxHealth = 100;
     int Health;
     public GameObject HealthBar;
@@ -39,7 +42,12 @@ public class InGameHealth : MonoBehaviour
     public float InvulnerabilityTimeFrame = 0.2f;
     float TempInvulnerabiliy;
 
-
+    private void Awake()
+    {
+        shipModel.SetActive(true);
+        EndMenu.SetActive(false);
+        PauseMenu.SetActive(true);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -99,7 +107,6 @@ public class InGameHealth : MonoBehaviour
 
         if(Health <= 0)
         {
-            
 
             if (DeathAudio != null)
             {
@@ -115,18 +122,15 @@ public class InGameHealth : MonoBehaviour
             {
                 AudioManager.FadeOUT(AudioFadeOutDuration);
             }
-
-            liv.UpdateSelected(false, false, false, true);
-            SceneManager.LoadScene(nextScene);
-
             DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
 
-            gameObject.SetActive(false);
-
             DeadShip.GetComponent<Rigidbody>().velocity = new Vector3(DropShipMovementScript.RotTarget * -1, 0, DropShipMovementScript.CurrentVelocity * 10);
+            DeadShip.AddComponent<EndMenuLogic>();
 
-            
-
+            liv.UpdateSelected(false, false, false, true);
+            DeadShip.GetComponent<EndMenuLogic>().Initialise(EndMenu, PauseMenu, EndMenuTimer);
+            DeadShip.GetComponent<EndMenuLogic>().StartCounter();
+            gameObject.SetActive(false);
         }
     }
 
@@ -155,8 +159,6 @@ public class InGameHealth : MonoBehaviour
         
 
         HealthBar.GetComponent<UnityEngine.UI.Image>().fillAmount = (float)Health / (float)MaxHealth;
-
-        
         
     }
 
