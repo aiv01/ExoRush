@@ -15,7 +15,7 @@ public class LoadingMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotAnim = 
-        transform.rotation = Quaternion.EulerRotation(0,0,0);
+        //RotAnim = 
+        transform.rotation = Quaternion.Euler(0,0,0);
     }
 }
