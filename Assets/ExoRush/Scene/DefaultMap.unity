@@ -911,6 +911,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a592762fe3fcfc44b2142abc059ad33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &240334929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2822494575573620702, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8991238018971403597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &285623118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2302,7 +2308,7 @@ PrefabInstance:
     - target: {fileID: 4749794517358057899, guid: ef567a085d4b4334b9e9f43db5a9eb41,
         type: 3}
       propertyPath: PowerUp
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4749794517358057899, guid: ef567a085d4b4334b9e9f43db5a9eb41,
         type: 3}
@@ -3848,6 +3854,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1528596825}
     m_Modifications:
+    - target: {fileID: -1300638234615968514, guid: 1f7c55d9afcf51248bc59395bdf121ee,
+        type: 3}
+      propertyPath: DeviceScript
+      value: 
+      objectReference: {fileID: 168456058}
     - target: {fileID: 68847220383336577, guid: 1f7c55d9afcf51248bc59395bdf121ee,
         type: 3}
       propertyPath: m_Name
@@ -3993,6 +4004,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2023665026}
     m_Modifications:
+    - target: {fileID: -1300638234615968514, guid: 1f7c55d9afcf51248bc59395bdf121ee,
+        type: 3}
+      propertyPath: DeviceScript
+      value: 
+      objectReference: {fileID: 168456058}
     - target: {fileID: 68847220383336577, guid: 1f7c55d9afcf51248bc59395bdf121ee,
         type: 3}
       propertyPath: m_Name
@@ -4333,6 +4349,11 @@ PrefabInstance:
       propertyPath: nextScene
       value: EndMap
       objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: shipModel
+      value: 
+      objectReference: {fileID: 240334929}
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: DeathAudio

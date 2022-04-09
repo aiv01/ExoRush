@@ -137,10 +137,6 @@ public class InGameHealth : MonoBehaviour
             DeadShip.GetComponent<EndMenuLogic>().Initialise(EndMenu, PauseMenu, EndMenuTimer);
             DeadShip.GetComponent<EndMenuLogic>().StartCounter();
             gameObject.SetActive(false);
-
-
-
-
         }
     }
 
