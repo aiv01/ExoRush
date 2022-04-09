@@ -1100,6 +1100,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 333109388}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &456035583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 174735192847753320, guid: 7403e2017c3abc74d9e53925e0a56d5f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1910723566}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &485819026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1272,6 +1278,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -280
       objectReference: {fileID: 0}
+    - target: {fileID: 4128533828224293499, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+        type: 3}
+      propertyPath: sl
+      value: 
+      objectReference: {fileID: 439579919}
+    - target: {fileID: 5629701546496678705, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+        type: 3}
+      propertyPath: sl
+      value: 
+      objectReference: {fileID: 439579919}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff9e66b0a10cd949bb418c62bd41f70, type: 3}
 --- !u!1 &518104637
@@ -3286,6 +3302,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.6, z: 0.6}
   m_Center: {x: -0.37, y: 0, z: 0}
+--- !u!1 &1594638544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202513596992798349, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+    type: 3}
+  m_PrefabInstance: {fileID: 485819026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1622009131
 GameObject:
   m_ObjectHideFlags: 0
@@ -4390,14 +4412,29 @@ PrefabInstance:
       objectReference: {fileID: 439579921}
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}
+      propertyPath: EndMenu
+      value: 
+      objectReference: {fileID: 1594638544}
+    - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
+        type: 3}
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 1100253262}
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}
+      propertyPath: PauseMenu
+      value: 
+      objectReference: {fileID: 456035583}
+    - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
+        type: 3}
       propertyPath: nextScene
       value: EndMap
       objectReference: {fileID: 0}
+    - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
+        type: 3}
+      propertyPath: shipModel
+      value: 
+      objectReference: {fileID: 990377951}
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}
       propertyPath: DeathAudio
