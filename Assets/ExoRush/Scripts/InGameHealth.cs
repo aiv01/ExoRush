@@ -42,6 +42,8 @@ public class InGameHealth : MonoBehaviour
     public float InvulnerabilityTimeFrame = 0.2f;
     float TempInvulnerabiliy;
 
+    public bool DashInvulnerability;
+
     private void Awake()
     {
         shipModel.SetActive(true);
@@ -79,10 +81,11 @@ public class InGameHealth : MonoBehaviour
     public void Damage(int damage,bool Shieldable,bool SpeedReduction,bool ShakeCamera)
     {
 
-        if(TempInvulnerabiliy > 0)
+        if(TempInvulnerabiliy > 0 || DashInvulnerability == true)
         {
             damage = 0;
         }
+
 
         TempInvulnerabiliy = InvulnerabilityTimeFrame;
 

@@ -12,6 +12,7 @@ public class DashBoost : MonoBehaviour
     public DropShipMovement MovementScript;
     [HideInInspector]
     public bool CanActivate;
+    public InGameHealth HealthManager;
 
     //LVL
     public LIVDefMap AbilityLoader;
@@ -46,6 +47,7 @@ public class DashBoost : MonoBehaviour
             if(DashDurationCowntdown <= 0)
             {
                 IsActivated = false;
+                HealthManager.DashInvulnerability = false;
             }
 
             MovementScript.BoostSpeedRotation = DashBoostAnimationFlipped.Evaluate(DashDurationCowntdown/DashDuration);
@@ -60,6 +62,7 @@ public class DashBoost : MonoBehaviour
     public void Dash()
     {
         IsActivated = true;
+        HealthManager.DashInvulnerability = true;
         DashDurationCowntdown = DashDuration;
     }
 
