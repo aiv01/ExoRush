@@ -23,6 +23,7 @@ public class KeyHint : MonoBehaviour
 
     private void InputChanged(Devices Device)
     {
+        Debug.Log(Device);
         DisplayImage.sprite = InputSprite[(int)Device];
     }
 

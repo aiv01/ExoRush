@@ -5,9 +5,9 @@ using UnityEngine;
 public enum Devices { Keyboard, Xbox, PS };
 public class InputDeviceCheck : MonoBehaviour
 {    
-    Devices NewInput;
+    static Devices NewInput;
     static Devices CurrentInput;
-    bool IsController;
+    static bool IsController;
 
     
 
@@ -17,6 +17,7 @@ public class InputDeviceCheck : MonoBehaviour
 
     private void Start()
     {
+        CurrentInput = NewInput;
         OnInputChanged(CurrentInput);
     }
 
@@ -74,11 +75,13 @@ public class InputDeviceCheck : MonoBehaviour
         if (NewInput != CurrentInput)
         {
             CurrentInput = NewInput;
-            OnInputChanged(CurrentInput);          
+            OnInputChanged(CurrentInput);        
 
         }
         
+        
 
     }
+
 
 }
