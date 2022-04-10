@@ -634,15 +634,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: ShopMap
-  saveOnJump: 0
-  liv: {fileID: 0}
+  saveOnJump: 1
+  liv: {fileID: 1044231442}
   saveCurrency: 0
   savePowerUps: 0
   saveLeaderboard: 0
   saveScore: 0
-  LoadingIcon: {fileID: 0}
-  UICanvas: {fileID: 0}
-  MainCamera: {fileID: 0}
+  LoadingIcon: {fileID: 707235139}
+  UICanvas: {fileID: 1044231440}
+  MainCamera: {fileID: 1558055627}
+  AsyncLoading: 0
 --- !u!1 &1044231437
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +938,7 @@ MonoBehaviour:
   LoadingIcon: {fileID: 707235139}
   UICanvas: {fileID: 1044231440}
   MainCamera: {fileID: 1558055627}
+  AsyncLoading: 1
 --- !u!1001 &1412374544
 PrefabInstance:
   m_ObjectHideFlags: 0

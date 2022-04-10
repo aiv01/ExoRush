@@ -711,6 +711,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1216295279}
     m_Modifications:
+    - target: {fileID: -1300638234615968514, guid: 1f7c55d9afcf51248bc59395bdf121ee,
+        type: 3}
+      propertyPath: DeviceScript
+      value: 
+      objectReference: {fileID: 437348863}
     - target: {fileID: 68847220383336577, guid: 1f7c55d9afcf51248bc59395bdf121ee,
         type: 3}
       propertyPath: m_Name
@@ -851,7 +856,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1300638234615968514, guid: 1f7c55d9afcf51248bc59395bdf121ee, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1f7c55d9afcf51248bc59395bdf121ee, type: 3}
 --- !u!1001 &765788654
 PrefabInstance:
@@ -1676,6 +1682,10 @@ MonoBehaviour:
   savePowerUps: 1
   saveLeaderboard: 0
   saveScore: 0
+  LoadingIcon: {fileID: 0}
+  UICanvas: {fileID: 0}
+  MainCamera: {fileID: 0}
+  AsyncLoading: 0
 --- !u!114 &1216295284
 MonoBehaviour:
   m_ObjectHideFlags: 0

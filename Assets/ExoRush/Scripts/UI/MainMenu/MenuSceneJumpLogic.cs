@@ -17,6 +17,7 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 	public Canvas UICanvas;
 	public Camera MainCamera;
 
+	public bool AsyncLoading;
 	private bool jump = false;
 	private bool isJumping = false;
 
@@ -60,9 +61,17 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 
 	public void LoadGame()
 	{
-		UICanvas.enabled = false;
-		LoadingIcon.SetActive(true);
-		StartCoroutine(LoadGameAsync(sceneName));
+        if (AsyncLoading)
+        {
+			UICanvas.enabled = false;
+			LoadingIcon.SetActive(true);
+			StartCoroutine(LoadGameAsync(sceneName));
+		}
+        else
+        {
+			SceneManager.LoadScene(sceneName);
+		}
+
 	}
 
 	private IEnumerator LoadGameAsync(string sceneName)
