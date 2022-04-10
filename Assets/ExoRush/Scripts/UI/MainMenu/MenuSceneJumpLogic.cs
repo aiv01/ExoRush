@@ -20,6 +20,8 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 	public bool AsyncLoading;
 	private bool jump = false;
 	private bool isJumping = false;
+	bool JumpReady;
+	float JumpAnim;
 
 	public void Execute()
 	{
@@ -49,6 +51,7 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 	 */
 	private void LateUpdate()
 	{
+
 		//	[LUCA]	Check if a load is in progress or this will begina  new load every frame while loading the scene the first time
 		if (jump && !isJumping)
 		//if(jump)	//	[LUCA] This is the former verison
@@ -57,6 +60,13 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 			Time.timeScale = 1;
 			LoadGame();
 		}
+
+        if (JumpReady)
+        {
+			JumpAnim += Time.deltaTime;
+			MainCamera.backgroundColor = Color.Lerp(Color.black, Color.white, JumpAnim);
+		}
+
 	}
 
 	public void LoadGame()
@@ -79,19 +89,42 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 		//	[LUCA]	Flagging the load as "in progress" you can prevent to start a new load each frame in LateUpdate
 		isJumping = true;
 
-		Application.backgroundLoadingPriority = ThreadPriority.Low;
+		Application.backgroundLoadingPriority = ThreadPriority.Normal;
 		AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(sceneName);
+		sceneLoad.allowSceneActivation = false;
+		MainCamera.backgroundColor = Color.black;
 
-		while (sceneLoad.progress < 0.9f)
-		{
-			//	[LUCA] Progress grows up to 0.9 so the lerp will never reach white. Divinding by the cap does actually gets to 1.0
-			MainCamera.backgroundColor = Color.Lerp(Color.black, Color.white, sceneLoad.progress / 0.9f);
-			//	MainCamera.backgroundColor = Color.Lerp(Color.black, Color.white, sceneLoad.progress);	//	[LUCA] This is the former verison
+		//while (sceneLoad.progress < 0.9f)
+		//{			
+			
+		//	//	[LUCA] Progress grows up to 0.9 so the lerp will never reach white. Divinding by the cap does actually gets to 1.0
+			
+		//	//	MainCamera.backgroundColor = Color.Lerp(Color.black, Color.white, sceneLoad.progress);	//	[LUCA] This is the former verison
+		//	yield return null;
+
+		//	Debug.Log(sceneLoad.progress);
+		//}
+
+		while(sceneLoad.progress < 0.9f)
+        {			
+			MainCamera.backgroundColor = Color.Lerp(Color.black, Color.white, 0);
 			yield return null;
 		}
 
+		yield return new WaitForSeconds(0.01f);
+
+		JumpReady = true;
+
+		yield return new WaitForSeconds(1);
+
+
+
+		sceneLoad.allowSceneActivation = true;
+
+		//sceneLoad.allowSceneActivation = true;
+
 		//	[LUCA]	I suggest to restore the normal thread priority once done since it affects a bunch of things other than scene load
-		Application.backgroundLoadingPriority = ThreadPriority.Normal;
+
 		yield return null;
 
 	}

@@ -1677,6 +1677,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c06913e8c52856b418b141d43c280ea5, type: 3}
+--- !u!1 &731539569 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202513596992798349, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+    type: 3}
+  m_PrefabInstance: {fileID: 1708378643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &765215588
 GameObject:
   m_ObjectHideFlags: 0
@@ -4566,7 +4572,7 @@ PrefabInstance:
         type: 3}
       propertyPath: EndMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 731539569}
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: DeadShip
