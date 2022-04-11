@@ -41,17 +41,38 @@ public class LoadScoreboard : MonoBehaviour
     {
         //create temporary array and assign it with lbValues
         int[] tempValues = new int[11];
+        string[] tempNames = new string[11];
+        int tempValue;
+        string tempName;
         for (int i = 0; i < tempValues.Length - 1; i++)
         {
             tempValues[i] = lbValues[i];
+            tempNames[i] = lbNames[i];
         }
         tempValues[10] = sl.sObj.score;
+        tempNames[10] = "Name";
         //sort tempArray
-        Array.Sort(tempValues);
+        for (int i = 0; i < tempValues.Length; i++)
+        {
+            for (int j = 0; j < tempValues.Length - i - 1; j++)
+            {
+                if (tempValues[j] > tempValues[j + 1])
+                {
+                    tempValue = tempValues[j + 1];
+                    tempValues[j + 1] = tempValues[j];
+                    tempValues[j] = tempValue;
+                    tempName = tempNames[j + 1];
+                    tempNames[j + 1] = tempNames[j];
+                    tempNames[j] = tempName;
+                }
+            }
+        }
+        //Array.Sort(tempValues);
         //assign tempArray to lbValues. discard last item
         for (int i = 0; i < lbValues.Length; i++)
         {
             lbValues[i] = tempValues[lbValues.Length - i];
+            lbNames[i] = tempNames[lbNames.Length - i];
         }
     }
 }

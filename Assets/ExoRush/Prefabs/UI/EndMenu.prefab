@@ -1664,6 +1664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sl: {fileID: 0}
+  lbTiles: []
 --- !u!1 &202513598527056865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,6 +2614,10 @@ MonoBehaviour:
   savePowerUps: 0
   saveLeaderboard: 1
   saveScore: 1
+  LoadingIcon: {fileID: 0}
+  UICanvas: {fileID: 0}
+  MainCamera: {fileID: 0}
+  AsyncLoading: 0
 --- !u!1001 &202513597551741786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3293,6 +3298,10 @@ MonoBehaviour:
   savePowerUps: 0
   saveLeaderboard: 1
   saveScore: 0
+  LoadingIcon: {fileID: 0}
+  UICanvas: {fileID: 0}
+  MainCamera: {fileID: 0}
+  AsyncLoading: 0
 --- !u!1001 &202513598044956130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3425,6 +3434,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 202513598480885247}
     m_Modifications:
+    - target: {fileID: 977583755938963942, guid: ae5a6059aa19e6e46b85c7c7e5c3b770,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 977583755938963944, guid: ae5a6059aa19e6e46b85c7c7e5c3b770,
         type: 3}
       propertyPath: m_Pivot.x
