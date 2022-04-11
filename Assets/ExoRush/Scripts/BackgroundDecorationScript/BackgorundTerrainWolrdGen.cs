@@ -18,6 +18,8 @@ public class BackgorundTerrainWolrdGen : MonoBehaviour
 
     public bool Mirror;
 
+    public bool RenerateOnStart;
+
 
     private void Start()
     {
@@ -27,7 +29,11 @@ public class BackgorundTerrainWolrdGen : MonoBehaviour
         //Width = terrain.terrainData.heightmapWidth;
         //Height = terrain.terrainData.heightmapHeight;
 
-        terrain.terrainData = GenerateTerrain(terrain.terrainData);
+        if (RenerateOnStart)
+        {
+            terrain.terrainData = GenerateTerrain(terrain.terrainData);
+        }
+        
 
 
     }

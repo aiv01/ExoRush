@@ -7,6 +7,7 @@ public class ProceduralTerrainAutomaticMovement : MonoBehaviour
     public GameObject Terrain1;
     public GameObject Terrain2;
     public float TerrainSize = 4097;
+    public float TerrainOffset = -400;
 
     
     void Start()
@@ -19,12 +20,12 @@ public class ProceduralTerrainAutomaticMovement : MonoBehaviour
     {
         if(Terrain1.transform.position.z + TerrainSize < transform.position.z)
         {
-            Terrain1.transform.position = new Vector3(-2000,-400,Terrain1.transform.position.z + (TerrainSize * 2));
+            Terrain1.transform.position = new Vector3(TerrainSize*-0.5f,TerrainOffset,Terrain1.transform.position.z + (TerrainSize * 2));
         }
 
         if (Terrain2.transform.position.z + TerrainSize < transform.position.z)
         {
-            Terrain2.transform.position = new Vector3(-2000,-400,Terrain2.transform.position.z + (TerrainSize * 2));
+            Terrain2.transform.position = new Vector3(TerrainSize * -0.5f,TerrainOffset,Terrain2.transform.position.z + (TerrainSize * 2));
         }
     }
 }

@@ -922,6 +922,7 @@ MonoBehaviour:
   Terrain1: {fileID: 1013644426}
   Terrain2: {fileID: 672506218}
   TerrainSize: 4097
+  TerrainOffset: -400
 --- !u!114 &168456058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1742,6 +1743,7 @@ MonoBehaviour:
   terrain: {fileID: 710588276}
   ForceUpdate: 0
   Mirror: 1
+  RenerateOnStart: 0
 --- !u!218 &710588276
 Terrain:
   m_ObjectHideFlags: 0
@@ -4529,7 +4531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929377844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2000, y: -400, z: 0}
+  m_LocalPosition: {x: -2048.5, y: -400, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1013644427}
@@ -4552,6 +4554,7 @@ MonoBehaviour:
   Terrain1: {fileID: 1013644426}
   Terrain2: {fileID: 672506218}
   TerrainSize: 4097
+  TerrainOffset: -400
 --- !u!1 &1947896663 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7395230603427013322, guid: 2ceabb7131a6f8848b5a31091a9eb420,
