@@ -12,7 +12,7 @@ public class DefaultMapStartingWhite : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Volume.weight = 1;
     }
 
     // Update is called once per frame

@@ -33,7 +33,10 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 
 	public void Execute()
 	{
-		text.text = "LOADING...";
+        if (showLoadingText)
+        {
+			text.text = "LOADING...";
+		}
 		jump = true;
 	}
 
