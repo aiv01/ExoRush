@@ -28,6 +28,8 @@ public class AbilityManager : MonoBehaviour
 
     Sprite AbilitySprite;
 
+    public KeyHint KeyHintImage;
+
     //Laser
     public LaserAbility LaserAbiityRef;
     public Sprite LaserIcon;
@@ -120,6 +122,8 @@ public class AbilityManager : MonoBehaviour
 
         IconImage.sprite = AbilitySprite;
 
+        KeyHintImage.Enabled();
+
     }
 
     public void DisableAbility()
@@ -131,7 +135,8 @@ public class AbilityManager : MonoBehaviour
         AbilityIcon.SetActive(false);
 
         AbilityEnabler(false);
-        
+
+        KeyHintImage.Disabled();       
 
     }
 

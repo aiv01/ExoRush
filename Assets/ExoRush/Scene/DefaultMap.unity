@@ -214,6 +214,7 @@ MonoBehaviour:
   TimeBox: {fileID: 1382732292}
   AbilityIcon: {fileID: 511128045}
   TimeBar: {fileID: 1947896663}
+  KeyHintImage: {fileID: 1240028965}
   LaserAbiityRef: {fileID: 168456044}
   LaserIcon: {fileID: 21300002, guid: 7f83de9ce1b2e9a4882fa64589108f14, type: 3}
   MissileAbilityRef: {fileID: 168456040}
@@ -1808,6 +1809,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8b1de4d09ac3d224589596462e688a0f, type: 3}
   - {fileID: 21300000, guid: 697ff26f524fad5429f193e041c2baa2, type: 3}
   DisplayImage: {fileID: 824684004}
+  StartOff: 0
 --- !u!114 &824684004 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 421255329189978728, guid: 1f7c55d9afcf51248bc59395bdf121ee,
@@ -2952,6 +2954,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c202b4ccd90edbd4289fa83b2ae30f11, type: 3}
   - {fileID: 21300000, guid: 71ed5c08be6d6094b923a108df3aff21, type: 3}
   DisplayImage: {fileID: 1240028966}
+  StartOff: 1
 --- !u!114 &1240028966 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 421255329189978728, guid: 1f7c55d9afcf51248bc59395bdf121ee,
