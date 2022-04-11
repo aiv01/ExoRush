@@ -4,8 +4,8 @@ public class BackgorundTerrainWolrdGen : MonoBehaviour
 {
     public int Depth = 20;
 
-    public int Height = 256;
-    public int Width = 256;
+    private int Height = 256;
+    private int Width = 256;
 
     public float scale = 20f;
 
@@ -23,11 +23,13 @@ public class BackgorundTerrainWolrdGen : MonoBehaviour
     {
         //offsetX = Random.value * 100000;
         //offsetY = Random.value * 100000;
+
+        Width = terrain.terrainData.heightmapWidth;
+        Height = terrain.terrainData.heightmapHeight;
+
         terrain.terrainData = GenerateTerrain(terrain.terrainData);
-        if (Mirror)
-        {
-            scale = scale * -1;
-        }
+
+
     }
 
     public void Update()
@@ -59,7 +61,7 @@ public class BackgorundTerrainWolrdGen : MonoBehaviour
         {
             for (int y = 0; y < Height; y++)
             {
-               heights[x, y] = CalculateHeight(x, y);
+               heights[x, y] = CalculateHeight(x, y);               
             }
                 
         }
@@ -70,9 +72,12 @@ public class BackgorundTerrainWolrdGen : MonoBehaviour
 
     float CalculateHeight(int x,int y)
     {
-      float xCoord = (float)x / Width * scale + offsetX;
-      float yCoord = (float)y / Height * scale + offsetY;
+      float xCoord = (float)x / Width ;
+      float yCoord = (float)y / Height;
 
-      return Mathf.PerlinNoise(xCoord, yCoord);        
+      if(Mirror) xCoord = 1 - xCoord;
+
+
+      return Mathf.PerlinNoise(xCoord * scale + offsetX, yCoord * scale + offsetY);        
     }
 }
