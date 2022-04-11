@@ -9,6 +9,8 @@ public class InputDeviceCheck : MonoBehaviour
     static Devices CurrentInput;
     static bool IsController;
 
+    public bool HasReciver = true;
+
     
 
     public delegate void InputDelegate(Devices type);
@@ -18,7 +20,12 @@ public class InputDeviceCheck : MonoBehaviour
     private void Start()
     {
         CurrentInput = NewInput;
-        OnInputChanged(CurrentInput);
+
+        if (HasReciver)
+        {
+            OnInputChanged(CurrentInput);
+        }
+        
     }
 
     void Update()
@@ -75,7 +82,12 @@ public class InputDeviceCheck : MonoBehaviour
         if (NewInput != CurrentInput)
         {
             CurrentInput = NewInput;
-            OnInputChanged(CurrentInput);        
+
+            if (HasReciver)
+            {
+                OnInputChanged(CurrentInput);
+            }
+               
 
         }
         

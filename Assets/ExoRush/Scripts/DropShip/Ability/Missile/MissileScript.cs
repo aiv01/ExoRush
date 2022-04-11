@@ -84,7 +84,12 @@ namespace Tarodev
             _rb.velocity = transform.forward * _currentspeed;
 
             Rigidbody testRB;
-            if (_target.TryGetComponent<Rigidbody>(out testRB)) RotateRocket();
+
+            if(_target != null)
+            {
+                if (_target.TryGetComponent<Rigidbody>(out testRB)) RotateRocket();
+            }
+            
 
         }
 
