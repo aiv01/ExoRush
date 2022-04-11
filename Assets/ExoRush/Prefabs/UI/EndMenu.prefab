@@ -2540,6 +2540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f68356c9f7b187429ab64a77375b559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showLoadingText: 1
   sceneName: DefaultMap
   saveOnJump: 1
   liv: {fileID: 0}
@@ -3224,6 +3225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f68356c9f7b187429ab64a77375b559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showLoadingText: 0
   sceneName: MainMenu
   saveOnJump: 1
   liv: {fileID: 0}

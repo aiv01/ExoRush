@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 {
+	[SerializeField] private bool showLoadingText = false;
+	private TMP_Text text;
 	[SerializeField] private string sceneName;
 	[SerializeField] private bool saveOnJump = false;
 	[SerializeField] private LIV liv;
@@ -23,8 +26,14 @@ public class MenuSceneJumpLogic : MonoBehaviour, IMenuInteractable
 	bool JumpReady;
 	float JumpAnim;
 
+	void Awake()
+    {
+		text = GetComponentInChildren<TMP_Text>();
+    }
+
 	public void Execute()
 	{
+		text.text = "LOADING...";
 		jump = true;
 	}
 
