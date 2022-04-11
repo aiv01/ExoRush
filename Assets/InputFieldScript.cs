@@ -6,10 +6,15 @@ using TMPro;
 public class InputFieldScript : MonoBehaviour
 {
     private TMP_InputField textObj;
-    private string text;
+    private TMP_Text target;
 
     [SerializeField] private GameObject[] affectedObjects;
     [SerializeField] private MonoBehaviour[] affectedScripts;
+
+    private void Awake()
+    {
+        textObj = GetComponentInChildren<TMP_InputField>();
+    }
 
     private void OnEnable()
     {
@@ -18,6 +23,7 @@ public class InputFieldScript : MonoBehaviour
 
     public void ActivateInputField()
     {
+        Debug.Log("InputField activated");
         textObj.enabled = true;
         foreach(var obj in affectedObjects)
         {
@@ -36,7 +42,12 @@ public class InputFieldScript : MonoBehaviour
 
     public void OnEndEdit()
     {
-        text = textObj.text;
+        target.text = textObj.text;
         DeactivateInputField();
+    }
+
+    public void AssignText(TMP_Text text)
+    {
+        target = text;
     }
 }
