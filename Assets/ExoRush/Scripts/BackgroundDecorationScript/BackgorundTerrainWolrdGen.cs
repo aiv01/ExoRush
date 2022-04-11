@@ -4,8 +4,8 @@ public class BackgorundTerrainWolrdGen : MonoBehaviour
 {
     public int Depth = 20;
 
-    private int Height = 256;
-    private int Width = 256;
+    public int Height = 4000;
+    public int Width = 4000;
 
     public float scale = 20f;
 
@@ -24,8 +24,8 @@ public class BackgorundTerrainWolrdGen : MonoBehaviour
         //offsetX = Random.value * 100000;
         //offsetY = Random.value * 100000;
 
-        Width = terrain.terrainData.heightmapWidth;
-        Height = terrain.terrainData.heightmapHeight;
+        //Width = terrain.terrainData.heightmapWidth;
+        //Height = terrain.terrainData.heightmapHeight;
 
         terrain.terrainData = GenerateTerrain(terrain.terrainData);
 
