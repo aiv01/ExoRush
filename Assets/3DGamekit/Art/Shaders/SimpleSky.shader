@@ -2,6 +2,7 @@
 
 Shader "Skybox/Simple"
 {
+
     Properties
     {
         _AmbientSky ("Ambient Sky", Color) = (0,0,1,1)
@@ -18,6 +19,8 @@ Shader "Skybox/Simple"
 
         _SunFalloff("Sun Falloff", float) = 550
         _SunSize("Sun Size", float) = 1
+
+        _HorizonCurvature("Horizon Curvature", float) = 5
 
     }
 
@@ -68,6 +71,7 @@ Shader "Skybox/Simple"
         float p2 = 1 - p1 - p3;
 
         half3 c_sky = _AmbientSky * p1 + _AmbientHorizon * p2 + _AmbientGround * p3;
+
         half3 c_sun = _SunColor * min(pow(max(0, dot(v, _SunDirection)), _SunFalloff) * _SunSize, 1);
 
         return half4(c_sky * _SkyIntensity + c_sun * _SunIntensity, 0);
