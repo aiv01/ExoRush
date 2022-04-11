@@ -907,6 +907,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &168456057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168456035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8f9895d9739bf46a3457a97a3c4c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Terrain1: {fileID: 1013644426}
+  Terrain2: {fileID: 672506218}
+  TerrainSize: 4097
 --- !u!114 &168456058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4498,6 +4513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1929377845}
+  - component: {fileID: 1929377846}
   m_Layer: 0
   m_Name: TerrainGeneration
   m_TagString: Untagged
@@ -4521,6 +4537,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1929377846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929377844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8f9895d9739bf46a3457a97a3c4c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Terrain1: {fileID: 1013644426}
+  Terrain2: {fileID: 672506218}
+  TerrainSize: 4097
 --- !u!1 &1947896663 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7395230603427013322, guid: 2ceabb7131a6f8848b5a31091a9eb420,
@@ -5033,6 +5064,11 @@ PrefabInstance:
       propertyPath: HealthBar
       value: 
       objectReference: {fileID: 1041159416}
+    - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: MaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: PauseMenu
