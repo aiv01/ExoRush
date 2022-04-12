@@ -8,21 +8,15 @@ public class InputFieldScript : MonoBehaviour
     private TMP_InputField textObj;
     private TMP_Text target;
 
+    [SerializeField] private GameObject inputSubmenu;
     [SerializeField] private GameObject[] affectedObjects;
     [SerializeField] private MonoBehaviour[] affectedScripts;
 
-    private void Awake()
-    {
-        textObj = GetComponentInChildren<TMP_InputField>();
-    }
-
-    private void OnEnable()
-    {
-        textObj.enabled = false;
-    }
-
     public void ActivateInputField()
     {
+        inputSubmenu.SetActive(true);
+        textObj = GetComponentInChildren<TMP_InputField>();
+        textObj.Select();
         Debug.Log("InputField activated");
         textObj.enabled = true;
         foreach(var obj in affectedObjects)
@@ -33,11 +27,16 @@ public class InputFieldScript : MonoBehaviour
 
     public void DeactivateInputField()
     {
-        textObj.enabled = false;
+        inputSubmenu.SetActive(false);
         foreach (var scr in affectedScripts)
         {
             scr.enabled = false;
         }
+    }
+
+    public void OnEdit()
+    {
+        textObj.text = textObj.text;
     }
 
     public void OnEndEdit()

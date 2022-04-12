@@ -75,12 +75,13 @@ public class LoadScoreboard : MonoBehaviour
         }
         //Array.Sort(tempValues);
         //assign tempArray to lbValues. discard last item
-        for (int i = 0; i < lbValues.Length; i++)
+        for (int i = 0; i <= lbValues.Length; i++)
         {
             lbValues[i] = tempValues[lbValues.Length - i];
             lbNames[i] = tempNames[lbNames.Length - i];
         }
-
+        //inverts order of array
+        //checks for new high-score
         if (scoreIndex != 10)
         {
             input.gameObject.SetActive(true);
