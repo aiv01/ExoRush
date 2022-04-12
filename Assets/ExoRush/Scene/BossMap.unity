@@ -741,6 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a592762fe3fcfc44b2142abc059ad33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HasReciver: 1
 --- !u!1 &406171195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,6 +1215,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 439579921}
     - target: {fileID: 202513597959690130, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+        type: 3}
+      propertyPath: liv
+      value: 
+      objectReference: {fileID: 439579921}
+    - target: {fileID: 331258826411410953, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
         type: 3}
       propertyPath: liv
       value: 

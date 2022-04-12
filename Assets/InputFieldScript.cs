@@ -7,30 +7,52 @@ public class InputFieldScript : MonoBehaviour
 {
     private TMP_InputField textObj;
     private TMP_Text target;
+    private bool endEdit = false;
+    public LIVDefMap liv;
+    public LoadScoreboard lSB;
 
     [SerializeField] private GameObject inputSubmenu;
     [SerializeField] private GameObject[] affectedObjects;
     [SerializeField] private MonoBehaviour[] affectedScripts;
+    
 
     public void ActivateInputField()
     {
         inputSubmenu.SetActive(true);
         textObj = GetComponentInChildren<TMP_InputField>();
         textObj.Select();
-        Debug.Log("InputField activated");
         textObj.enabled = true;
         foreach(var obj in affectedObjects)
         {
             obj.SetActive(false);
         }
+        foreach (var scr in affectedScripts)
+        {
+            scr.enabled = false;
+        }
     }
 
     public void DeactivateInputField()
     {
-        inputSubmenu.SetActive(false);
+        foreach (var obj in affectedObjects)
+        {
+            obj.SetActive(true);
+        }
         foreach (var scr in affectedScripts)
         {
-            scr.enabled = false;
+            scr.enabled = true;
+        }
+        inputSubmenu.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (endEdit)
+        {
+            if (Input.GetKeyUp(KeyCode.Return))
+            {
+                DeactivateInputField();
+            }
         }
     }
 
@@ -42,7 +64,9 @@ public class InputFieldScript : MonoBehaviour
     public void OnEndEdit()
     {
         target.text = textObj.text;
-        DeactivateInputField();
+        lSB.UpdateLB();
+        liv.UpdateSelected(false, false, true, false);
+        endEdit = true;
     }
 
     public void AssignText(TMP_Text text)

@@ -4806,6 +4806,11 @@ PrefabInstance:
       objectReference: {fileID: 1041159416}
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: MaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 1692445292}

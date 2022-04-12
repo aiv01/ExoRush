@@ -59,10 +59,10 @@ public class LoadScoreboard : MonoBehaviour
         {
             for (int j = 0; j < tempValues.Length - i - 1; j++)
             {
-                if (tempValues[j] > tempValues[j + 1])
+                if (tempValues[j] >= tempValues[j + 1])
                 {
                     //keep scoreIndex up to date
-                    if (j + 1 == scoreIndex - 1) scoreIndex--;
+                    if (j + 1 == scoreIndex) scoreIndex--;
 
                     tempValue = tempValues[j + 1];
                     tempValues[j + 1] = tempValues[j];
@@ -75,12 +75,12 @@ public class LoadScoreboard : MonoBehaviour
         }
         //Array.Sort(tempValues);
         //assign tempArray to lbValues. discard last item
-        for (int i = 0; i <= lbValues.Length; i++)
+        for (int i = 0; i < lbValues.Length; i++)
         {
             lbValues[i] = tempValues[lbValues.Length - i];
             lbNames[i] = tempNames[lbNames.Length - i];
         }
-        //inverts order of array
+        scoreIndex = 10 - scoreIndex;
         //checks for new high-score
         if (scoreIndex != 10)
         {
@@ -93,9 +93,24 @@ public class LoadScoreboard : MonoBehaviour
                 if (value.gameObject.tag == "lbName") text = value;
             }
             input.gameObject.SetActive(true);
+            input.liv = sl.gameObject.GetComponent<LIVDefMap>();
+            input.lSB = this;
             input.AssignText(text);
-            Debug.Log("new scoreboard hs");
             input.ActivateInputField();
         }
+    }
+
+    public void UpdateLB()
+    {
+        for (int i = 0; i < lbTiles.Length; i++)
+        {
+            TMP_Text[] values = new TMP_Text[2];
+            values = lbTiles[i].GetComponentsInChildren<TMP_Text>();
+            foreach (var value in values)
+            {
+                if (value.gameObject.tag == "lbName") lbNames[i] = value.text;
+            }
+        }
+        sl.gameObject.GetComponent<LIVDefMap>().GetLB(lbValues, lbNames);
     }
 }
