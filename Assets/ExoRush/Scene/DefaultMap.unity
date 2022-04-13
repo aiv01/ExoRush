@@ -147,13 +147,13 @@ MonoBehaviour:
   TimeBar: {fileID: 1947896663}
   KeyHintImage: {fileID: 1240028965}
   LaserAbiityRef: {fileID: 168456044}
-  LaserIcon: {fileID: 21300002, guid: 7f83de9ce1b2e9a4882fa64589108f14, type: 3}
+  LaserIcon: {fileID: 21300000, guid: 28a9d089b13bbad408b71336b1fc1501, type: 3}
   MissileAbilityRef: {fileID: 168456040}
-  MissileIcon: {fileID: 21300010, guid: db1119505b88ac244ab924ad71d3ece3, type: 3}
+  MissileIcon: {fileID: 21300000, guid: 31faecfddd242cc4e833ea9260570b5e, type: 3}
   DashAbilityRef: {fileID: 168456037}
-  DashIcon: {fileID: 21300000, guid: be668f8b2ae220b4ba6ed120e2613f06, type: 3}
+  DashIcon: {fileID: 21300000, guid: 4d79929eb1cbf23449fff97428fb11eb, type: 3}
   FusionAbilityRef: {fileID: 168456043}
-  FusionIcon: {fileID: 21300014, guid: fc49794cc535bef4f969645c4eb97b80, type: 3}
+  FusionIcon: {fileID: 21300000, guid: c2a5612913c57404abe4a152ae76b447, type: 3}
 --- !u!114 &168456037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2510,7 +2510,7 @@ PrefabInstance:
     - target: {fileID: 4749794517358057899, guid: ef567a085d4b4334b9e9f43db5a9eb41,
         type: 3}
       propertyPath: PowerUp
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4749794517358057899, guid: ef567a085d4b4334b9e9f43db5a9eb41,
         type: 3}

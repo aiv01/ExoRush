@@ -106,7 +106,7 @@ public class AbilityManager : MonoBehaviour
             case PowerUps.FusionCannon:
                 CurrentPowerUP = FusionAbilityRef;
                 AbilityFullDuration = FusionAbilityRef.AbilityLvl * 3;
-                AbilitySprite = DashIcon;
+                AbilitySprite = FusionIcon;
                 break;
         }
 
