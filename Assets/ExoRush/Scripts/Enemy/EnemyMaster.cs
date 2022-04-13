@@ -67,7 +67,6 @@ public class EnemyMaster : MonoBehaviour
 
         if (Health <= 0)
         {
-            Debug.Log("Dead");
 
             if(Animator != null)
             {

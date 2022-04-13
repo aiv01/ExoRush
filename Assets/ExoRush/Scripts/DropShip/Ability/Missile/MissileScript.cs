@@ -23,6 +23,7 @@ namespace Tarodev
         public float AccellerationSpeed = 1;
         public float AccellerationMultiplier = 140;
         float AccellerationTimer;
+        
 
         //Explosion
         public float ExplosionRadius = 3;
@@ -72,6 +73,7 @@ namespace Tarodev
         private void Update()
         {
             AutoDestructionTime -= Time.deltaTime;
+
             if(AutoDestructionTime <= 0 || _target == null)
             {
                 Destroy(gameObject);
@@ -80,29 +82,35 @@ namespace Tarodev
 
         private void FixedUpdate()
         {
-            AccellerationTimer += Time.deltaTime * AccellerationSpeed;
 
-            _currentspeed = (AccellerationCurve.Evaluate(AccellerationTimer)*AccellerationMultiplier);
+                AccellerationTimer += Time.deltaTime * AccellerationSpeed;
 
-            _rb.velocity = transform.forward * _currentspeed;
+                _currentspeed = (AccellerationCurve.Evaluate(AccellerationTimer) * AccellerationMultiplier);
 
-            Rigidbody testRB;
+                _rb.velocity = transform.forward * _currentspeed;
 
-            if(_target != null)
-            {
-                if (_target.TryGetComponent<Rigidbody>(out testRB)) RotateRocket();
-            }
+                Rigidbody testRB;
+
+                if (_target != null)
+                {
+                    if (_target.TryGetComponent<Rigidbody>(out testRB)) RotateRocket();
+                }
+
+
             
 
         }
 
         private void RotateRocket()
         {
-            _standardPrediction = _target.GetComponent<Rigidbody>().position + _target.GetComponent<Rigidbody>().velocity;
-            var heading = _standardPrediction - transform.position;
 
-            var rotation = Quaternion.LookRotation(heading);
-            _rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, rotation, _rotateSpeed * Time.deltaTime));
+                _standardPrediction = _target.GetComponent<Rigidbody>().position + _target.GetComponent<Rigidbody>().velocity;
+                var heading = _standardPrediction - transform.position;
+
+                var rotation = Quaternion.LookRotation(heading);
+                _rb.MoveRotation(Quaternion.RotateTowards(transform.rotation, rotation, _rotateSpeed * Time.deltaTime));
+
+
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -114,25 +122,25 @@ namespace Tarodev
                 Destroy(collision.gameObject);
             }
 
-            Debug.Log("Explosion");
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, ExplosionRadius);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, ExplosionRadius);           
+
             foreach (var hitCollider in hitColliders)
             {
                 if (hitCollider.gameObject.tag == "Enemy")
                 {
-                    Destroy(hitCollider.gameObject);
-                    
+                    Destroy(hitCollider.gameObject);                    
                 }
             }
 
             Destroy(gameObject);
-            
+
         }
 
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, _standardPrediction);
+            Gizmos.DrawWireSphere(transform.position, ExplosionRadius);
         }
     }
 }
