@@ -15,7 +15,7 @@ public class InGameScoreCalculation : MonoBehaviour
     public float AnimationSizeMultiplier;
     public float AnimationSpeed = 5;
     public GameObject AdditonalScoreText;
-    static int TransitionMapScore;
+    public static int TransitionMapScore;
     public bool Bossmap;
 
     // Start is called before the first frame update
