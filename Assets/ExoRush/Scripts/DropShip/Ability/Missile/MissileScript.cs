@@ -24,6 +24,9 @@ namespace Tarodev
         public float AccellerationMultiplier = 140;
         float AccellerationTimer;
 
+        //Explosion
+        public float ExplosionRadius = 3;
+
 
 
 
@@ -110,7 +113,17 @@ namespace Tarodev
             {
                 Destroy(collision.gameObject);
             }
- 
+
+            Debug.Log("Explosion");
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, ExplosionRadius);
+            foreach (var hitCollider in hitColliders)
+            {
+                if (hitCollider.gameObject.tag == "Enemy")
+                {
+                    Destroy(hitCollider.gameObject);
+                }
+            }
+
             Destroy(gameObject);
             
         }
