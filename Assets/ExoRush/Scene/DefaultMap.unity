@@ -2184,7 +2184,7 @@ GameObject:
   - component: {fileID: 892721502}
   - component: {fileID: 892721501}
   m_Layer: 0
-  m_Name: DistancePostProcess
+  m_Name: AdditionalPostProcess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
