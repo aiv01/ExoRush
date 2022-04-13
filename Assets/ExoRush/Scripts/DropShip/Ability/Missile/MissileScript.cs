@@ -121,7 +121,9 @@ namespace Tarodev
                 if (hitCollider.gameObject.tag == "Enemy")
                 {
                     Destroy(hitCollider.gameObject);
+                    
                 }
+                Debug.Log("Something");
             }
 
             Destroy(gameObject);

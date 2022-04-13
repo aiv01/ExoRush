@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class LIVDefMap : LIV
 {
     [SerializeField] private SaveLogic sl;
-    [SerializeField] private Text scoreValue;       
+    [SerializeField] private Text scoreValue; 
 
     public int[] AbilityLvl;
+    private int[] lbvalues;
+    private string[] lbnames;
 
     private void Awake()
     {
@@ -24,7 +26,18 @@ public class LIVDefMap : LIV
         {
             scr = int.Parse(scoreValue.text);
         }
+        if (leaderboard)
+        {
+            if (lbvalues != null && lbnames != null)
+            {
+                sl.UpdateObjLeaderboard(lbvalues, lbnames);
+            }        }
         sl.UpdateScore(scr, true);
     }
     
+    public void GetLB(int[] values, string[] names)
+    {
+        lbvalues = values;
+        lbnames = names;
+    }
 }

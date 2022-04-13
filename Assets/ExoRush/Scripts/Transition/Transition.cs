@@ -12,8 +12,6 @@ public class Transition : MonoBehaviour
         {
             other.GetComponent<InGameScoreCalculation>().TransitionMapScoreCalculator();
             SceneManager.LoadScene("BossMap");
-            Debug.Log("OpenMap");
-
         }
     }
 
