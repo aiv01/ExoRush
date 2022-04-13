@@ -18,7 +18,7 @@ public class SaveObject
         for(int i = 0; i < leaderboard.Length; i++)
         {
             leaderboard[i] = 0;
-            lbNames[i] = "John Doe";
+            lbNames[i] = "";
         }
     }
 }

@@ -97,7 +97,6 @@ public class LoadScoreboard : MonoBehaviour
             input.lSB = this;
             input.AssignText(text);
             input.ActivateInputField();
-            Debug.Log("activateIF");
         }
     }
 

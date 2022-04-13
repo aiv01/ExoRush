@@ -214,7 +214,7 @@ PrefabInstance:
     - target: {fileID: 898532044562825514, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
         type: 3}
       propertyPath: m_Interactable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 898532044562825524, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
         type: 3}
@@ -326,6 +326,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6513814396881983732, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38d6bf5491e1c74db50fb9c49fbc5b6, type: 3}
 --- !u!224 &164904777 stripped
@@ -400,6 +405,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &533393648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 898532044562825524, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 164904776}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &533393649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533393648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f68356c9f7b187429ab64a77375b559, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showLoadingText: 0
+  sceneName: EndMap
+  saveOnJump: 0
+  liv: {fileID: 0}
+  saveCurrency: 0
+  savePowerUps: 0
+  saveLeaderboard: 0
+  saveScore: 0
+  LoadingIcon: {fileID: 0}
+  UICanvas: {fileID: 0}
+  MainCamera: {fileID: 0}
+  AsyncLoading: 0
 --- !u!1001 &595620628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -633,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f68356c9f7b187429ab64a77375b559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showLoadingText: 0
   sceneName: ShopMap
   saveOnJump: 1
   liv: {fileID: 1044231442}
@@ -942,6 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f68356c9f7b187429ab64a77375b559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showLoadingText: 0
   sceneName: DefaultMap
   saveOnJump: 1
   liv: {fileID: 1044231442}
