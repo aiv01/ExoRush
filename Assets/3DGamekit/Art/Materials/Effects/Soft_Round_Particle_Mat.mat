@@ -30,6 +30,7 @@ Material:
   stringTagMap: {}
   disabledShaderPasses:
   - ALWAYS
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -103,6 +104,9 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _SampleGI: 0
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 1
     - _SoftParticlesFarFadeDistance: 1

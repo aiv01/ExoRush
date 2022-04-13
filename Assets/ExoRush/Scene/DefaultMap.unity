@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.2892385, g: 0.23553158, b: 0.55658585, a: 1}
+  m_IndirectSpecularColor: {r: 0.2892385, g: 0.23553157, b: 0.55658585, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4717,6 +4717,141 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1409429831746909157, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: SizeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: ColorModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.textureMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: useRigidbodyForVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.lifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.dieWithParticles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.sizeAffectsWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.minVertexDistance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.sizeAffectsLifetime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.generateLightingData
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.inheritParticleColor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5144076900989739941, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: TrailModule.colorOverLifetime.minMaxState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864689450447106737, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_SortMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864689450447106737, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864689450447106737, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_RenderAlignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864689450447106737, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864689450447106737, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864689450447106737, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_ApplyActiveColorSpace
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864689450447106737, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_UseCustomVertexStreams
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864689450447106737, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 82a7b841a67e01c4ebb2e73662c7d17f, type: 2}
     - target: {fileID: 8989541349209877056, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: m_Name
@@ -4740,7 +4875,7 @@ PrefabInstance:
     - target: {fileID: 8991238018827756336, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8991238018827756493, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
