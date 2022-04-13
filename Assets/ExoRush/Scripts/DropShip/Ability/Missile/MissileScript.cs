@@ -123,7 +123,6 @@ namespace Tarodev
                     Destroy(hitCollider.gameObject);
                     
                 }
-                Debug.Log("Something");
             }
 
             Destroy(gameObject);

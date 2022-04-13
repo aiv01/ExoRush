@@ -45,6 +45,7 @@ public class EnemyMaster : MonoBehaviour
 
     public void Damage(int damage)
     {
+
         Health -= damage;
 
         if(Animator != null)
@@ -66,6 +67,8 @@ public class EnemyMaster : MonoBehaviour
 
         if (Health <= 0)
         {
+            Debug.Log("Dead");
+
             if(Animator != null)
             {
                 Animator.SetTrigger("Death");
