@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 3581289612690393500}
   - component: {fileID: 918185791670540103}
   - component: {fileID: 3910346549948724022}
+  - component: {fileID: 2999680307777744039}
   m_Layer: 16
   m_Name: Particle System
   m_TagString: Untagged
@@ -202,7 +203,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -756,7 +757,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 10
     angle: 60
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -1581,7 +1582,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -4022,7 +4023,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 1
+    enabled: 0
     mode: 0
     ratio: 1
     lifetime:
@@ -4856,7 +4857,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
-  - {fileID: 2100000, guid: 197d1bf7fcff009419ab56837d7c95ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4902,6 +4902,21 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2999680307777744039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5500087608018220872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854da7b8f40e5264483311193ece22dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropshipRef: {fileID: 0}
+  speedOffset: 0
+  speed: 0
 --- !u!1 &6294652264824238867
 GameObject:
   m_ObjectHideFlags: 0
