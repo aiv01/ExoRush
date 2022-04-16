@@ -757,7 +757,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 10
     angle: 60
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -1582,7 +1582,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -4023,7 +4023,7 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 1
+    enabled: 0
     mode: 0
     ratio: 1
     lifetime:
@@ -4857,7 +4857,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
-  - {fileID: 2100000, guid: 89f7f061773639845a049221e81eb0b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4915,6 +4914,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 854da7b8f40e5264483311193ece22dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropshipRef: {fileID: 0}
+  speedOffset: 0
+  speed: 0
 --- !u!1 &6294652264824238867
 GameObject:
   m_ObjectHideFlags: 0
