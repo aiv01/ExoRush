@@ -5,7 +5,7 @@ using UnityEngine;
 public class GeyserDamageScript : MonoBehaviour
 {
     public int Damage;
-    public GameObject Player;
+    GameObject Player;
     public float TimeBetweenDamge;
     float TempTimeBetweenDamage;
 
