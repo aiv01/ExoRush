@@ -817,6 +817,32 @@ MonoBehaviour:
   RightEngine: {fileID: 2028456708}
   YEngineRotationAmplification: 30
   EngineRotationSpeed: 30
+  GyeserReductionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.1
+      inSlope: 0.2575488
+      outSlope: 0.2575488
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.18300247
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  InGyeserRecoverySpeed: 1
+  ZGyeserFoce: 0.9
 --- !u!114 &401484649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4408,6 +4434,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 485819026}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2003336217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2718129258480851422, guid: cfff8823cfb6b394ebe8480c3c785133,
+    type: 3}
+  m_PrefabInstance: {fileID: 2718129257735161297}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 523f7cba78486a246a1d809a1c683198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2028456708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4618231656785488375, guid: b64efcd1457abab418e25783b065dd42,
@@ -4626,6 +4664,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2718129257880728233, guid: cfff8823cfb6b394ebe8480c3c785133,
+        type: 3}
+      propertyPath: DamageScript
+      value: 
+      objectReference: {fileID: 2003336217}
     - target: {fileID: 2718129258784838768, guid: cfff8823cfb6b394ebe8480c3c785133,
         type: 3}
       propertyPath: m_Name

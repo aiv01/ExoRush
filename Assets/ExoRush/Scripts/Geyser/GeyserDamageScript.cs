@@ -5,7 +5,7 @@ using UnityEngine;
 public class GeyserDamageScript : MonoBehaviour
 {
     public int Damage;
-    GameObject Player;
+    public GameObject Player;
     public float TimeBetweenDamge;
     float TempTimeBetweenDamage;
 
@@ -24,6 +24,7 @@ public class GeyserDamageScript : MonoBehaviour
             {
                 TempTimeBetweenDamage = 0;
                 Player.GetComponent<InGameHealth>().Damage(Damage, false, false, false);
+                Player.GetComponent<BossDropShipMovement>().GyeserHit();
             }
             TempTimeBetweenDamage += Time.deltaTime;
         }

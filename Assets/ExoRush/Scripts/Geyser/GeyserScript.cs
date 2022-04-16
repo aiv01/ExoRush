@@ -17,6 +17,7 @@ public class GeyserScript : MonoBehaviour
     public float ReloadTime;
     float TempReloadTime;
     public BoxCollider DetectBoxCollider;
+    public GeyserDamageScript DamageScript;
 
     void Start()
     {
@@ -84,7 +85,9 @@ public class GeyserScript : MonoBehaviour
         TempReloadTime = ReloadTime;
         WarningActive =false;
         MainActive = true;
-        MainDamageBox.SetActive(true);       
+        MainDamageBox.SetActive(true);
+        DamageScript.Player = null;
+        
         
     }
 

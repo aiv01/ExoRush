@@ -53,6 +53,14 @@ public class BossDropShipMovement : MonoBehaviour
     public float YEngineRotationAmplification;
     public float EngineRotationSpeed = 1;
     float YEngineRotation;
+    //GyeserReduction
+    public AnimationCurve GyeserReductionCurve;
+    bool InGyeserRange;
+    float CurrentGyeserMultiplierValue;
+    public float InGyeserRecoverySpeed = 1;
+    float TempGyserRecoveryTime;
+    float ZAdditionalForce;
+    public float ZGyeserFoce;
 
 
 
@@ -66,10 +74,34 @@ public class BossDropShipMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Gyeser
+        if (InGyeserRange)
+        {
+            TempGyserRecoveryTime += Time.deltaTime * InGyeserRecoverySpeed;
+            CurrentGyeserMultiplierValue = GyeserReductionCurve.Evaluate(TempGyserRecoveryTime);
+            ZAdditionalForce = ZGyeserFoce;
+            if(TempGyserRecoveryTime > 1)
+            {
+                InGyeserRange = false;
+            }
+
+        }
+        else
+        {
+            CurrentGyeserMultiplierValue = 1;
+            ZAdditionalForce = 0;
+        }
+
+        //Movement
 
         YInputForce = Input.GetAxis("Horizontal");
 
-        ZInputForce = Input.GetAxis("Vertical");
+
+        ZInputForce = Input.GetAxis("Vertical") + ZAdditionalForce;
+
+        ZInputForce = Mathf.Clamp(ZInputForce, -1, 1);
+
+
 
         if (YInputForce != 0)
         {
@@ -86,7 +118,7 @@ public class BossDropShipMovement : MonoBehaviour
         if (IsDashing)
         {
             Dash();
-            YRot -= DashValue * Time.deltaTime;
+            YRot -= CurrentGyeserMultiplierValue * DashValue * Time.deltaTime;
         }
         else
         {
@@ -104,7 +136,7 @@ public class BossDropShipMovement : MonoBehaviour
                 }
             }
 
-            YRot -= (YInputForce * Time.deltaTime * YRotationSpeed);
+            YRot -= (YInputForce * Time.deltaTime * YRotationSpeed * CurrentGyeserMultiplierValue);
         }
 
         //Border Reduction
@@ -198,5 +230,12 @@ public class BossDropShipMovement : MonoBehaviour
         {
             IsDashing = false;
         }
+    }
+
+    public void GyeserHit()
+    {
+        InGyeserRange = true;
+        TempGyserRecoveryTime = 0;
+        
     }
 }
