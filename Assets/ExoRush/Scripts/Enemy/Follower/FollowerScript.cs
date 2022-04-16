@@ -126,10 +126,10 @@ public class FollowerScript : MonoBehaviour
 
     public void CheckIfBehind()
     {
-        //if (transform.position.z < Ship.transform.position.z + DestroyOffset)
-        //{
-        //    Destroy(this);
-        //}
+        if (transform.position.z < Ship.transform.position.z + DestroyOffset)
+        {
+            Destroy(this.gameObject);
+        }
 
     }
 

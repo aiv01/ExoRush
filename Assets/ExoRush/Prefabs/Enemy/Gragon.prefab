@@ -11457,7 +11457,7 @@ MonoBehaviour:
   AnimationActivated: 0
   AttackSound: {fileID: 5183114805530182696}
   RockSound: {fileID: -8623970487980511050}
-  DestroyOffset: 0
+  DestroyOffset: -10
 --- !u!65 &1226287974657034504
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -681,6 +681,7 @@ MonoBehaviour:
   ChompAnimator: {fileID: 5212987549901051947}
   AttackSound: {fileID: 9047399719881035741}
   SoundStarted: 0
+  DestroyOffset: -10
 --- !u!114 &5239925871194466853
 MonoBehaviour:
   m_ObjectHideFlags: 0

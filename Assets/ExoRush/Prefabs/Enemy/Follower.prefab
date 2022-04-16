@@ -1443,7 +1443,7 @@ MonoBehaviour:
   FollowerAnimator: {fileID: 1111311676290898566}
   WalkingGround: {fileID: 6516664767619762726}
   GroundCheckDistance: 40
-  DestroyOffset: 0
+  DestroyOffset: -10
 --- !u!114 &6516664767976141765
 MonoBehaviour:
   m_ObjectHideFlags: 0
