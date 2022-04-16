@@ -9623,7 +9623,7 @@ GameObject:
   - component: {fileID: 4108417052849622090}
   - component: {fileID: 4108417052849622085}
   m_Layer: 0
-  m_Name: Geyser
+  m_Name: GeyserParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

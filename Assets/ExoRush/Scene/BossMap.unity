@@ -4669,6 +4669,21 @@ PrefabInstance:
       propertyPath: DamageScript
       value: 
       objectReference: {fileID: 2003336217}
+    - target: {fileID: 2718129258480851393, guid: cfff8823cfb6b394ebe8480c3c785133,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718129258480851393, guid: cfff8823cfb6b394ebe8480c3c785133,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718129258480851420, guid: cfff8823cfb6b394ebe8480c3c785133,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2718129258784838768, guid: cfff8823cfb6b394ebe8480c3c785133,
         type: 3}
       propertyPath: m_Name
