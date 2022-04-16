@@ -27,6 +27,11 @@ public class InGameHealth : MonoBehaviour
     public DropShipMovement DropShipMovementScript;
 
     public Volume DamageVolume;
+    public Volume HitVolume;
+    public AnimationCurve HitPostProcessAnimation;
+    public float HitAnimationSpeed = 1;
+    bool HitAnimationInProgress;
+    float TempAnimationPosition;
 
     //Death
     public GameObject DeadShipModel;
@@ -43,6 +48,8 @@ public class InGameHealth : MonoBehaviour
     float TempInvulnerabiliy;
 
     public bool DashInvulnerability;
+
+   
 
     private void Awake()
     {
@@ -70,6 +77,18 @@ public class InGameHealth : MonoBehaviour
 
         InvulnerabilityTimeFrame -= Time.deltaTime;
 
+        if (HitAnimationInProgress)
+        {
+            TempAnimationPosition += Time.deltaTime * HitAnimationSpeed;
+
+            HitVolume.weight = HitPostProcessAnimation.Evaluate(TempAnimationPosition);
+
+            if (TempAnimationPosition > 1)
+            {
+                HitAnimationInProgress = false;
+            }
+        }
+
     }
 
     // Update is called once per frame
@@ -86,6 +105,11 @@ public class InGameHealth : MonoBehaviour
             damage = 0;
         }
 
+        if(damage > 0)
+        {
+            HitAnimationInProgress = true;
+            TempAnimationPosition = 0;
+        }
 
         TempInvulnerabiliy = InvulnerabilityTimeFrame;
 
