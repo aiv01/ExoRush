@@ -48,6 +48,7 @@ public class InGameHealth : MonoBehaviour
     float TempInvulnerabiliy;
 
     public bool DashInvulnerability;
+    public bool DeadShipSpawned;
 
    
 
@@ -105,7 +106,7 @@ public class InGameHealth : MonoBehaviour
             damage = 0;
         }
 
-        if(damage > 0)
+        if(damage > 0 && !HitAnimationInProgress)
         {
             HitAnimationInProgress = true;
             TempAnimationPosition = 0;
@@ -151,7 +152,12 @@ public class InGameHealth : MonoBehaviour
                 AudioManager.FadeOUT(AudioFadeOutDuration);
             }
 
-            DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
+            if (!DeadShipSpawned)
+            {
+                DeadShipSpawned = true;
+                DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
+            }
+            
 
             if (DropShipMovementScript != null)
             {
@@ -164,6 +170,8 @@ public class InGameHealth : MonoBehaviour
             DeadShip.GetComponent<EndMenuLogic>().Initialise(EndMenu, PauseMenu, EndMenuTimer);
             DeadShip.GetComponent<EndMenuLogic>().StartCounter();
             gameObject.SetActive(false);
+
+
         }
     }
 
