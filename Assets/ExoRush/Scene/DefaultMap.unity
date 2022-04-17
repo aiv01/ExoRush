@@ -1595,6 +1595,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!198 &460738535 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 787322617682709484, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8991238018971403597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &472276263 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7706277212973641982, guid: 61d4b31236b1c4e4cb84cf17a121c09c,
@@ -3362,6 +3368,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8991238018971403597}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1404711282 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6138007661588621421, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8991238018971403597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1404711284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5094,6 +5106,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1066087076169780281, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: m_Name
+      value: ShieldParticles2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066087076169780281, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568559885140674658, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_Name
+      value: ShieldParticles1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568559885140674658, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -5587,6 +5614,16 @@ PrefabInstance:
       propertyPath: ShieldBar
       value: 
       objectReference: {fileID: 1067973444}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: Particles1
+      value: 
+      objectReference: {fileID: 1404711282}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: Particles2
+      value: 
+      objectReference: {fileID: 460738535}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: ReloadTime

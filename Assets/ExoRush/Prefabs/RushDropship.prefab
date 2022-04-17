@@ -570,6 +570,14 @@ MonoBehaviour:
   CameraScript: {fileID: 0}
   DropShipMovementScript: {fileID: 8991238020083654759}
   DamageVolume: {fileID: 0}
+  HitVolume: {fileID: 0}
+  HitPostProcessAnimation:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  HitAnimationSpeed: 1
   DeadShipModel: {fileID: 0}
   AudioManager: {fileID: 0}
   AudioFadeOutDuration: 2
@@ -577,6 +585,7 @@ MonoBehaviour:
   DeathAudio: {fileID: 0}
   InvulnerabilityTimeFrame: 0.2
   DashInvulnerability: 0
+  DeadShipSpawned: 0
 --- !u!114 &8991238020083654771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +626,8 @@ MonoBehaviour:
   ShieldBar: {fileID: 0}
   AbilityLoader: {fileID: 0}
   AbilityIndex: 0
+  Particles1: {fileID: 0}
+  Particles2: {fileID: 0}
 --- !u!1 &8989554891451571408
 GameObject:
   m_ObjectHideFlags: 0
@@ -44658,6 +44669,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500087608018220872, guid: 8a20a1b6eb16f5d48961d88c84e0cb2e,
+        type: 3}
+      propertyPath: m_Name
+      value: ShilelParticles1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500087608018220872, guid: 8a20a1b6eb16f5d48961d88c84e0cb2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294652264824238867, guid: 8a20a1b6eb16f5d48961d88c84e0cb2e,
+        type: 3}
+      propertyPath: m_Name
+      value: ShilelParticles2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294652264824238867, guid: 8a20a1b6eb16f5d48961d88c84e0cb2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a20a1b6eb16f5d48961d88c84e0cb2e, type: 3}

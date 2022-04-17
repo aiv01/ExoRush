@@ -13,13 +13,17 @@ public class Shield : MonoBehaviour
     float TempReloadTime;
     public float ReuseTime;
     float TempReuseTime;
-
     public GameObject ShieldBar;
+
+    public MeshCollider ShieldMeshCollider;
 
     //LVL
     public LIVDefMap AbilityLoader;
     int AbilityLvl;
     public int AbilityIndex;
+
+    //Particles
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,8 @@ public class Shield : MonoBehaviour
         AbilityLvlLoader();
 
         Shiled.SetActive(false);
+
+
     }
 
     // Update is called once per frame
@@ -37,8 +43,8 @@ public class Shield : MonoBehaviour
 
             if(ShieldEnergy > 0 && TempReuseTime <= 0)
             {
-                Shiled.SetActive(true);
-                Active = true;
+                ActivateShield(true);
+
                 ShieldEnergy -= (Time.deltaTime * EnergyDrainedSpeed) / AbilityLvl;
                 TempReloadTime = ReloadTime;
             }
@@ -47,16 +53,13 @@ public class Shield : MonoBehaviour
 
             if(ShieldEnergy <= 0)
             {
-                Shiled.SetActive(false);
-                Active = false;
+                ActivateShield(false);
             }
 
         }
         else
-        {         
-
-            Shiled.SetActive(false);
-            Active = false;
+        {
+            ActivateShield(false);
         }
 
         if (TempReloadTime <= 0 && !Active)
@@ -86,5 +89,19 @@ public class Shield : MonoBehaviour
     public void AbilityLvlLoader()
     {
         AbilityLvl = AbilityLoader.AbilityLvl[AbilityIndex] + 1;
+    }
+
+    public void ActivateShield(bool Activate)
+    {
+        if (Activate)
+        {
+            Shiled.SetActive(true);
+            Active = true;
+        }
+        else
+        {
+            Shiled.SetActive(false);
+            Active = false;
+        }
     }
 }
