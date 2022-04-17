@@ -4958,6 +4958,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c899d455d0ab048a800f2bd12eaceb, type: 3}
+--- !u!1 &2123766323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1066087076169780281, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8991238018971403597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2163892836086019405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5617,6 +5623,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: Particles
+      value: 
+      objectReference: {fileID: 1404711282}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: ReuseTime
       value: 3
       objectReference: {fileID: 0}
@@ -5650,6 +5661,11 @@ PrefabInstance:
       propertyPath: AbilityLoader
       value: 
       objectReference: {fileID: 1748523445}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: ParticlesFront
+      value: 
+      objectReference: {fileID: 2123766323}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: ShieldCollider

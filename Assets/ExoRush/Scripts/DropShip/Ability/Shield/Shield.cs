@@ -23,15 +23,14 @@ public class Shield : MonoBehaviour
     public int AbilityIndex;
 
     //Particles
-    public ParticleSystem Particles1;
-    public ParticleSystem Particles2;
+    public ParticleSystem Particles;
+    public GameObject ParticlesFront;
 
 
     // Start is called before the first frame update
     void Start()
     {
         AbilityLvlLoader();
-
     }
 
     // Update is called once per frame
@@ -97,12 +96,16 @@ public class Shield : MonoBehaviour
             //Shiled.SetActive(true);
             Active = true;
             ShieldCollider.enabled = true;
+            Particles.Play();
+            ParticlesFront.SetActive(true);
         }
         else
         {
             //Shiled.SetActive(false);
             Active = false;
             ShieldCollider.enabled = false;
+            Particles.Stop();
+            ParticlesFront.SetActive(false);
         }
     }
 }
