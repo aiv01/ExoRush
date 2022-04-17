@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5743700932275124536
 Transform:
   m_ObjectHideFlags: 0
@@ -9846,6 +9846,8 @@ MonoBehaviour:
   ReloadTime: 5
   DetectBoxCollider: {fileID: 5743700933578535540}
   DamageScript: {fileID: 5743700934172214143}
+  MainParticleSystem: {fileID: 5743700933418068866}
+  WarningParticleSystem: {fileID: 5743700934244554229}
 --- !u!1 &5743700933931933409
 GameObject:
   m_ObjectHideFlags: 0

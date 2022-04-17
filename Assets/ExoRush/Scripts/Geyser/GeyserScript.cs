@@ -18,6 +18,8 @@ public class GeyserScript : MonoBehaviour
     float TempReloadTime;
     public BoxCollider DetectBoxCollider;
     public GeyserDamageScript DamageScript;
+    public ParticleSystem MainParticleSystem;
+    public ParticleSystem WarningParticleSystem;
 
     void Start()
     {
@@ -37,13 +39,14 @@ public class GeyserScript : MonoBehaviour
 
         if (MainActive)
         {
+
             TempMainGeyeserDuration -= Time.deltaTime;
             if(TempMainGeyeserDuration < 0)
             {
                 MainActive = false;
-                MainGeyserParticle.SetActive(false);
+                //MainGeyserParticle.SetActive(false);
                 MainDamageBox.SetActive(false);
-                
+                MainParticleSystem.Stop();
             }
         }
 
@@ -74,20 +77,22 @@ public class GeyserScript : MonoBehaviour
     {
         WarningActive = true;
         WarningGeyserParticle.SetActive(true);
-        TempMainActivationTime = MainActivationTime;       
-        
+        TempMainActivationTime = MainActivationTime;
+        WarningParticleSystem.Play();
+
     }
 
     private void StartMain()
     {
-        WarningGeyserParticle.SetActive(false);
+        WarningParticleSystem.Stop();
+        //WarningGeyserParticle.SetActive(false);
         MainGeyserParticle.SetActive(true);
         TempReloadTime = ReloadTime;
         WarningActive =false;
         MainActive = true;
         MainDamageBox.SetActive(true);
-        DamageScript.Player = null;
-        
+        DamageScript.Player = null;  
+        MainParticleSystem.Play();
         
     }
 
