@@ -2863,6 +2863,12 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!65 &1044656733 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8991238018827756338, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+    type: 3}
+  m_PrefabInstance: {fileID: 8991238018971403597}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1067973444
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,6 +5178,11 @@ PrefabInstance:
     - target: {fileID: 8991238018827756336, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991238018827756338, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8991238018827756493, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
@@ -5641,9 +5652,19 @@ PrefabInstance:
       objectReference: {fileID: 1748523445}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: ShieldCollider
+      value: 
+      objectReference: {fileID: 1044656733}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: EnergyDrainedSpeed
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: ShieldMeshCollider
+      value: 
+      objectReference: {fileID: 1044656733}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: EnergyRegenerateSpeed

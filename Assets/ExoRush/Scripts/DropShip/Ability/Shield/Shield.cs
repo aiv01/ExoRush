@@ -15,7 +15,7 @@ public class Shield : MonoBehaviour
     float TempReuseTime;
     public GameObject ShieldBar;
 
-    public MeshCollider ShieldMeshCollider;
+    public BoxCollider ShieldCollider;
 
     //LVL
     public LIVDefMap AbilityLoader;
@@ -23,15 +23,14 @@ public class Shield : MonoBehaviour
     public int AbilityIndex;
 
     //Particles
+    public ParticleSystem Particles1;
+    public ParticleSystem Particles2;
 
 
     // Start is called before the first frame update
     void Start()
     {
         AbilityLvlLoader();
-
-        Shiled.SetActive(false);
-
 
     }
 
@@ -95,13 +94,15 @@ public class Shield : MonoBehaviour
     {
         if (Activate)
         {
-            Shiled.SetActive(true);
+            //Shiled.SetActive(true);
             Active = true;
+            ShieldCollider.enabled = true;
         }
         else
         {
-            Shiled.SetActive(false);
+            //Shiled.SetActive(false);
             Active = false;
+            ShieldCollider.enabled = false;
         }
     }
 }
