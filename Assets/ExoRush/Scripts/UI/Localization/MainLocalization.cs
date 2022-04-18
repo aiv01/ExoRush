@@ -2,25 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Lenguage {ENG,IT,ES,JP};
+public enum Language {ENG,IT,ES,JP};
 
 public class MainLocalization : MonoBehaviour
 {
-    static public Lenguage CurrentLenguage;
+    static public Language CurrentLanguage;
 
-    public delegate void InputDelegate(Lenguage type);
+    public delegate void InputDelegate(Language type);
 
-    public event InputDelegate OnLenguageChanged = null;
+    public event InputDelegate OnLanguageChanged = null;
 
     void Start()
     {
-        UpdateLenguage(Lenguage.ES);
+        UpdateLenguage(Language.ES);
     }
 
-    public void UpdateLenguage(Lenguage choosedlenguage)
+    public void UpdateLenguage(Language choosedlenguage)
     {
-        OnLenguageChanged(choosedlenguage);
-        CurrentLenguage = choosedlenguage;
+        OnLanguageChanged(choosedlenguage);
+        CurrentLanguage = choosedlenguage;
     }
 
 }

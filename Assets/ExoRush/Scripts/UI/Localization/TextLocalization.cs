@@ -7,21 +7,21 @@ public class TextLocalization : MonoBehaviour
 {
     public MainLocalization MainLocalizationScript;
     public TextMeshProUGUI TextToChange;
-    public string[] LenguageText;
+    public string[] LanguageText;
 
     void OnEnable()
     {
-        MainLocalizationScript.OnLenguageChanged += LenguageChanged;
+        MainLocalizationScript.OnLanguageChanged += LanguageChanged;
     }
 
     void OnDisable()
     {
-        MainLocalizationScript.OnLenguageChanged -= LenguageChanged;
+        MainLocalizationScript.OnLanguageChanged -= LanguageChanged;
     }
 
-    private void LenguageChanged(Lenguage lenguage)
+    private void LanguageChanged(Language language)
     {
-        TextToChange.text = LenguageText[(int)lenguage];
+        TextToChange.text = LanguageText[(int)language];
     }
 
 }
