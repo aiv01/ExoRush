@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Lenguage {ENG,IT,JP,ES};
+public enum Lenguage {ENG,IT,ES,JP};
 
 public class MainLocalization : MonoBehaviour
 {
     static public Lenguage CurrentLenguage;
+    public int LenguageInt;
 
     public delegate void InputDelegate(Lenguage type);
 
@@ -14,13 +15,14 @@ public class MainLocalization : MonoBehaviour
 
     void Start()
     {
-        CurrentLenguage = Lenguage.IT;
-        OnLenguageChanged(CurrentLenguage);
+        UpdateLenguage(Lenguage.ES);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateLenguage(Lenguage choosedlenguage)
     {
-        
+        OnLenguageChanged(choosedlenguage);
+        CurrentLenguage = choosedlenguage;
+        LenguageInt = (int)CurrentLenguage;
     }
+
 }

@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e174f7bff1977c4295f6476903d8ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LenguageInt: 0
 --- !u!1 &202513596775272019
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +858,7 @@ GameObject:
   - component: {fileID: 202513597274013724}
   - component: {fileID: 202513597274013714}
   - component: {fileID: 202513597274013715}
+  - component: {fileID: 648917149835060459}
   m_Layer: 0
   m_Name: CurrencyValue
   m_TagString: Untagged
@@ -980,6 +982,24 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &648917149835060459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202513597274013725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0573d74d75f496048bf57aeb6c27cb1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainLocalizationScript: {fileID: 4054807016449750388}
+  TextToChange: {fileID: 202513597274013715}
+  LenguageText:
+  - RUSH COIN
+  - RUSH COIN
+  - RUSH COIN
 --- !u!1 &202513597342754022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1338,7 @@ MonoBehaviour:
   LenguageText:
   - SCORE
   - PUNTEGGIO
+  - PUNTEGGIO
 --- !u!1 &202513597995750986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,6 +1627,7 @@ MonoBehaviour:
   LenguageText:
   - GAME OVER
   - PARTITA TERMINATA
+  - GAME OVER
 --- !u!1 &202513598480885240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,6 +2856,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38d6bf5491e1c74db50fb9c49fbc5b6, type: 3}
+--- !u!224 &1060390080728163252 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 898532044562825525, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 202513597520110209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1060390080708975945 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 898532044544344008, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
@@ -2846,21 +2874,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1060390080728163253 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 898532044562825524, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 202513597520110209}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1060390080728163252 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 898532044562825525, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 202513597520110209}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1060390080708975947 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 898532044544344010, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 202513597520110209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1060390080728163253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 898532044562825524, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
     type: 3}
   m_PrefabInstance: {fileID: 202513597520110209}
   m_PrefabAsset: {fileID: 0}
@@ -2881,6 +2903,7 @@ MonoBehaviour:
   LenguageText:
   - PLAY AGAIN
   - RIGIOCA
+  - RE EMPEZAR
 --- !u!114 &202513597520110214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3559,18 +3582,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38d6bf5491e1c74db50fb9c49fbc5b6, type: 3}
---- !u!1 &1060390081110202025 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 898532044562825524, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 202513597959690141}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1060390081110202024 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 898532044562825525, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 202513597959690141}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1060390081091348567 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 898532044544344010, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
@@ -3589,6 +3600,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1060390081110202025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 898532044562825524, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 202513597959690141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1060390081110202024 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 898532044562825525, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 202513597959690141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &550315513342245114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3606,6 +3629,7 @@ MonoBehaviour:
   LenguageText:
   - EXIT
   - ESCI
+  - SALIDA
 --- !u!114 &202513597959690130
 MonoBehaviour:
   m_ObjectHideFlags: 0

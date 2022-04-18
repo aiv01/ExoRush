@@ -227,6 +227,7 @@ MonoBehaviour:
   LenguageText:
   - GAME PAUSED
   - PAUSA
+  - DESCANSO
 --- !u!1 &174735192565303851
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e174f7bff1977c4295f6476903d8ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LenguageInt: 0
 --- !u!1 &174735192731141488
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +794,7 @@ MonoBehaviour:
   LenguageText:
   - EXIT
   - ESCI
+  - SALIDA
 --- !u!1001 &174735192341980069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1011,3 +1014,4 @@ MonoBehaviour:
   LenguageText:
   - RESUME
   - CONTINUA
+  - CONTINUAR
