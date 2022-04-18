@@ -1235,10 +1235,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 202513596772058012}
   TextToChange: {fileID: 1066454006}
-  LenguageText:
-  - 'RETURN TO MENU '
+  LanguageText:
+  - RETURN TO MENU
   - TORNA AL MENU
-  - VOLVER A MENU
+  - VOLVER AL MENU
 --- !u!1001 &1087716145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3163,7 +3163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 0}
   TextToChange: {fileID: 202513597764302631}
-  LenguageText:
+  LanguageText:
   - LEADERBOARD
   - CLASSIFICA
   - RANKING
