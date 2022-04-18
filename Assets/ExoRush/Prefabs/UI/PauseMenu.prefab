@@ -224,10 +224,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 8691444211195197462}
   TextToChange: {fileID: 174735192220721126}
-  LenguageText:
+  LanguageText:
   - GAME PAUSED
-  - PAUSA
-  - DESCANSO
+  - GAME PAUSED
+  - GAME PAUSED
 --- !u!1 &174735192565303851
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e174f7bff1977c4295f6476903d8ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LenguageInt: 0
 --- !u!1 &174735192731141488
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,10 +790,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 8691444211195197462}
   TextToChange: {fileID: 1014702557016400915}
-  LenguageText:
+  LanguageText:
   - EXIT
   - ESCI
-  - SALIDA
+  - SALIR
 --- !u!1001 &174735192341980069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1011,7 +1010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 8691444211195197462}
   TextToChange: {fileID: 1014702555194940525}
-  LenguageText:
+  LanguageText:
   - RESUME
   - CONTINUA
-  - CONTINUAR
+  - CONTINUA
