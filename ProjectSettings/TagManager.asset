@@ -15,6 +15,7 @@ TagManager:
   - BmPx
   - lbValue
   - lbName
+  - BackgorundMusic
   layers:
   - Default
   - TransparentFX

@@ -50,6 +50,8 @@ public class InGameHealth : MonoBehaviour
     public bool DashInvulnerability;
     public bool DeadShipSpawned;
 
+    public bool BossMap;
+
    
 
     private void Awake()
@@ -137,10 +139,7 @@ public class InGameHealth : MonoBehaviour
         {
             InGameScoreCalculation.TransitionMapScore = 0;
 
-            if (DeathAudio != null)
-            {
-                DeathAudio.Play();
-            }
+
 
             if(AbilityManager != null)
             {
@@ -156,8 +155,29 @@ public class InGameHealth : MonoBehaviour
             {
                 DeadShipSpawned = true;
                 DeadShip = Instantiate(DeadShipModel, transform.position, transform.rotation);
+
+                if(BossMap == true)
+                {
+                    AudioSource[] AudioComponents = Resources.FindObjectsOfTypeAll<AudioSource>();
+                    for (int i = 0; i < AudioComponents.Length; i++)
+                    {
+                        if (AudioComponents[i].playOnAwake != true)
+                        {
+                            AudioComponents[i].enabled = false;
+                        }
+
+                    }
+                    if (DeathAudio != null)
+                    {
+                        DeathAudio.enabled = true;
+                        DeathAudio.Play();
+                    }
+                }
+
+
             }
-            
+
+
 
             if (DropShipMovementScript != null)
             {

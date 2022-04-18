@@ -4827,6 +4827,11 @@ PrefabInstance:
       objectReference: {fileID: 439579921}
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}
+      propertyPath: BossMap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
+        type: 3}
       propertyPath: EndMenu
       value: 
       objectReference: {fileID: 1594638544}
