@@ -498,7 +498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e174f7bff1977c4295f6476903d8ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LenguageInt: 0
 --- !u!1 &202513596775272019
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,9 +647,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 4054807016449750388}
   TextToChange: {fileID: 202513596775272017}
-  LenguageText:
-  - RUSH COINS
-  - RUSH COINS
+  LanguageText:
+  - RUSH COIN
+  - RUSH COIN
+  - RUSH COIN
 --- !u!1 &202513596992798349
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,10 +996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 4054807016449750388}
   TextToChange: {fileID: 202513597274013715}
-  LenguageText:
-  - RUSH COIN
-  - RUSH COIN
-  - RUSH COIN
+  LanguageText: []
 --- !u!1 &202513597342754022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,10 +1332,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 4054807016449750388}
   TextToChange: {fileID: 202513597597456874}
-  LenguageText:
+  LanguageText:
   - SCORE
   - PUNTEGGIO
-  - PUNTEGGIO
+  - PUNTAJE
 --- !u!1 &202513597995750986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,9 +1621,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 4054807016449750388}
   TextToChange: {fileID: 202513598148594225}
-  LenguageText:
+  LanguageText:
   - GAME OVER
-  - PARTITA TERMINATA
+  - GAME OVER
   - GAME OVER
 --- !u!1 &202513598480885240
 GameObject:
@@ -2900,10 +2897,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 4054807016449750388}
   TextToChange: {fileID: 1060390080708975945}
-  LenguageText:
+  LanguageText:
   - PLAY AGAIN
-  - RIGIOCA
-  - RE EMPEZAR
+  - RIPARTI
+  - PLAY AGAIN
 --- !u!114 &202513597520110214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3626,10 +3623,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 4054807016449750388}
   TextToChange: {fileID: 1060390081091348565}
-  LenguageText:
+  LanguageText:
   - EXIT
   - ESCI
-  - SALIDA
+  - SALIR
 --- !u!114 &202513597959690130
 MonoBehaviour:
   m_ObjectHideFlags: 0
