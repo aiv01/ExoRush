@@ -434,10 +434,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 437348864}
   TextToChange: {fileID: 85965638}
-  LenguageText:
+  LanguageText:
   - RETURN TO MENU
   - TORNA AL MENU
-  - VOLVER A MENU
+  - VOLVER AL MENU
 --- !u!1 &119923116
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 437348864}
   TextToChange: {fileID: 158182531}
-  LenguageText:
+  LanguageText:
   - DASH
   - SPRINT
   - SPRINT
@@ -762,7 +762,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e174f7bff1977c4295f6476903d8ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LenguageInt: 0
 --- !u!114 &452550034 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7996579852185696980, guid: 476bffd3022a78148a6bf5fde79c3263,
@@ -962,7 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 437348864}
   TextToChange: {fileID: 730508470}
-  LenguageText:
+  LanguageText:
   - MISSILE
   - MISSILE
   - MISIL
@@ -1706,10 +1705,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 437348864}
   TextToChange: {fileID: 1049904252}
-  LenguageText:
+  LanguageText:
   - TWIN LASER
   - BILASER
-  - LASER
+  - "DOBLE L\xC1SER"
 --- !u!114 &1049904252 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
@@ -2017,10 +2016,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 437348864}
   TextToChange: {fileID: 1305536534}
-  LenguageText:
+  LanguageText:
   - SHIELD
   - SCUDO
-  - ' ESCUDO'
+  - ESCUDO
 --- !u!1001 &1475845805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2282,8 +2281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 437348864}
   TextToChange: {fileID: 1819355805}
-  LenguageText:
-  - LASER BEAM
+  LanguageText:
+  - BEAM
   - BEAM
   - BEAM
 --- !u!1001 &1824519138
@@ -2539,10 +2538,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 437348864}
   TextToChange: {fileID: 1827352863}
-  LenguageText:
+  LanguageText:
   - FUSION CANNON
   - CANNONE A FUSIONE
-  - FUSIL
+  - "CA\xD1\xD3N DE FUSI\xD3N"
 --- !u!1001 &1879989131
 PrefabInstance:
   m_ObjectHideFlags: 0

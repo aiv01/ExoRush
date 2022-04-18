@@ -997,6 +997,8 @@ MonoBehaviour:
   IslandPoolLibrary:
   - {fileID: 7942782257069617167, guid: 08c899d455d0ab048a800f2bd12eaceb, type: 3}
   - {fileID: 3841933240311911929, guid: 95d240d8c76361e45b0287883e27a9b4, type: 3}
+  - {fileID: 335326333120158514, guid: cb894b0d669359c4d842fb0c38030149, type: 3}
+  - {fileID: 6743660521551965643, guid: 9e99ba76813015b46848c98bd4fb0ca0, type: 3}
   IslandAmount: 3
   SpawnDistance: 7000
   SpawnTimeCowntdown: 2
@@ -5327,7 +5329,7 @@ PrefabInstance:
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: MaxHealth
-      value: 1000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}

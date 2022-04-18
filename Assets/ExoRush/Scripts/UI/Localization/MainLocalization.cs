@@ -14,10 +14,10 @@ public class MainLocalization : MonoBehaviour
 
     void Start()
     {
-        UpdateLenguage(Language.ES);
+        UpdateLanguage(Language.ENG);
     }
 
-    public void UpdateLenguage(Language choosedlenguage)
+    public void UpdateLanguage(Language choosedlenguage)
     {
         OnLanguageChanged(choosedlenguage);
         CurrentLanguage = choosedlenguage;
