@@ -202,10 +202,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 1044231444}
   TextToChange: {fileID: 70026909}
-  LenguageText:
+  LanguageText:
   - START
   - INIZIA
-  - EMPEZA
+  - EMPIEZA
 --- !u!114 &70026909 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 898532044544344008, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
@@ -869,7 +869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e174f7bff1977c4295f6476903d8ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LenguageInt: 0
 --- !u!1 &1138836345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 1044231444}
   TextToChange: {fileID: 1583179563}
-  LenguageText:
+  LanguageText:
   - LEADERBOARD
   - CLASSIFICA
   - RANKING
@@ -1363,10 +1362,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 1044231444}
   TextToChange: {fileID: 1608991078}
-  LenguageText:
+  LanguageText:
   - EXIT
   - ESCI
-  - SALIDA
+  - SALIR
 --- !u!114 &1608991078 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 898532044544344008, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,
@@ -1670,7 +1669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainLocalizationScript: {fileID: 1044231444}
   TextToChange: {fileID: 2099361300}
-  LenguageText:
+  LanguageText:
   - SHOP
   - NEGOZIO
   - TIENDA
