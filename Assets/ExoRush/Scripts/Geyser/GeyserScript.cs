@@ -21,9 +21,12 @@ public class GeyserScript : MonoBehaviour
     public ParticleSystem MainParticleSystem;
     public ParticleSystem WarningParticleSystem;
 
+    //Audio
+    public FadeAudioEffect FadeAudioGeyser;
+
     void Start()
     {
-        
+        FadeAudioGeyser.FadeOUT(0);
     }
 
     void Update()
@@ -47,6 +50,7 @@ public class GeyserScript : MonoBehaviour
                 //MainGeyserParticle.SetActive(false);
                 MainDamageBox.SetActive(false);
                 MainParticleSystem.Stop();
+                FadeAudioGeyser.FadeOUT(2);
             }
         }
 
@@ -79,6 +83,7 @@ public class GeyserScript : MonoBehaviour
         WarningGeyserParticle.SetActive(true);
         TempMainActivationTime = MainActivationTime;
         WarningParticleSystem.Play();
+        FadeAudioGeyser.FadeIN(2);
 
     }
 
