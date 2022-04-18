@@ -637,6 +637,7 @@ MonoBehaviour:
   AnimationSpeed: 5
   AdditonalScoreText: {fileID: 781506784}
   Bossmap: 1
+  Roundscore: 0
 --- !u!82 &401484645
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4842,7 +4843,7 @@ PrefabInstance:
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}
       propertyPath: MaxHealth
-      value: 100000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5536657772901358459, guid: b64efcd1457abab418e25783b065dd42,
         type: 3}
