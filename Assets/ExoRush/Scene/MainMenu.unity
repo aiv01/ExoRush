@@ -1330,7 +1330,7 @@ MonoBehaviour:
   LenguageText:
   - LEADERBOARD
   - CLASSIFICA
-  - CLASIFICA
+  - RANKING
 --- !u!114 &1583179563 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 898532044544344008, guid: a38d6bf5491e1c74db50fb9c49fbc5b6,

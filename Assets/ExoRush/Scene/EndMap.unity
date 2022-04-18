@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1095,6 +1095,7 @@ GameObject:
   - component: {fileID: 1066454005}
   - component: {fileID: 1066454007}
   - component: {fileID: 1066454006}
+  - component: {fileID: 1066454008}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1220,6 +1221,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066454004}
   m_CullTransparentMesh: 1
+--- !u!114 &1066454008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066454004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0573d74d75f496048bf57aeb6c27cb1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainLocalizationScript: {fileID: 202513596772058012}
+  TextToChange: {fileID: 1066454006}
+  LenguageText:
+  - 'RETURN TO MENU '
+  - TORNA AL MENU
+  - VOLVER A MENU
 --- !u!1001 &1087716145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2242,6 +2261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 202513596772058010}
+  - component: {fileID: 202513596772058012}
   m_Layer: 0
   m_Name: EndMenu
   m_TagString: Untagged
@@ -2249,6 +2269,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &202513596772058012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202513596772058011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e174f7bff1977c4295f6476903d8ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &202513596804361417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3012,6 +3044,7 @@ GameObject:
   - component: {fileID: 202513597764302628}
   - component: {fileID: 202513597764302630}
   - component: {fileID: 202513597764302631}
+  - component: {fileID: 202513597764302632}
   m_Layer: 0
   m_Name: LBText
   m_TagString: Untagged
@@ -3116,6 +3149,24 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &202513597764302632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202513597764302629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0573d74d75f496048bf57aeb6c27cb1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainLocalizationScript: {fileID: 0}
+  TextToChange: {fileID: 202513597764302631}
+  LenguageText:
+  - LEADERBOARD
+  - CLASSIFICA
+  - RANKING
 --- !u!1001 &202513597859879156
 PrefabInstance:
   m_ObjectHideFlags: 0
