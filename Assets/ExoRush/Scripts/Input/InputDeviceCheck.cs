@@ -9,9 +9,7 @@ public class InputDeviceCheck : MonoBehaviour
     static Devices CurrentInput;
     static bool IsController;
 
-    public bool HasReciver = true;
-
-    
+    public bool HasReciver = true;    
 
     public delegate void InputDelegate(Devices type);
 
