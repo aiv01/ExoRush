@@ -27,7 +27,7 @@ public class PauseMenuLogic : MonoBehaviour, IMenuInteractable
         }
     }
 
-    void Awake()
+    void OnEnable()
     {
         isActive = false;
         Resume();

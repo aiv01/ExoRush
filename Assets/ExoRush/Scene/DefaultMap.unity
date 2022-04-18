@@ -4188,6 +4188,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 202513596742612927, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 202513596992798348, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
         type: 3}
       propertyPath: m_RootOrder
@@ -4368,6 +4373,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -280
       objectReference: {fileID: 0}
+    - target: {fileID: 3696083653193607298, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4128533828224293499, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
         type: 3}
       propertyPath: sl
@@ -4438,6 +4448,11 @@ PrefabInstance:
       propertyPath: lbTiles.Array.data[9]
       value: 
       objectReference: {fileID: 1231045859}
+    - target: {fileID: 7967502658211681699, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 202513598347847635, guid: 3ff9e66b0a10cd949bb418c62bd41f70, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3ff9e66b0a10cd949bb418c62bd41f70, type: 3}
@@ -5329,7 +5344,7 @@ PrefabInstance:
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: MaxHealth
-      value: 1000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654775, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}

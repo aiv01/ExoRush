@@ -63,7 +63,10 @@ public class InputFieldScript : MonoBehaviour
 
     public void OnEndEdit()
     {
-        target.text = textObj.text;
+        if (target != null)
+        {
+            target.text = textObj.text;
+        }
         lSB.UpdateLB();
         liv.UpdateSelected(false, false, true, false);
         endEdit = true;
