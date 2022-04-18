@@ -51,14 +51,16 @@ public class DropShipMovement : MonoBehaviour
     float TempTransition;
     public GameObject TransitionEffect;
 
-    
-
+    //AdditinalTransitionData
+    public InGameScoreCalculation ScoreScript;
+    int transitionmapscore;
+    public float TransitionScoreMultiplier = 1;
 
 
 
     void Start()
     {
-        
+        transitionmapscore = ScoreScript.Roundscore;
     }
 
     // Update is called once per frame
@@ -121,7 +123,7 @@ public class DropShipMovement : MonoBehaviour
 
     void GoToBossmap()
     {
-        if (!InTransition && transform.position.z >= TransferDistance)
+        if (!InTransition && transform.position.z >= TransferDistance + (transitionmapscore*TransitionScoreMultiplier))
         {
             InTransition = true;
             TempTransition = TransitionTime;

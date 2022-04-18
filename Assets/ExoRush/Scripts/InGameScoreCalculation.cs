@@ -17,11 +17,12 @@ public class InGameScoreCalculation : MonoBehaviour
     public GameObject AdditonalScoreText;
     public static int TransitionMapScore;
     public bool Bossmap;
+    public int Roundscore;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Roundscore = TransitionMapScore;
     }
 
     private void Update()
