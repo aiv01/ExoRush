@@ -142,8 +142,6 @@ public class InGameHealth : MonoBehaviour
         {
             InGameScoreCalculation.TransitionMapScore = 0;
 
-
-
             if(AbilityManager != null)
             {
                 AbilityManager.DisableAbility();

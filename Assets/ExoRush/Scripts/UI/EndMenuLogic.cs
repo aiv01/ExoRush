@@ -34,6 +34,7 @@ public class EndMenuLogic : MonoBehaviour
     {
         counter = 0;
         start = false;
+        Cursor.visible = true;
     }
 
     private void Update()

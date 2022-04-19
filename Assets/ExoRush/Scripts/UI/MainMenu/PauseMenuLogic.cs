@@ -17,11 +17,13 @@ public class PauseMenuLogic : MonoBehaviour, IMenuInteractable
             if (!isActive && value)
             {
                 isActive = true;
+                Cursor.visible = true;
                 Pause();
             }
             else if (isActive && !value)
             {
                 isActive = false;
+                Cursor.visible = false;
                 Resume();
             }
         }
@@ -31,6 +33,7 @@ public class PauseMenuLogic : MonoBehaviour, IMenuInteractable
     {
         isActive = false;
         Resume();
+        
     }
 
     public void Execute()
@@ -42,12 +45,14 @@ public class PauseMenuLogic : MonoBehaviour, IMenuInteractable
     {
         Time.timeScale = 0.001f;
         AffectScriptsAndObjs();
+        Cursor.visible = true;
     }
 
     void Resume()
     {
         Time.timeScale = 1;
         AffectScriptsAndObjs();
+        Cursor.visible = false;
     }
 
     void AffectScriptsAndObjs()
@@ -63,5 +68,7 @@ public class PauseMenuLogic : MonoBehaviour, IMenuInteractable
             item.SetActive(isActive);
         }
     }
+
+
 }
 
