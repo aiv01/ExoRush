@@ -40,7 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos: []
-  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 8cf5cab1ff858954681553752f2db154,
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 733b16e1e3cfa80449d031442f12f2a3,
     type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
