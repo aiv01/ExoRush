@@ -16,6 +16,8 @@ public class GragonScript : MonoBehaviour
 
     public float DestroyOffset;
 
+    public SkinnedMeshRenderer SkinnedMeshRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class GragonScript : MonoBehaviour
             Animator.enabled = true;
             StaticRock.SetActive(false);
             Debris.SetActive(true);
+            SkinnedMeshRenderer.enabled = true;
             if (!AnimationActivated)
             {
                 AttackSound.Play();

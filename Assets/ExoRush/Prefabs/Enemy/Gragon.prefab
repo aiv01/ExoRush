@@ -11325,7 +11325,7 @@ SkinnedMeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8591811417263670168}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11458,6 +11458,7 @@ MonoBehaviour:
   AttackSound: {fileID: 5183114805530182696}
   RockSound: {fileID: -8623970487980511050}
   DestroyOffset: -10
+  SkinnedMeshRenderer: {fileID: 8591811417277271706}
 --- !u!65 &1226287974657034504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11793,6 +11794,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: c5712480ad7732348bdc1eedb4b0b25c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c5712480ad7732348bdc1eedb4b0b25c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5712480ad7732348bdc1eedb4b0b25c, type: 3}
