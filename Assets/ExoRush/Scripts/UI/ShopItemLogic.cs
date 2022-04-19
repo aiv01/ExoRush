@@ -65,7 +65,7 @@ public class ShopItemLogic : MonoBehaviour, IButtonInteractable
     public void UpdateValues()
     {
         if (!GetTextValues(currencyText, ref currency)) currency = 0;
-        if (priceIndex > 0) button.GetComponentInChildren<Text>().text = "UPGRADE";
+        if (priceIndex >= 0) button.GetComponentInChildren<Text>().text = "UPGRADE";
         currLogic.ChangeCurrencyValue(currency);
 
         if (price > currency)

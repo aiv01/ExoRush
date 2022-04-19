@@ -5245,9 +5245,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6138007661588621421, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138007661588621421, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: InitialModule.startSpeed.scalar
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8058293328373271580, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8058293328373271580, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8989541349209877056, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: m_Name
@@ -5785,6 +5800,11 @@ PrefabInstance:
       propertyPath: ParticlesFront
       value: 
       objectReference: {fileID: 2123766323}
+    - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
+      propertyPath: ParticlesSpray
+      value: 
+      objectReference: {fileID: 1404711279}
     - target: {fileID: 8991238020175638958, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: ShieldCollider

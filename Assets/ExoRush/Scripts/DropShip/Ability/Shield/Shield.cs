@@ -23,7 +23,7 @@ public class Shield : MonoBehaviour
     public int AbilityIndex;
 
     //Particles
-    public ParticleSystem Particles;
+    public GameObject ParticlesSpray;
     public GameObject ParticlesFront;
 
 
@@ -91,12 +91,14 @@ public class Shield : MonoBehaviour
 
     public void ActivateShield(bool Activate)
     {
+        //Particle spray possible unity bug in build
+
         if (Activate)
         {
             //Shiled.SetActive(true);
             Active = true;
             ShieldCollider.enabled = true;
-            Particles.Play();
+            ParticlesSpray.SetActive(true);
             ParticlesFront.SetActive(true);
         }
         else
@@ -104,7 +106,7 @@ public class Shield : MonoBehaviour
             //Shiled.SetActive(false);
             Active = false;
             ShieldCollider.enabled = false;
-            Particles.Stop();
+            ParticlesSpray.SetActive(false);
             ParticlesFront.SetActive(false);
         }
     }

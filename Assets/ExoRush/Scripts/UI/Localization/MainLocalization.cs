@@ -23,4 +23,9 @@ public class MainLocalization : MonoBehaviour
         CurrentLanguage = choosedlenguage;
     }
 
+    public void Refresh()
+    {
+        UpdateLenguage(CurrentLanguage);
+    }
+
 }

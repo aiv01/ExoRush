@@ -652,6 +652,7 @@ MonoBehaviour:
   - RUSH COIN
   - RUSH COIN
   - RUSH COIN
+  RequestLanguageRefresh: 0
 --- !u!1 &202513596992798349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1323,7 @@ MonoBehaviour:
   - PUNTEGGIO
   - PUNTAJE
   - "R\xC9SULTAT"
+  RequestLanguageRefresh: 0
 --- !u!1 &202513597995750986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,6 +1614,7 @@ MonoBehaviour:
   - GAME OVER
   - GAME OVER
   - "JEU TERMIN\xC9"
+  RequestLanguageRefresh: 0
 --- !u!1 &202513598480885240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,6 +2017,7 @@ MonoBehaviour:
   - NUOVO PUNTEGGIO MIGLIORE!
   - "NUEVA PUNTUACI\xD3N MEJOR"
   - "NOUVEAU MEILLEUR R\xC9SULTAT"
+  RequestLanguageRefresh: 0
 --- !u!1 &4412909729482359586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,6 +2247,7 @@ MonoBehaviour:
   - INSERISCI IL TUO NOME...
   - INTRODUCE TU NOMBRE...
   - "INS\xC9RER VOTRE NOM..."
+  RequestLanguageRefresh: 0
 --- !u!1 &6284474854481521247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,7 +2338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1600119919081278636
 Transform:
   m_ObjectHideFlags: 0
@@ -3065,6 +3070,7 @@ MonoBehaviour:
   - RIPARTI
   - PLAY AGAIN
   - JEU ENCORE
+  RequestLanguageRefresh: 1
 --- !u!114 &202513597520110214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3791,6 +3797,8 @@ MonoBehaviour:
   - EXIT
   - ESCI
   - SALIR
+  - QUITER
+  RequestLanguageRefresh: 1
 --- !u!114 &202513597959690130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4292,3 +4300,4 @@ MonoBehaviour:
   - Inserisci nome...
   - Nombre...
   - "Ins\xE9rer votre nom..."
+  RequestLanguageRefresh: 0

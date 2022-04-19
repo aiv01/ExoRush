@@ -42,6 +42,10 @@ public class LanguageManager : MonoBehaviour
             {
                 sLan.language = (int)Language.ES;
             }
+            else if (Application.systemLanguage == SystemLanguage.French)
+            {
+                sLan.language = (int)Language.FR;
+            }
             Debug.Log("Could not find Language File. New Language File created");
             Save(sLan);
         }

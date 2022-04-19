@@ -8,6 +8,7 @@ public class TextLocalization : MonoBehaviour
     public MainLocalization MainLocalizationScript;
     public TextMeshProUGUI TextToChange;
     public string[] LanguageText;
+    public bool RequestLanguageRefresh;
 
     void OnEnable()
     {
@@ -19,10 +20,19 @@ public class TextLocalization : MonoBehaviour
         MainLocalizationScript.OnLanguageChanged -= LanguageChanged;
     }
 
+    public void Start()
+    {
+        if (RequestLanguageRefresh)
+        {
+            MainLocalizationScript.Refresh();
+        }
+        
+    }
+
     private void LanguageChanged(Language language)
     {        
 
-        if ((int)language <= LanguageText.Length)
+        if ((int)language <= LanguageText.Length-1)
         {
             TextToChange.text = LanguageText[(int)language];
         }
