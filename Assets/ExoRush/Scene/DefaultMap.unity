@@ -4051,6 +4051,11 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 174735192645185231, guid: 7403e2017c3abc74d9e53925e0a56d5f,
+        type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 174735192847753320, guid: 7403e2017c3abc74d9e53925e0a56d5f,
         type: 3}
       propertyPath: m_Name
