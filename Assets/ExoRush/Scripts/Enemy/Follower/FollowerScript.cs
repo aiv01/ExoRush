@@ -13,6 +13,7 @@ public class FollowerScript : MonoBehaviour
     public float AttackRadius = 100;
     public float DamageRadius = 80;
     bool HasDamaged;
+    public int Damage = 300;
 
     public float RotationDamping;
     public float FallingSpeed = 1;
@@ -98,7 +99,7 @@ public class FollowerScript : MonoBehaviour
 
         if (Vector3.Distance(transform.position, Ship.transform.position) < DamageRadius && !HasDamaged)
         {
-            Object.FindObjectOfType<InGameHealth>().Damage(300, true, false, false);
+            Object.FindObjectOfType<InGameHealth>().Damage(Damage, true, false, false);
             HasDamaged = true;
         }
 

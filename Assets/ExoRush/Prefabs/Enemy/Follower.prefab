@@ -1434,8 +1434,8 @@ MonoBehaviour:
   BottomDistance: 100
   TopOffset: 5
   SpotDistance: 500
-  AttackRadius: 150
-  DamageRadius: 10
+  AttackRadius: 220
+  DamageRadius: 30
   RotationDamping: 10
   FallingSpeed: 1
   MovementSpeed: 0
