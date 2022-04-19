@@ -75,11 +75,18 @@ public class FusionCannonAbility : MonoBehaviour
 
                         if (!Physics.Raycast(FusionCannon[0].transform.position, FusionCannon[0].transform.forward + new Vector3(Random.Range(AdditionalRandomness*-1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness)), out hit, DamageDistance, Layer))
                         {
+                            Debug.DrawLine(FusionCannon[0].transform.position, OutWithRandomness, Color.yellow);
+                            TrailPool[i].GetComponent<FusionCannonEffectManager>().Started(FusionCannon[0].transform.position, hit.point);
+
                             continue;
                         }
-                        Debug.DrawLine(FusionCannon[0].transform.position, OutWithRandomness, Color.green);
+                        //else
+                        //{
+                        //    hit.point = FusionCannon[0].transform.forward + (new Vector3(Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness)*DamageDistance));
+                        //    continue;
+                        //}
 
-                        TrailPool[i].GetComponent<FusionCannonEffectManager>().Started(FusionCannon[0].transform.position, hit.point);
+
 
 
                     }
@@ -90,11 +97,13 @@ public class FusionCannonAbility : MonoBehaviour
 
                         if (!Physics.Raycast(FusionCannon[1].transform.position, FusionCannon[0].transform.forward + new Vector3(Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness), Random.Range(AdditionalRandomness * -1, AdditionalRandomness)), out hit, DamageDistance, Layer))
                         {
+                            Debug.DrawLine(FusionCannon[1].transform.position, hit.point, Color.yellow);
+
+                            TrailPool[i].GetComponent<FusionCannonEffectManager>().Started(FusionCannon[1].transform.position, hit.point);
+
                             continue;
                         }
-                        Debug.DrawLine(FusionCannon[1].transform.position, hit.point, Color.green);
 
-                        TrailPool[i].GetComponent<FusionCannonEffectManager>().Started(FusionCannon[1].transform.position, hit.point);
                     }
 
 

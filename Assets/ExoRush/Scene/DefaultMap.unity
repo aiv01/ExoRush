@@ -5606,7 +5606,7 @@ PrefabInstance:
     - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
       propertyPath: DamageDistance
-      value: 1000
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
