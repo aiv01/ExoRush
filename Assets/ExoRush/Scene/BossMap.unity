@@ -1124,6 +1124,8 @@ MonoBehaviour:
   Gyeser: {fileID: 5743700934047261870, guid: f4b9b662b2c9f744fbf945404fc3a9af, type: 3}
   AmountOfSpawn: 10
   SpawnPoint: {fileID: 1377560559}
+  SpawnRock: {fileID: 1212515848904816, guid: 47c3f32edd809594683703cacb16bfe7, type: 3}
+  rockScale: {x: 0.5, y: 0.5, z: 0.5}
 --- !u!4 &414816759
 Transform:
   m_ObjectHideFlags: 0
