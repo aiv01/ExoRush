@@ -61,14 +61,14 @@ public class FollowerScript : MonoBehaviour
         {
             if (Physics.Linecast(ViewPoint.transform.position, Ship.transform.position,out hit,mask))
             {
-                Debug.DrawLine(ViewPoint.transform.position, Ship.transform.position,Color.red);
-                Debug.Log(hit.rigidbody.name);                
+                //Debug.DrawLine(ViewPoint.transform.position, Ship.transform.position,Color.red);
+                //Debug.Log(hit.rigidbody.name);                
                 GoToPlayer(false);
 
             }
             else
             {
-                Debug.DrawLine(ViewPoint.transform.position, Ship.transform.position, Color.green);
+                //Debug.DrawLine(ViewPoint.transform.position, Ship.transform.position, Color.green);
 
                 if (Physics.Raycast(WalkingGround.transform.position, WalkingGround.transform.forward, out hit, GroundCheckDistance))
                 {
