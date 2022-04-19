@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Language {ENG,IT,ES,last};
+public enum Language {ENG,IT,ES,FR,last};
 
 public class MainLocalization : MonoBehaviour
 {

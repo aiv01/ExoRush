@@ -200,7 +200,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 202513597092707582}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5
+  m_Size: 0.50020087
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1321,6 +1321,7 @@ MonoBehaviour:
   - SCORE
   - PUNTEGGIO
   - PUNTAJE
+  - "R\xC9SULTAT"
 --- !u!1 &202513597995750986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1611,7 @@ MonoBehaviour:
   - GAME OVER
   - GAME OVER
   - GAME OVER
+  - "JEU TERMIN\xC9"
 --- !u!1 &202513598480885240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,7 +1923,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'NEW HI-SCORE!
+  m_text: 'NEW HIGH SCORE!
 
 
 '
@@ -1951,7 +1953,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
+  m_fontSize: 97.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2008,9 +2010,10 @@ MonoBehaviour:
   MainLocalizationScript: {fileID: 4054807016449750388}
   TextToChange: {fileID: 2457043131184526035}
   LanguageText:
-  - NEW HI-SCORE!
+  - NEW HIGH SCORE!
   - NUOVO PUNTEGGIO MIGLIORE!
   - "NUEVA PUNTUACI\xD3N MEJOR"
+  - "NOUVEAU MEILLEUR R\xC9SULTAT"
 --- !u!1 &4412909729482359586
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,6 +2242,7 @@ MonoBehaviour:
   - ENTER YOUR NAME...
   - INSERISCI IL TUO NOME...
   - INTRODUCE TU NOMBRE...
+  - "INS\xC9RER VOTRE NOM..."
 --- !u!1 &6284474854481521247
 GameObject:
   m_ObjectHideFlags: 0
@@ -3060,6 +3064,7 @@ MonoBehaviour:
   - PLAY AGAIN
   - RIPARTI
   - PLAY AGAIN
+  - JEU ENCORE
 --- !u!114 &202513597520110214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4120,12 +4125,12 @@ PrefabInstance:
     - target: {fileID: 1280969089794069952, guid: 09f133414a6dad54cbeb5df4f76dde43,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1920
+      value: 1920.0001
       objectReference: {fileID: 0}
     - target: {fileID: 1280969089794069952, guid: 09f133414a6dad54cbeb5df4f76dde43,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1080
+      value: 1080.3859
       objectReference: {fileID: 0}
     - target: {fileID: 1280969089794069952, guid: 09f133414a6dad54cbeb5df4f76dde43,
         type: 3}
@@ -4185,7 +4190,7 @@ PrefabInstance:
     - target: {fileID: 1280969089794069952, guid: 09f133414a6dad54cbeb5df4f76dde43,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 609
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 1280969089794069952, guid: 09f133414a6dad54cbeb5df4f76dde43,
         type: 3}
@@ -4210,6 +4215,11 @@ PrefabInstance:
     - target: {fileID: 1280969089794069953, guid: 09f133414a6dad54cbeb5df4f76dde43,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280969089794070013, guid: 09f133414a6dad54cbeb5df4f76dde43,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1280969091078344202, guid: 09f133414a6dad54cbeb5df4f76dde43,
@@ -4281,3 +4291,4 @@ MonoBehaviour:
   - Enter name...
   - Inserisci nome...
   - Nombre...
+  - "Ins\xE9rer votre nom..."

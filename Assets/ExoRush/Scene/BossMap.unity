@@ -4024,7 +4024,7 @@ PrefabInstance:
     - target: {fileID: 830143053292846042, guid: 802f8cb97dd76f14b9163f6e12c7d291,
         type: 3}
       propertyPath: m_Name
-      value: BossFightDropship
+      value: RushDropship
       objectReference: {fileID: 0}
     - target: {fileID: 834105777933744546, guid: 802f8cb97dd76f14b9163f6e12c7d291,
         type: 3}

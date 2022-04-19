@@ -676,11 +676,31 @@ PrefabInstance:
       propertyPath: MainLocalizationScript
       value: 
       objectReference: {fileID: 1044231444}
+    - target: {fileID: 393614378805077837, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 393614378805077837, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.data[3]
+      value: LANGUE
+      objectReference: {fileID: 0}
     - target: {fileID: 393614378881716372, guid: 37068c6fab599c64794cbdbee5502502,
         type: 3}
       propertyPath: MainLocalizationScript
       value: 
       objectReference: {fileID: 1044231444}
+    - target: {fileID: 393614378881716372, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 393614378881716372, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.data[3]
+      value: COMMENCER
+      objectReference: {fileID: 0}
     - target: {fileID: 393614378959464185, guid: 37068c6fab599c64794cbdbee5502502,
         type: 3}
       propertyPath: liv
@@ -841,6 +861,16 @@ PrefabInstance:
       propertyPath: MainLocalizationScript
       value: 
       objectReference: {fileID: 1044231444}
+    - target: {fileID: 393614379535704091, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 393614379535704091, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.data[3]
+      value: ACHETER
+      objectReference: {fileID: 0}
     - target: {fileID: 393614379801262540, guid: 37068c6fab599c64794cbdbee5502502,
         type: 3}
       propertyPath: liv
@@ -866,11 +896,31 @@ PrefabInstance:
       propertyPath: MainLocalizationScript
       value: 
       objectReference: {fileID: 1044231444}
+    - target: {fileID: 393614380034479981, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 393614380034479981, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.data[3]
+      value: QUITER
+      objectReference: {fileID: 0}
     - target: {fileID: 393614380057162018, guid: 37068c6fab599c64794cbdbee5502502,
         type: 3}
       propertyPath: MainLocalizationScript
       value: 
       objectReference: {fileID: 1044231444}
+    - target: {fileID: 393614380057162018, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 393614380057162018, guid: 37068c6fab599c64794cbdbee5502502,
+        type: 3}
+      propertyPath: LanguageText.Array.data[3]
+      value: LEADERBOARD
+      objectReference: {fileID: 0}
     - target: {fileID: 652560233641654061, guid: 37068c6fab599c64794cbdbee5502502,
         type: 3}
       propertyPath: m_AnchorMax.y

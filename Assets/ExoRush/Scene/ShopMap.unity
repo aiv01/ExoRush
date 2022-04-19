@@ -439,6 +439,7 @@ MonoBehaviour:
   - RETURN TO MENU
   - TORNA AL MENU
   - VOLVER AL MENU
+  - RETOURNER AU MENU
 --- !u!1 &119923116
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +593,7 @@ MonoBehaviour:
   - DASH
   - SPRINT
   - SPRINT
+  - TIRET
 --- !u!1 &412152121 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 68847220383336577, guid: 1f7c55d9afcf51248bc59395bdf121ee,
@@ -980,6 +982,7 @@ MonoBehaviour:
   - MISSILE
   - MISSILE
   - MISIL
+  - MISSILE
 --- !u!1001 &765788654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1304,7 +1307,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 3
   m_linkedTextComponent: {fileID: 0}
@@ -1724,6 +1727,7 @@ MonoBehaviour:
   - TWIN LASER
   - DOPPIO LASER
   - "DOBLE L\xC1SER"
+  - LASERS JUMEAUX
 --- !u!114 &1049904252 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7081487285910953117, guid: 476bffd3022a78148a6bf5fde79c3263,
@@ -2035,6 +2039,7 @@ MonoBehaviour:
   - SHIELD
   - SCUDO
   - ESCUDO
+  - BOUCLIER
 --- !u!1001 &1475845805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2300,6 +2305,8 @@ MonoBehaviour:
   - BEAM
   - BEAM
   - BEAM
+  - BEAM
+  - BEAM
 --- !u!1001 &1824519138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2557,6 +2564,7 @@ MonoBehaviour:
   - FUSION CANNON
   - CANNONE A FUSIONE
   - "CA\xD1\xD3N DE FUSI\xD3N"
+  - CANONS
 --- !u!1001 &1879989131
 PrefabInstance:
   m_ObjectHideFlags: 0
