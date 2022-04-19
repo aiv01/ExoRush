@@ -24,8 +24,10 @@ public class LoadLanguageSettings : MonoBehaviour
         }
         if (updateLan)
         {
+            sLan = LanguageManager.Load();
             objs = gameObject.GetComponentsInChildren<MainLocalization>();
             int value = (Language) sLan.language < Language.last ? sLan.language : 0;
+            sLan.language = value;
             foreach (var item in objs)
             {
                 item.UpdateLenguage((Language)sLan.language);

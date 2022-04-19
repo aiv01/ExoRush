@@ -21,11 +21,11 @@ public class TextLocalization : MonoBehaviour
 
     private void LanguageChanged(Language language)
     {
-        TextToChange.text = LanguageText[(int)language];
+        
 
         if ((int)language <= LanguageText.Length)
         {
-            
+            TextToChange.text = LanguageText[(int)language];
         }
         else
         {

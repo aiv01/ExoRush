@@ -31,18 +31,6 @@ public class LanguageManager : MonoBehaviour
         else
         {
             Debug.Log("Could not find Language File. New Language File created");
-            if (Application.systemLanguage == SystemLanguage.English)
-            {
-                sLan.language = 0;
-            }
-            else if(Application.systemLanguage == SystemLanguage.Italian)
-            {
-                sLan.language = 1;
-            }
-            else if (Application.systemLanguage == SystemLanguage.Spanish)
-            {
-                sLan.language = 2;
-            }
             Save(sLan);
         }
 
