@@ -5716,6 +5716,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
         type: 3}
+      propertyPath: BurstParticleReference
+      value: 
+      objectReference: {fileID: 2958008047470945532, guid: a83fdf0ea005c5a48be06f5b7eb57f13,
+        type: 3}
+    - target: {fileID: 8991238020083654779, guid: 65a72c65f58be3f438d1ddf71ed4aef4,
+        type: 3}
       propertyPath: AmountOfBulletsForEachCannon
       value: 10
       objectReference: {fileID: 0}
