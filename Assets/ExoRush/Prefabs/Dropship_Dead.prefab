@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7014984549646387514}
   - component: {fileID: 7025585984718812474}
   - component: {fileID: 6344956773188370389}
-  - component: {fileID: 6344956773188370390}
+  - component: {fileID: 3315917401858826113}
   m_Layer: 16
   m_Name: Dropship_Dead
   m_TagString: Untagged
@@ -138,8 +138,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &6344956773188370390
-MeshCollider:
+--- !u!65 &3315917401858826113
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -148,10 +148,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8068580541943738512, guid: 47af982c494dd8944989e6736a03ee90, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 10.485606, y: 7.6907816, z: 13.051965}
+  m_Center: {x: 0, y: 3.8420568, z: -2.798182}
 --- !u!1 &8376292837810838736
 GameObject:
   m_ObjectHideFlags: 0

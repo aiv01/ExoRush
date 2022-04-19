@@ -3781,7 +3781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropshipRef: {fileID: 1171629354}
-  speedOffset: 0
+  speedOffset: -10
   speed: 0
 --- !u!1001 &1419918182
 PrefabInstance:
