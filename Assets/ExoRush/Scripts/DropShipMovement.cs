@@ -55,7 +55,7 @@ public class DropShipMovement : MonoBehaviour
     public InGameScoreCalculation ScoreScript;
     int transitionmapscore;
     public float TransitionScoreMultiplier = 1;
-
+    public float AbsoluteMaxDistance;
 
 
     void Start()
@@ -123,7 +123,10 @@ public class DropShipMovement : MonoBehaviour
 
     void GoToBossmap()
     {
-        if (!InTransition && transform.position.z >= TransferDistance + (transitionmapscore*TransitionScoreMultiplier))
+        float ActualTransferDistance = (TransferDistance + (transitionmapscore * TransitionScoreMultiplier));
+        ActualTransferDistance = Mathf.Clamp(ActualTransferDistance, 0, AbsoluteMaxDistance);
+
+        if (!InTransition && transform.position.z >= ActualTransferDistance)
         {
             InTransition = true;
             TempTransition = TransitionTime;
