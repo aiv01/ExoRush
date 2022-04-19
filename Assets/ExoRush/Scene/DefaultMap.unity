@@ -4033,8 +4033,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 174735192645185231, guid: 7403e2017c3abc74d9e53925e0a56d5f,
         type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 174735192645185231, guid: 7403e2017c3abc74d9e53925e0a56d5f,
+        type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174735192645185231, guid: 7403e2017c3abc74d9e53925e0a56d5f,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 174735192645185231, guid: 7403e2017c3abc74d9e53925e0a56d5f,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 174735192847753320, guid: 7403e2017c3abc74d9e53925e0a56d5f,
         type: 3}
