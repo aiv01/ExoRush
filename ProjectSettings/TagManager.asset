@@ -15,6 +15,7 @@ TagManager:
   - BmPx
   - lbValue
   - lbName
+  - corner
   layers:
   - Default
   - TransparentFX

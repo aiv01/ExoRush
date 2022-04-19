@@ -124,4 +124,14 @@ public class GamepadMapper : MonoBehaviour
         if (lastIndex != -1) cellItems[lastIndex].item.OnItemLeft();
         cellItems[index].item.OnItemHighlighted();
     }
+
+    public void HighlightItem()
+    {
+        cellItems[index].item.OnItemHighlighted();
+    }
+
+    public void LeaveItem()
+    {
+        cellItems[index].item.OnItemLeft();
+    }
 }
