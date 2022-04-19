@@ -117,6 +117,7 @@ namespace Tarodev
         {
             if (_explosionPrefab) Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
             if (collision.transform.TryGetComponent<IExplode>(out var ex)) ex.Explode();
+
             if(collision.gameObject.tag == "Enemy")
             {
                 Destroy(collision.gameObject);

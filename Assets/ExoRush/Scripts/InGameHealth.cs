@@ -108,11 +108,7 @@ public class InGameHealth : MonoBehaviour
             damage = 0;
         }
 
-        if(damage > 0 && !HitAnimationInProgress)
-        {
-            HitAnimationInProgress = true;
-            TempAnimationPosition = 0;
-        }
+
 
         TempInvulnerabiliy = InvulnerabilityTimeFrame;
 
@@ -123,6 +119,13 @@ public class InGameHealth : MonoBehaviour
         }
         HealAfterCounter = HealAfterTimer;
         Health = Health - damage;
+
+        if (damage > 0 && !HitAnimationInProgress)
+        {
+            HitAnimationInProgress = true;
+            TempAnimationPosition = 0;
+        }
+
         if (ShakeCamera)
         {
             CameraScript.ShakeCamera();
