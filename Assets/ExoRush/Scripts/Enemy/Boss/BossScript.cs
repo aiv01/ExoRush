@@ -121,7 +121,11 @@ public class BossScript : MonoBehaviour
 
     public void StartAttack()
     {
-        MeleeAttackSource.Play();
+        if(MeleeAttackSource.enabled == true)
+        {
+            MeleeAttackSource.Play();
+        }
+
         BoxResults = (Physics.OverlapBox(MeleeHitBox.transform.TransformPoint(MeleeHitBox.center),MeleeHitBox.size/2*MeleeHitBox.transform.lossyScale.x,MeleeHitBox.transform.rotation));
         for (int i = 0; i < BoxResults.Length; i++)
         {
@@ -136,7 +140,11 @@ public class BossScript : MonoBehaviour
 
     public void Shoot()
     {
-        RangeAttackSource.Play();
+
+        if (RangeAttackSource.enabled == true)
+        {
+            RangeAttackSource.Play();
+        }
         BoxResults = (Physics.OverlapBox(RangeHitBox.transform.TransformPoint(RangeHitBox.center), RangeHitBox.size / 2 * RangeHitBox.transform.lossyScale.x, RangeHitBox.transform.rotation));
         for (int i = 0; i < BoxResults.Length; i++)
         {

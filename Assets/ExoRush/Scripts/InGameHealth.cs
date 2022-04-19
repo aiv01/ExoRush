@@ -162,7 +162,7 @@ public class InGameHealth : MonoBehaviour
                     AudioSource[] AudioComponents = Resources.FindObjectsOfTypeAll<AudioSource>();
                     for (int i = 0; i < AudioComponents.Length; i++)
                     {
-                        if (AudioComponents[i].playOnAwake != true)
+                        if (AudioComponents[i].transform.gameObject.transform.tag != "BackgroundMusic")
                         {
                             AudioComponents[i].enabled = false;
                         }

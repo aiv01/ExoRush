@@ -23,21 +23,21 @@ public class FadeAudioEffect : MonoBehaviour
     }
     void Update()
     {
-        if(FadeOUTTimer > 0)
+        if(AudioSource.enabled == true)
         {
-            FadeOUTTimer -= Time.deltaTime;
-            FadeOUTAudioValue = Mathf.Clamp((FadeOUTTimer / TotalFadeOUTDuration), 0, 1);
-            AudioSource.volume = FadeOUTAudioValue;
+            if (FadeOUTTimer > 0)
+            {
+                FadeOUTTimer -= Time.deltaTime;
+                FadeOUTAudioValue = Mathf.Clamp((FadeOUTTimer / TotalFadeOUTDuration), 0, 1);
+                AudioSource.volume = FadeOUTAudioValue;
+            }
+            if (FadeINTimer > 0)
+            {
+                FadeINTimer -= Time.deltaTime;
+                FadeINAudioValue = Mathf.Clamp((((FadeINTimer / TotalFadeINDuration) * -1) + 1), 0, 1);
+                AudioSource.volume = FadeINAudioValue;
+            }
         }
-        if(FadeINTimer > 0)
-        {
-            FadeINTimer -= Time.deltaTime;
-            FadeINAudioValue = Mathf.Clamp((((FadeINTimer / TotalFadeINDuration) * -1) + 1), 0, 1);
-            AudioSource.volume = FadeINAudioValue;
-        }
-
-
-
     }
     public void FadeIN(float Duration)
     {
