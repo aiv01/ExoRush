@@ -788,7 +788,7 @@ Transform:
   m_Children:
   - {fileID: 1377560560}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439579918
 GameObject:
@@ -2190,6 +2190,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1126160058, guid: 802f8cb97dd76f14b9163f6e12c7d291,
     type: 3}
   m_PrefabInstance: {fileID: 4055534351551551814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1152913030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 202513596992798349, guid: 3ff9e66b0a10cd949bb418c62bd41f70,
+    type: 3}
+  m_PrefabInstance: {fileID: 485819026}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1160431524 stripped
 GameObject:
@@ -3976,7 +3982,7 @@ PrefabInstance:
         type: 3}
       propertyPath: EndMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1152913030}
     - target: {fileID: 829592348202807789, guid: 802f8cb97dd76f14b9163f6e12c7d291,
         type: 3}
       propertyPath: HealthBar
