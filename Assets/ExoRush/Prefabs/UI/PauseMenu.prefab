@@ -226,8 +226,8 @@ MonoBehaviour:
   TextToChange: {fileID: 174735192220721126}
   LanguageText:
   - GAME PAUSED
-  - GAME PAUSED
-  - GAME PAUSED
+  - PAUSA
+  - PAUSA
 --- !u!1 &174735192565303851
 GameObject:
   m_ObjectHideFlags: 0
