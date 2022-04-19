@@ -24,11 +24,13 @@ public class BossScript : MonoBehaviour
     public float MeleeTimer;
     float MeleeTempTimer;
     public AudioSource MeleeAttackSource;
+    public int MeleeDamage = 700;
 
     //RangeAttack
     public float RangeTimer;
     float RangeTempTimer;
     public AudioSource RangeAttackSource;
+    public int RangeDamage = 500;
 
 
     // Start is called before the first frame update
@@ -127,7 +129,7 @@ public class BossScript : MonoBehaviour
         {
             if(BoxResults[i].transform.name == "RushDropship")
             {
-                BoxResults[i].GetComponent<InGameHealth>().Damage(700, false, false, false);
+                BoxResults[i].GetComponent<InGameHealth>().Damage(MeleeDamage, false, false, false);
             }           
             
         }
@@ -149,7 +151,7 @@ public class BossScript : MonoBehaviour
             if (BoxResults[i].transform.name == "RushDropship")
             {
 
-               BoxResults[i].GetComponent<InGameHealth>().Damage(500, false, false, false);
+               BoxResults[i].GetComponent<InGameHealth>().Damage(RangeDamage, false, false, false);
                 
             }
 
