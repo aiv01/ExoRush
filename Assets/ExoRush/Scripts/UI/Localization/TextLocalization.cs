@@ -21,7 +21,15 @@ public class TextLocalization : MonoBehaviour
 
     private void LanguageChanged(Language language)
     {
-        TextToChange.text = LanguageText[(int)language];
+        if(LanguageText.Length <= (int)language)
+        {
+            TextToChange.text = LanguageText[(int)language];
+        }
+        else
+        {
+            Debug.Log("TranslationNotFound");
+        }
+        
     }
 
 }
