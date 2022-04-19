@@ -20,8 +20,7 @@ public class TextLocalization : MonoBehaviour
     }
 
     private void LanguageChanged(Language language)
-    {
-        
+    {        
 
         if ((int)language <= LanguageText.Length)
         {
