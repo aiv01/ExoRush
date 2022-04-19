@@ -85,13 +85,6 @@ public class InputDeviceCheck : MonoBehaviour
             {
                 OnInputChanged(CurrentInput);
             }
-               
-
-        }
-        
-        
-
+        }  
     }
-
-
 }
