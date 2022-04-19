@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022280599761099700}
-  - component: {fileID: 1128165242300879072}
   m_Layer: 23
   m_Name: LowerMouth
   m_TagString: Untagged
@@ -36,21 +35,6 @@ Transform:
   m_Father: {fileID: 1021976679911547952}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1128165242300879072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1024642918663446696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a16fbab0c6a57e43ae3d1658c4feded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  muzzleOffset: {x: -0.25, y: 0, z: -0.2}
-  projectile: {fileID: 114103497732328600, guid: 294784d1e17ec8b45bed8a0790b0369b,
-    type: 3}
 --- !u!1 &1024657002793865296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1420,7 @@ MonoBehaviour:
   SpotDistance: 500
   AttackRadius: 220
   DamageRadius: 30
+  Damage: 300
   RotationDamping: 10
   FallingSpeed: 1
   MovementSpeed: 0
