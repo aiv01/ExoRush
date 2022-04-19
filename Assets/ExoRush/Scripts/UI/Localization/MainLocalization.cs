@@ -14,7 +14,7 @@ public class MainLocalization : MonoBehaviour
 
     void Start()
     {
-        UpdateLenguage(Language.ES);
+        UpdateLenguage(CurrentLanguage);
     }
 
     public void UpdateLenguage(Language choosedlenguage)

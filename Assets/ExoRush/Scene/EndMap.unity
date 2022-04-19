@@ -3161,7 +3161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0573d74d75f496048bf57aeb6c27cb1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainLocalizationScript: {fileID: 0}
+  MainLocalizationScript: {fileID: 202513596772058012}
   TextToChange: {fileID: 202513597764302631}
   LanguageText:
   - LEADERBOARD
