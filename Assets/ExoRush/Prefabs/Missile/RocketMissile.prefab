@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rb: {fileID: 1316536308641708603}
   _target: {fileID: 0}
-  _explosionPrefab: {fileID: 1021943856421883302, guid: 4104a369b8a84524c99e8d96e6e13bcd,
+  _explosionPrefab: {fileID: 1021943856421883302, guid: 8f67712690885364182f6dcd7de2504f,
     type: 3}
   AutoDestructionTime: 8
   AccellerationCurve:
