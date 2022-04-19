@@ -14,7 +14,7 @@ public class BossfightBeam : MonoBehaviour
     public GameObject BeamBar;
     public LaserBeamScript BeamEffect;
 
-    
+    public float BeamMultiplier = 0.3f;
 
     //Overcharge 2
     float OverchargeEnergy = 1;
@@ -25,6 +25,7 @@ public class BossfightBeam : MonoBehaviour
     public float ReuseTime;
     float TempReuseTime;
     bool Active;
+   
 
     //LVL
     public LIVDefMap AbilityLoader;
@@ -38,7 +39,7 @@ public class BossfightBeam : MonoBehaviour
     void Start()
     {
         AbilityLvlLoader();
-        ExponentialDamageAmplifier += AbilityLvl;
+        ExponentialDamageAmplifier += AbilityLvl * BeamMultiplier;
     }
 
     // Update is called once per frame

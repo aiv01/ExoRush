@@ -3972,6 +3972,10 @@ PrefabInstance:
       propertyPath: AbilityLoader
       value: 
       objectReference: {fileID: 439579921}
+    - target: {fileID: 401484639, guid: 802f8cb97dd76f14b9163f6e12c7d291, type: 3}
+      propertyPath: OverchargeRegenerateSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 401484640, guid: 802f8cb97dd76f14b9163f6e12c7d291, type: 3}
       propertyPath: InGameUMG
       value: 
