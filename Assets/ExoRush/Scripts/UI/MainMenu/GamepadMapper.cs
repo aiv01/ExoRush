@@ -11,6 +11,8 @@ struct CellGridPos
 public class GamepadMapper : MonoBehaviour
 {
     [SerializeField] private float axisThreshold = 0.8f;
+    [Tooltip("if active, the script won't be detecting keys already preesed when activated")]
+    [SerializeField] private bool keysMustBeUp = true;
 
     private IButtonInteractable[] items;
     private CellGridPos[] cellItems;
@@ -20,9 +22,10 @@ public class GamepadMapper : MonoBehaviour
     private int index = 0;
     private int numColons;
     private bool movementDet = false;
+    private bool keyAlreadyDown = false;
 
 
-    private void Awake()
+    private void OnEnable()
     {
         items = GetComponentsInChildren<IButtonInteractable>();
         numColons = GetComponent<GridLayoutGroup>().constraintCount;
@@ -33,6 +36,12 @@ public class GamepadMapper : MonoBehaviour
             cellItems[i] = new CellGridPos();
             cellItems[i].item = items[i];
             cellItems[i].pos = new Vector2(i % numColons, i / numColons);
+        }
+        if (keysMustBeUp && (Input.GetAxis("Submit") >= axisThreshold 
+            || Input.GetAxis("Horizontal") >= axisThreshold || Input.GetAxis("Horizontal") <= -axisThreshold
+            || Input.GetAxis("Vertical") >= axisThreshold || Input.GetAxis("Vertical") >= axisThreshold))
+        {
+            keyAlreadyDown = true;
         }
     }
 
@@ -45,7 +54,7 @@ public class GamepadMapper : MonoBehaviour
     {
         Vector2 tempPos;
         
-        if (!movementDet)
+        if (!movementDet && !keyAlreadyDown)
         {
             if (Input.GetAxis("Horizontal") >= axisThreshold) //right selected
             {
@@ -79,6 +88,7 @@ public class GamepadMapper : MonoBehaviour
                 && Input.GetAxis("Submit") <= axisThreshold)
             {
                 movementDet = false;
+                keyAlreadyDown = false;
             }
         }
     }

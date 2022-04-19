@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Language {ENG,IT,ES,JP, last};
+public enum Language {ENG,IT,ES, last};
 
 public class MainLocalization : MonoBehaviour
 {
@@ -19,8 +19,8 @@ public class MainLocalization : MonoBehaviour
 
     public void UpdateLanguage(Language choosedlenguage)
     {
-        OnLanguageChanged(choosedlenguage);
         CurrentLanguage = choosedlenguage;
+        OnLanguageChanged(choosedlenguage);
     }
 
 }

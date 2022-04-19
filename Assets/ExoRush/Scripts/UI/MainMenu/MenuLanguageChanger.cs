@@ -23,7 +23,7 @@ public class MenuLanguageChanger : MonoBehaviour, IMenuInteractable
             sLan.language = (Language)(index + shift) - Language.last;
         }else if ((Language)index + shift < 0)
         {
-            sLan.language = Language.last - (Language)(index + shift);
+           sLan.language = Language.last - (Language)(index - shift);
         } else
         {
             sLan.language = index + shift;
