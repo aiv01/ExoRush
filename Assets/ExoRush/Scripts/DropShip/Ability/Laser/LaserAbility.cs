@@ -79,13 +79,13 @@ public class LaserAbility : MonoBehaviour
                 LaserGameObject[i].GetComponent<LineRenderer>().widthMultiplier = CurrentLaserWidth;
                 if(i == 0)
                 {
-                    LaserGameObject[i].transform.rotation = Quaternion.Euler(CurrentRotation, -0.8f, this.transform.rotation.eulerAngles.z);
+                    LaserGameObject[i].transform.rotation = Quaternion.Euler(CurrentRotation, 0, this.transform.rotation.eulerAngles.z);
 
 
                 }
                 else
                 {
-                    LaserGameObject[i].transform.rotation = Quaternion.Euler(CurrentRotation, 0.8f, this.transform.rotation.eulerAngles.z);
+                    LaserGameObject[i].transform.rotation = Quaternion.Euler(CurrentRotation, 0, this.transform.rotation.eulerAngles.z);
 
 
                 }
