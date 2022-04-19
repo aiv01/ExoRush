@@ -98,7 +98,8 @@ public class Shield : MonoBehaviour
             //Shiled.SetActive(true);
             Active = true;
             ShieldCollider.enabled = true;
-            ParticlesSpray.SetActive(true);
+            ParticlesSpray.transform.position = ParticlesFront.transform.position;
+            //ParticlesSpray.SetActive(true);
             ParticlesFront.SetActive(true);
         }
         else
@@ -106,7 +107,8 @@ public class Shield : MonoBehaviour
             //Shiled.SetActive(false);
             Active = false;
             ShieldCollider.enabled = false;
-            ParticlesSpray.SetActive(false);
+            ParticlesSpray.transform.position = new Vector3(0,-9999999,0);
+            //ParticlesSpray.SetActive(false);
             ParticlesFront.SetActive(false);
         }
     }
