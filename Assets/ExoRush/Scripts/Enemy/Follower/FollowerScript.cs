@@ -99,7 +99,10 @@ public class FollowerScript : MonoBehaviour
 
         if (Vector3.Distance(transform.position, Ship.transform.position) < DamageRadius && !HasDamaged)
         {
-            Object.FindObjectOfType<InGameHealth>().Damage(Damage, true, false, false);
+            if(Object.FindObjectOfType<InGameHealth>() != null)
+            {
+                Object.FindObjectOfType<InGameHealth>().Damage(Damage, true, false, false);
+            }            
             HasDamaged = true;
         }
 

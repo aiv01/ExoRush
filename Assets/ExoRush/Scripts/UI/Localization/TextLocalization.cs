@@ -38,7 +38,7 @@ public class TextLocalization : MonoBehaviour
         }
         else
         {
-            Debug.Log("TranslationNotFound");
+            //Debug.Log("TranslationNotFound");
         }
         
     }
