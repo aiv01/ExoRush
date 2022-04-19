@@ -10,6 +10,7 @@ public class InputFieldScript : MonoBehaviour
     private bool endEdit = false;
     public LIVDefMap liv;
     public LoadScoreboard lSB;
+    private bool FirstFrame = true;
 
     [SerializeField] private GameObject inputSubmenu;
     [SerializeField] private GameObject[] affectedObjects;
@@ -20,7 +21,6 @@ public class InputFieldScript : MonoBehaviour
     {
         inputSubmenu.SetActive(true);
         textObj = GetComponentInChildren<TMP_InputField>();
-        textObj.Select();
         textObj.enabled = true;
         foreach(var obj in affectedObjects)
         {
@@ -54,6 +54,17 @@ public class InputFieldScript : MonoBehaviour
                 DeactivateInputField();
             }
         }
+        if (FirstFrame)
+        {
+            textObj.Select();
+            FirstFrame = false;
+        }
+        if (Input.GetKeyDown(KeyCode.JoystickButton0))
+        {
+            OnEndEdit();
+            DeactivateInputField();
+        }
+        
     }
 
     public void OnEdit()
@@ -64,6 +75,10 @@ public class InputFieldScript : MonoBehaviour
     public void OnEndEdit()
     {
         target.text = textObj.text;
+        if(target.text == "")
+        {
+            target.text = "John Doe";
+        }
         lSB.UpdateLB();
         liv.UpdateSelected(false, false, true, false);
         endEdit = true;
