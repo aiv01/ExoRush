@@ -229,6 +229,7 @@ MonoBehaviour:
   - PAUSA
   - PAUSA
   - JEU EN PAUSE
+  RequestLanguageRefresh: 0
 --- !u!1 &174735192565303851
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +798,7 @@ MonoBehaviour:
   - ESCI
   - SALIR
   - QUITER
+  RequestLanguageRefresh: 0
 --- !u!1001 &174735192341980069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1017,5 +1019,5 @@ MonoBehaviour:
   - RESUME
   - CONTINUA
   - CONTINUA
-  - CONTINUA
   - REPRENDRE
+  RequestLanguageRefresh: 0
